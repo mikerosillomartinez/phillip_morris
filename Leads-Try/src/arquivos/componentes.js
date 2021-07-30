@@ -14448,7 +14448,7 @@ Vue.component('rgm-component', {
 
 var $rgmPrueba = `<div> 
                 <section class="coronavirus" style="order:1;">
-                <h4>Por el momento los dispositivos IQOS están agotados, ¡Regístrate y entérate cuando estén de regreso!</h4>
+                <h4>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento para la compra de tu primer Kit IQOS.</h4>
                 </section>
 
                 <section v-bind:class="{ pagina }" class="principal version_agoust" satyle="order:2;" v-if="pagina == 'lp1' || pagina == 'rgm'">
@@ -14466,8 +14466,8 @@ var $rgmPrueba = `<div>
 
 
                 <section id="prueba" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}" v-if="pagina == 'lp1' || pagina == 'lp2'">
-                <h4 style="margin-top:20px;">Regístrate para conocer IQOS y recibir $200 MXN*</h4>
-                <p style="opacity:0.60">Por el momento los dispositivos IQOS están agotados, pero puedes registrarte para recibir noticias de IQOS y enterarte primero que nadie cuando los dispositivos estén disponibles nuevamente.</p>
+                <h4 style="margin-top:20px;">Regístrate para conocer IQOS y recibe 10% de descuento*</h4>
+                <p style="opacity:0.60">¡Compártenos tus datos y te mostraremos todo lo que IQOS tiene para ti! Eliminar el humo y la ceniza, lo cambia todo</p>
                 <div v-if="window.width > 767">
                     <ul class="refer-a-friend__box-items">
                         <li class="refer-a-friend__box-item">
@@ -14475,21 +14475,21 @@ var $rgmPrueba = `<div>
                                 <img src="/arquivos/Icono_1.png" />                        
                             </div>
                             <div class="refer-a-friend__item-text">Regístrate para obtener tu código de descuento</div>
-                            <p class="refer-a-friend__item--info">Completa el formulario de abajo (20 segundos).</p>
+                            <p class="refer-a-friend__item--info">Completa el formulario, te tomará 20 segundos.</p>
                         </li>
                         <li class="refer-a-friend__box-item">
                             <div class="refer-a-friend__item-icon">
                                 <img src="/arquivos/icono_2.png" /> 
                             </div>
-                            <div class="refer-a-friend__item-text">Recibe tu cupón de descuento por $200 MXN*</div>
-                            <p class="refer-a-friend__item--info">*Recibirás un correo electrónico con tu cupón. Válido para la compra de tu primer Kit IQOS.</p>
+                            <div class="refer-a-friend__item-text">Recibe tu código de 10% de descuento*</div>
+                            <p class="refer-a-friend__item--info">*Recibirás un correo electrónico con tu código. Válido para la compra de tu primer Kit IQOS.</p>
                         </li>
                         <li class="refer-a-friend__box-item">
                             <div class="refer-a-friend__item-icon">
-                                <img src="/arquivos/icono_3.png" /> 
+                                <img src="/arquivos/icono_3_.png" /> 
                             </div>
-                            <div class="refer-a-friend__item-text">Mantente enterado de las noticias de IQOS</div>
-                            <p class="refer-a-friend__item--info">Entérate primero que nadie cuando los dispositivos IQOS estén disponibles nuevamente.</p>
+                            <div class="refer-a-friend__item-text" style="margin-top: 18px;">Canjea tu código de descuento </div>
+                            <p class="refer-a-friend__item--info">Podrás canjear tu código de descuento en IQOS.com, Tiendas IQOS y con Expertos IQOS.</p>
                         </li>
                     </ul>
                 </div>
@@ -14513,7 +14513,7 @@ var $rgmPrueba = `<div>
                         border-color: #979797;">
                             <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
                             <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Completa el formulario de abajo (20 segundos).</p>
+                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Completa el formulario, te tomará 20 segundos.</p>
                             </div>
                         </div>
 
@@ -14523,7 +14523,7 @@ var $rgmPrueba = `<div>
                                 <img src="/arquivos/icono_2.png" /> 
                             </div>
                             <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                <div class="refer-a-friend__item-text" style="font-size:20px">Recibe tu cupón de descuento por $200 MXN*</div>
+                                <div class="refer-a-friend__item-text" style="font-size:20px">Recibe tu código de 10% de descuento*</div>
                             </div>
                         </div>
                         <div class="col-12 prueba" 
@@ -14536,7 +14536,7 @@ var $rgmPrueba = `<div>
                         border-color: #979797;">
                             <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
                             <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">*Recibirás un correo electrónico con tu cupón. Válido para la compra de tu primer Kit IQOS.</p>
+                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">*Recibirás un correo electrónico con tu código. Válido para la compra de tu primer Kit IQOS.</p>
                             </div>
                         </div>
 
@@ -14544,11 +14544,11 @@ var $rgmPrueba = `<div>
                         <div class="col-12 prueba" style="display:flex">
                             <div class="col-3 prueba" style="display: flex;justify-content: end;">
                                 <div class="refer-a-friend__item-icon">
-                                    <img src="/arquivos/icono_3.png" /> 
+                                    <img src="/arquivos/icono_3_.png" /> 
                                 </div>
                             </div>
                             <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                <div class="refer-a-friend__item-text" style="font-size:20px">Mantente enterado de las noticias de IQOS</div>
+                                <div class="refer-a-friend__item-text" style="font-size:20px"Canjea tu código de descuento </div>
                             </div>
                         </div>
                         <div class="col-12 prueba" 
@@ -14561,12 +14561,12 @@ var $rgmPrueba = `<div>
                         border-color: #979797;">
                             <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
                             <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Entérate primero que nadie cuando los dispositivos IQOS estén disponibles nuevamente.</p>
+                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Podrás canjear tu código de descuento en IQOS.com, Tiendas IQOS y con Expertos IQOS.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="ambiente_prueba" style="font-size:10px" >*Si te registras en la base de datos de IQOS del 1 de enero al 31
+                <p class="ambiente_prueba" style="font-size:10px" >*Si te registras en la base de datos de IQOS del 1 de agosto al 31
                 de diciembre de 2021 para recibir información sobre IQOS,
                 recibirás en tu correo electrónico un código de descuento para
                 la compra de tu primer Kit IQOS. Aplican restricciones. Consulta <a style="color:blue" target="_blank" href="https://www.iqos.com/mx/es/codigos-de-descuento.html">Términos y Condiciones</a>.</span></p>

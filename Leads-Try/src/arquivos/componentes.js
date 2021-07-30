@@ -221,8 +221,6 @@ Vue.component('header-component', {
 
 
 
-
-
 var $headerAdopta = ` <div>
                 <header v-bind:class="{ pagina }">
                     <div class="container">
@@ -33520,7 +33518,7 @@ var $gettritalEnvioTest = `<div>
                                             <!--  ----------------------------------------------------------------------  -->
                                             
                                             <p v-show="datos" style="opacity:0.60;cursor:pointer;padding-bottom:1rem;" class="envio" @click="goBack()">1. Datos de contacto</p>
-                                            <p v-show="!datos" class="envio">1. Datos de contacto</p>
+                                            <p v-show="!datos" class="envio">1. Datos de Usuario</p>
                                             <br>
                                             <p v-show="datos" class="envio">2. Datos de envio</p>
                                             <br>
@@ -33764,6 +33762,3562 @@ var $gettritalEnvioTest = `<div>
 
 Vue.component('gettrital-component-enviotest', {
     'template': $gettritalEnvioTest,
+    'data': function() {
+
+        return {
+            "pagina": "lp1",
+            "Msnenvio": null,
+            "errors": [],
+            "nombre": "",
+            "apelido": "",
+            "telefone": "",
+            "email": "",
+            "declaracao": false,
+            "publicidad": false,
+            "source": "LendingWeb",
+            "medium": "",
+            "campaign": "",
+            "fechaNacimiento": "",
+            "form": "#form",
+            "city": "",
+            "state": "",
+            "mes": window.mes,
+            "ano": window.ano,
+            "term": "",
+            "transaction": "",
+            "colorDispositivo": "",
+            "calle": "",
+            "codigopostal": "",
+            "colonia": "",
+            "estado": "",
+            "municipio": "",
+            "nointerno": "",
+            "obs": "",
+            "descuento": "",
+            "emailVerifiedNB":false,
+            "promCode":"",
+            "codigoDeReferidoValidado":false,
+            "codigoReferidoFeedbackMessage":"Código de referido no válido, por favor verifícalo.",
+            "showWarning":null,
+            "utmEqualsB2b":false,
+            "datos":false,
+            "firstFormChecked":false,
+            "GAtransactionId":"",
+            "showWarningForInvalidZipCode":false,
+            "validZipCode":false,
+            "feedBackMessageForInvalidZipCode":"Código postal no válido, por favor verifícalo.",
+            "codestring":null,
+            "sourceFromUtm":"",
+            "promCodeselected":"",
+            "firstTimeFormChecked":false,
+            "percentageCompleted": 0,
+            "totalLength": 0,
+            "video10": false,
+            "video20": false,
+            "video30": false,
+            "video40": false,
+            "video50": false,
+            "video60": false, 
+            "video70": false,
+            "video80": false,
+            "video90": false,
+            "video99": false,
+            "userCode": false,
+            "screen": window.innerWidth,
+            "dispositivo": ""
+        };
+
+    },
+    'methods': {
+        "GA_clientId":function(){
+            try{
+                var tracker = ga.getAll()[0];
+                this.GAtransactionId = tracker.get('clientId');
+                console.log("GA_clientId =",this.GAtransactionId)
+                return tracker.get('clientId');
+            } catch (e){
+                console.log("GA_clientId error =",e)
+                // return "";
+            }
+        },
+        "video": function () {
+            var myPlayer = document.querySelector('#myVideo'),
+                playVideo = false,
+                _self = this
+            
+            myPlayer.ontimeupdate = function() {
+                _self.getPercentage()
+            };
+
+            $("section.video .container").click(function(){
+                
+                $(this).toggleClass("play-pause")
+                $(this).find("img").hide()
+                $(this).find("video").fadeIn()
+
+                if (!playVideo) {
+                    myPlayer.play()
+                    playVideo = true
+                    window.dataLayer.push({
+                        "category": "Video (clicks)",
+                        "action": "Play",
+                        "label": "que-es-iqos-3-duo-caracteriAviso sticas-y-video",
+                        "event": "video"
+                    })
+                } else {
+                    myPlayer.pause()
+                    playVideo = false
+                    window.dataLayer.push({
+                        "category": "Video (clicks)",
+                        "action": "Pause",
+                        "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                        "event": "video"
+                    })
+                }
+                
+            })
+        }, 
+        "getPercentage": function () {
+            var myPlayer = document.querySelector('#myVideo');
+                
+            this.totalLength = myPlayer.duration;   
+            this.percentageCompleted = (myPlayer.currentTime / this.totalLength) * 100;
+
+            // is 10   
+            if (!this.video10 && this.percentageCompleted.toFixed() == 10) {
+                this.video10 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (10%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+            
+            
+            // is 20
+            if (!this.video20 && this.percentageCompleted.toFixed() == 20) {
+                this.video20 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (20%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+            // is 30
+            if ((!this.video30) && (this.percentageCompleted.toFixed() == 30)) {
+                this.video30 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (30%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+            // is 40
+            if ((!this.video40) && (this.percentageCompleted.toFixed() == 40)) {
+                this.video40 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (40%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+            // is 50
+            if ((!this.video50) && (this.percentageCompleted.toFixed() == 50)) {
+                this.video50 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (50%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+            // is 60
+            if ((!this.video60) && (this.percentageCompleted.toFixed() == 60)) {
+                this.video60 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (60%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+            // is 70
+            if ((!this.video70) && (this.percentageCompleted.toFixed() == 70)) {
+                this.video70 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (70%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+            // is 80
+            if ((!this.video80) && (this.percentageCompleted.toFixed() == 80)) {
+                this.video80 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (80%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+            // is 90
+            if ((!this.video90) && (this.percentageCompleted.toFixed() == 90)) {
+                this.video90 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (90%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+            // is 100
+            if ((!this.video99) && (this.percentageCompleted.toFixed() == 99)) {
+                this.video99 = true;
+                window.dataLayer.push({
+                    "category": "Video (clicks)",
+                    "action": "Percentile (100%)",
+                    "label": "que-es-iqos-3-duo-caracteristicas-y-video",
+                    "event": "video"
+                })
+            }
+        },
+        "goBack":function(){
+             this.datos = false
+             this.firstFormChecked = false
+        },
+        "GetTransaction": function () {
+            var date = new Date().toISOString()
+                date = date.replace(/:/g,"").replace(/-/g,"").replace(/\./g,"")
+
+                this.transaction = "PMI-"+date
+        },
+        "seletorSku": function (){
+            var _self = this
+            $(".selector-sku").each(function () {
+                $(this).find("a").click(function(e) {
+                    e.preventDefault();
+                    var color = $(this).attr("color")
+                    $(this)
+                        .addClass("active")
+                        .siblings()
+                            .removeClass("active")
+                        .parents(".selector").find(".imagem img").attr("src","/arquivos/iqos-"+color.replace("IQOS 2.4 ","")+".png?v=53534")
+                        $('#00N4P00000GOkeR [value="'+color+'"]').prop("selected","selected");
+                        $("#00N4P00000GOkeR").attr("data-action", color)
+                    _self.colorDispositivo = color
+                })
+            })
+
+            $("#00N4P00000GOkeR").change(function () {
+                $(".selector-sku a").removeClass("active")
+
+                $(".selector-sku a[color='"+$(this).val()+"'").addClass("active")
+                $(".selector .imagem img").attr("src","/arquivos/iqos-"+$(this).val().replace("IQOS 2.4 ","").replace("B","b").replace("A","a")+".png?v=53534")
+                var colorSelected = "";
+            
+                if ($(this).val() == "IQOS 2.4 Blanco") {
+                    colorSelected = "White"
+                } else {
+                    colorSelected = "Blue"
+                }
+                $(this).attr("data-action", "IQOS 2.4 Plus - "+colorSelected)
+                _self.colorDispositivo = $(this).val()
+            })
+
+            _self.colorDispositivo = $(".selector-sku a.active").attr("color")
+
+        },
+        "mesyano": function (){
+            if (this.$cookies.get("mes") && this.$cookies.get("ano")) {
+                this.mes = this.$cookies.get("mes");
+                this.ano = this.$cookies.get("ano");
+            }
+        },
+        "datapushPag": function () {
+            try {
+                window.dataLayer.push({
+                    event: "PV",
+                    category: window.location.href.toS,
+                    action: $("title").text(),
+                    label: "MX"
+                })
+            } catch (e) {console.log(e)}            
+        },
+        "utms": function () {
+            var _self = this
+            if (window.location.search != "") {
+                var utms = _self.getQueryParams(window.location.search.split("?")[1])
+                console.log(utms, "utms")
+                _self.term = utms.utm_term
+                _self.source = "LendingWeb";
+                _self.campaign = utms.utm_campaign;
+                _self.medium = utms.utm_medium;
+                if(utms.utm_source == "b2b"){
+                    _self.utmEqualsB2b = true
+                }
+            }
+        },
+        "fixedCorona": function () {
+            var corona =  ""
+            setTimeout(function (){
+                corona =  $(".coronavirus").offset().top
+                coronaFixed()
+            },500)
+            
+            $(document).scroll(function() {
+                coronaFixed()
+            });
+
+            function coronaFixed() {
+                if (corona != "" && $(this).scrollTop() > corona) {
+                    $("section.coronavirus").addClass("fixed")
+                } else {
+                    $("section.coronavirus").removeClass("fixed")
+                }
+            }
+        },
+        'getQueryParams': function (qs) {
+
+            qs = qs.split("+").join(" ");
+
+            var params = {},
+                tokens,
+                re = /[?&]?([^=]+)=([^&]*)/g;
+
+            while ((tokens = re.exec(qs))) {
+                params[decodeURIComponent(tokens[1])] = decodeURIComponent(
+                    tokens[2]
+                );
+            }
+
+            return params;
+        },
+        "paginaStatus": function(){
+            if ($("body").hasClass("get-trial")) {
+                this.pagina = "get-trial"
+            }
+
+            $(document).scroll(function() {
+                if ($(this).scrollTop() > 180) {
+                    $(".mouse").css("opacity","0");
+                    $(".mouse").hide()
+                }else{
+                    if (window.innerHeight < 960) {
+                        $(".mouse").css("opacity","1");
+                        $(".mouse").show()
+                    }
+                }
+            });
+
+            if (window.innerHeight < 960) {
+                $(".mouse").css("opacity","1");
+                $(".mouse").show()
+            }
+        },
+        "clickMouse": function (){
+            setTimeout(function (){
+                var corona =  $(".coronavirus").offset().top
+                $("html, body").animate({scrollTop:corona}, 'slow');
+            },100)
+            
+        },
+        "irADatosDeEnvio": function (){
+            setTimeout(function (){
+                var form =  $("#form").offset().top
+                $("html, body").animate({scrollTop:form}, 'slow');
+            },100)
+        },
+        "focusError": function (){
+            setTimeout(function (){
+                var errorId =  $("#00N4P00000GOkeM").offset().top
+                $("html, body").animate({scrollTop:errorId}, 'slow');
+            },100)
+        },
+        /*
+        "agendarllamada": function () {
+            var _self = this
+            $(".agendarllamada").click(function(e) {
+                e.preventDefault()
+                $('html,body').animate({ scrollTop: ($("#pasos").offset().top - ($(".coronavirus").height()*1))});
+            })
+            $(".coronavirus").click(function(e) {
+                e.preventDefault()
+                $('html,body').animate({ scrollTop: ($("#pasos").offset().top - $(".coronavirus").height())});
+            })
+        },
+        */
+        "checkForm": function (e) {
+            console.log("checkform called")
+            var _self = this
+            this.errors = [];
+            this.Msnenvio = null
+            // var codeValue = $("#00N4P00000GOkeM").val()
+            // console.log(codevalue, "codevalue")
+            // console.log(codevalue.length, "codevalue length")
+            this.GA_clientId()
+        
+            if ($("#first_name").val().length < 3) {
+                this.errors.push("Tu nombre debe tener más de 3 caracteres");
+            }
+
+            if ($("#last_name").val().length < 3) {
+                this.errors.push("Tu apellido debe tener más de 3 caracteres");
+            }
+            
+            if ($("#phone").val().length < 10) {
+                this.errors.push("Ingresa tu teléfono a 10 dígitos");
+            }
+
+            if ($("#phone").val().length <= 10) {
+                this.count_phone_element($("#phone").val());
+            }
+
+            if ($("#email").val().length < 1) {
+                this.errors.push('Ingresa tu correo electrónico');
+            } else if (!this.validEmail($("#email").val())) {
+                this.errors.push('Ingresa un correo electrónico válido (ej. emiliano@iqos.com)');
+            }
+            
+            if( this.promCode == "Si" && $("#00N4P00000GOkeM").val().length == 0) {
+                this.promCodeselected = "Si"
+                this.descuento = "MENOSOLOR200"
+                console.log(this.descuento, "promcode si but field empty")
+            }
+
+            // if( this.promCode == "Si" && $("#00N4P00000GOkeM").val().length == undefined) {
+            //     this.promCodeselected = "Si"
+            //     this.descuento = "MENOSOLOR20"
+            //     console.log(this.descuento, "promcode si but field empty")
+            // }
+            
+            if( this.promCode == "Si" && $("#00N4P00000GOkeM").val().length >= 1) {
+                this.promCodeselected = "Si"
+                this.validateReferrCode($("#00N4P00000GOkeM").val())
+                console.log(this.descuento, "promcode si and pass validation code function")
+            }
+
+            if( this.promCode == "Si" && $("#00N4P00000GOkeM").val().length <= 0) {
+                this.descuento = "MENOSOLOR200"
+                this.promCodeselected = "Si"
+                this.showWarning = false
+                console.log(this.descuento, "promcode si but field empty 2")
+            }
+
+            if( this.promCode == "No" ){
+                this.promCodeselected = "No"
+                this.showWarning = false
+                this.descuento = "MENOSOLOR200"
+                console.log(this.descuento, "promcode no")
+            }
+
+            if(this.promCode == "" && this.firstTimeFormChecked == false ){
+                this.promCodeselected = ""
+                this.showWarning = false
+                this.descuento = "MENOSOLOR200"
+                console.log(this.descuento, "promcode not clicked")
+            }
+
+            if ($("#00N4P00000GZEGJ").prop("checked") == false){
+                this.errors.push("Marca la casilla para aceptar nuestro Aviso de Privacidad");
+            }
+
+            if ($("#aceptoterminos").prop("checked") == false){
+                this.errors.push("Marca la casilla para aceptar nuestro Términos y Condiciones.");
+            }
+
+            // if( this.utmEqualsB2b == true && this.promCodeselected == "Si" && $("#00N4P00000GOkeM").val().length == 0){
+            //     this.descuento = "CAMBIA20"
+            //     console.log(this.descuento, "conditional 3 for people comming from utm b2b")
+            // }
+
+            if( this.utmEqualsB2b == true && this.promCodeselected == "Si" && $("#00N4P00000GOkeM").val() == undefined && this.userCode == false){
+                this.descuento = "CAMBIA21"
+                console.log(this.descuento, "conditional 3 for people comming from utm b2b")
+            }
+
+            if( this.utmEqualsB2b == true && this.promCodeselected == "Si" && $("#00N4P00000GOkeM").val() != undefined){
+                if($("#00N4P00000GOkeM").val().length >= 1){
+                    this.validateReferrCode($("#00N4P00000GOkeM").val())
+                    this.userCode = true
+                //     this.descuento = $("#00N4P00000GOkeM").val()
+                // console.log(this.descuento, "conditional 4 for people comming from utm b2b")
+                }
+                
+            } 
+
+            if(this.promCodeselected == "" ){
+                this.showWarning = false
+            }
+            this.emailVerifiedNB = true
+            if (!this.errors.length && this.emailVerifiedNB == true && this.showWarning == false) {
+                console.log("condition when tru", this.promCodeselected)
+                this.nombre = $("#first_name").val()
+                this.apelido = $("#last_name").val()
+                this.telefone = $("#phone").val()
+                this.email= $("#email").val()
+                this.dispositivo = $("#00N4P00000GOkeR").val()
+                this.firstTimeFormChecked = true
+                _self.datos = true
+                // _self.envio()
+                _self.promCode = ""
+                _self.checkSecondForm(e)
+                _self.irADatosDeEnvio()
+
+            } else {
+                window.dataLayer.push({
+                    "category": "Form Local Lead",
+                    "action": "Failed",
+                    "label": "MX",
+                    "event": "TYPLanding"
+                })
+
+                e.preventDefault()
+            }
+        },
+        "checkSecondForm":function(e){
+            var _self = this
+            this.errors = [];
+            this.Msnenvio = null
+            
+            if(this.firstFormChecked == true){
+                if ($("#calle").val().length < 1) {
+                    this.errors.push("Ingresa tu calle y número ext.");
+                }
+    
+                if ($("#codigopostal").val().length < 5) {
+                    this.errors.push("Ingresa tu código postal");
+                }
+
+                if ($("#codigopostal").val().length == 5) {
+                    this.validateZipCode($("#codigopostal").val());
+                }
+    
+                if ($("#municipio").val().length < 1) {
+                    this.errors.push("Ingresa tu alcaldía / municipio");
+                }
+    
+                if ($("#colonia").val().length < 1) {
+                    this.errors.push("Ingresa tu colonia");
+                }
+    
+                // if ($("#estado").val().length < 1) {
+                //     this.errors.push("Ingresa tu Estado/Municipio");
+                // }
+                if(!this.errors.length && this.validZipCode == true){
+                    this.estado = $("#estado").val()
+                    console.log(this.estado)
+                    _self.envio()
+                    _self.envioToLp()
+                } else {
+                    window.dataLayer.push({
+                        "category": "Form Local Lead",
+                        "action": "Failed",
+                        "label": "MX",
+                        "event": "TYPLanding"
+                    })
+    
+                    e.preventDefault()
+                }
+            } else {
+                this.firstFormChecked = true
+            } 
+        },
+        "validateReferrCode": function(codigoReferido) {
+            console.log(codigoReferido.length,"length")
+            if(codigoReferido.length == 1 || codigoReferido.length == 2){
+                console.log(codigoReferido.length,"length less then 3")
+                this.codigoDeReferidoValidado = false
+                this.showWarning = true
+                this.focusError()
+            } else {
+
+                let firstThreeLetters = codigoReferido.slice(0,3)
+
+                if(firstThreeLetters == "MGM" 
+                || firstThreeLetters == "EGM" 
+                || firstThreeLetters == "B2B" 
+                || firstThreeLetters == "RGM" 
+                || firstThreeLetters == "IQO"
+                || firstThreeLetters == "RET") {
+                    this.codigoDeReferidoValidado = true
+                    this.showWarning = false
+                    this.descuento = codigoReferido
+                    console.log(this.descuento, "should be the entered codigo referido 1")
+                } else {
+                    this.codigoDeReferidoValidado = false
+                    this.showWarning = true
+                    this.focusError()
+                }
+            }
+            
+        },
+        "closePopUp": function(e) {
+            this.errors = [];
+            this.Msnenvio = null;
+            e.preventDefault();
+        },
+        "geoFencing": function () {
+            var _self = this
+            $.get( "https://get.geojs.io/v1/ip/geo.json", function (data){
+                    _self.city = data.city
+                    _self.state = data.region
+            })
+        },
+        "validEmail": function (email) {
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        },
+       
+        "envio": function() {  
+            var urlIqos = $("input[name=retURL").val()
+            var oid = $("input[name=oid").val()
+            var concatination = this.sourceFromUtm + this.medium;
+            //  "&00N4P000008mN2Q="+concatination+
+            console.log(this.descuento, "should be the entered codigo referido 1")
+            if ($("#00N4P000008mN8e").prop("checked") == true){
+                this.publicidad = true
+            }
+
+            if( this.utmEqualsB2b == true && this.promCodeselected == "No"){
+                console.log(this.descuento, "fall first condition")
+                this.descuento = "CAMBIA21"
+                console.log(this.descuento, "conditional 1 for people comming from utm b2b")
+            }
+
+            if( this.utmEqualsB2b == true && this.promCodeselected == ""){
+                console.log(this.descuento, "fall second condition")
+                this.descuento = "CAMBIA21"
+                console.log(this.descuento, "conditional 2 for people comming from utm b2b")
+            }
+
+            var _self = this
+
+            if ($("#00N4P000008mN8e").prop("checked") == true){
+                _self.publicidad = "1"
+            } else {
+                _self.publicidad = "0"
+            }
+            console.log(_self.descuento, "final")
+            settings = {
+                "url": "https://webto.salesforce.com/servlet/servlet.WebToLead?oid="+oid+"&retURL="+urlIqos+"&first_name="+_self.nombre+"&last_name="+_self.apelido+"&phone="+_self.telefone+"&email="+_self.email+"&00N4P000008mN1c="+_self.state+"&00N4P000008mN26="+_self.city+"&00N4P00000GZHnH="+_self.mes+"&00N4P00000GZEGY="+_self.ano+"&00N4P000008mN2L="+_self.source+"&00N4P000008mN2Q="+concatination+"&00N4P000008mN2a="+_self.campaign+"&00N4P000008mN13=FUMADOR"+"&00N4P00000GOgJP="+_self.GAtransactionId+"&00N4P00000GOkeC="+_self.transaction+"&00N4P00000GZEGd="+_self.term+"&00N4P00000GZEGJ=1&00N4P00000GOkeR="+_self.dispositivo+"&00N4P000008mN8e="+_self.publicidad+"&00N4P00000GOkeM="+_self.descuento+"&submit=Enviar",
+                "type": "POST",
+                "dataType": 'jsonp',
+                "async": false,
+                "headers": {
+                    "content-type": "application/json",
+                    "accept": "application/vnd.vtex.ds.v10+json"
+                },
+                "beforeSend": function() {
+                    $(_self.form).find(".loading").length < 1 ? $(_self.form).append('<div class="loading" style="display: inline-block;position: relative;width: 100%;"><img src="/arquivos/amiqos-loading.gif?v=432" style=" position: absolute; right: 0; width: 40px; height: 40px;"></div>') : ""
+                }
+            }
+
+            _self.ajaxrequest(settings, function() {
+                // $(_self.form).find(".loading").remove()
+                // _self.Msnenvio = "¡Tu solicitud ha sido recibida! \n Un experto IQOS te llamará por teléfono para coordinar la entrega de tu dispositivo";
+            
+                _self.nombre = ""
+                _self.telefone = ""
+                _self.email = ""
+                _self.apelido = ""
+                _self.descuento = ""
+                _self.declaracao = false
+                _self.publicidad = false
+                _self.GAtransactionId = ""
+                _self.promCode = ""
+                _self.promCodeselected = ""
+                _self.userCode = false
+                
+                $("#00N4P00000GZEGJ, #aceptoterminos").attr("checked", false)
+                $(".field").val("")
+                
+                setTimeout(function (){
+                    $(".field").val("")
+                },200)
+
+                try {
+                    window.dataLayer.push({
+                        "category": "Form Local Lead",
+                        "action": "Success",
+                        "label": "MX",
+                        "event": "TYPLanding"
+                    })
+                } catch (e) {console.log(e)}
+                try {
+                    window.dataLayer.push({ 'event': 'formTrySubmitted' });
+                } catch (e) {console.log(e)}
+                    
+            })
+        
+        },
+        "envioToLp": function() {  
+
+            var _self = this
+
+            var camposValores = [{
+                apellido: this.apelido,
+                direccion: this.direccion,
+                dispositivo: this.dispositivo,
+                email: this.email,
+                nombre: this.nombre,
+                telefone: this.telefone,
+                orderID: this.transaction,
+                calle: this.calle,
+                codigopostal: this.codigopostal,
+                colonia: this.colonia,
+                estado: this.estado,
+                municipio: this.municipio,
+                nointerno: this.nointerno,
+                descuento: this.descuento,
+                obs: this.obs,
+                dispositivo: this.colorDispositivo
+            }]
+           
+            var settings = {
+                "url": "/api/dataentities/LP/documents",
+                "type": "POST",
+                "headers": {
+                    "content-type": "application/json",
+                    "accept": "application/vnd.vtex.ds.v10+json"
+                },
+                "data": JSON.stringify(camposValores[0]),
+                "beforeSend": function() {
+                    $(_self.form).find(".loading").length < 1 ? $(_self.form).append('<div class="loading" style="display: inline-block;position: relative;width: 100%;"><img src="/arquivos/amiqos-loading.gif?v=432" style=" position: absolute; right: 0; width: 40px; height: 40px;"></div>') : ""
+                }
+            }
+
+            _self.ajaxrequest(settings, function() {
+                $(_self.form).find(".loading").remove()
+                _self.Msnenvio = "Order ID: "+_self.transaction+" \n\n¡Gracias por tu registro!";
+            
+                _self.apelido= ""
+                _self.dispositivo= ""
+                _self.email= ""
+                _self.nombre= ""
+                _self.telefone= ""
+                _self.calle= ""
+                _self.codigopostal= ""
+                _self.colonia= ""
+                _self.estado= ""
+                _self.municipio= ""
+                _self.nointerno= ""
+                _self.descuento= ""
+                _self.obs= ""
+                _self.firstFormChecked = false
+                _self.datos = false
+                _self.showWarning = null
+                
+                _self.GetTransaction()
+
+                $(".field").val("")
+                
+                setTimeout(function (){
+                    $(".field").val("")
+                },200)
+                    
+            })        
+        },
+        "ajaxrequest": function(settings, fn, type) {
+
+            var callback = (typeof fn === "function") ? true : false;
+    
+            $.ajax(settings)
+                .done(function(response) {
+                    if (callback) {
+                        console.log(response)
+                        fn(response);
+                    }
+                })
+                .fail(function(jqXHR, textStatus, errorThrown) {
+                    if (callback) {
+                        console.log(jqXHR)
+                        console.log(textStatus)
+                        console.log(errorThrown)
+                        fn(false, jqXHR);
+                    }
+                })
+    
+            return null;
+        },
+        "count_phone_element":function (string) {
+            let arr = string.split("")
+            let current = null;
+            let cnt = 0;
+            for (let i = 0; i <= arr.length; i++) {
+                if (arr[i] != current) {
+                    if (cnt >= 4) {
+                        this.errors.push("El número de teléfono agregado es invalido");
+                    }
+                    current = arr[i];
+                    cnt = 1;
+                } else {
+                    cnt++;
+                }
+            }
+            return false
+        },
+        "check_if_cookies_allowed": function () {
+            var ret = document.cookie != -1;
+            function readCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                }
+                return null;
+            }
+            var exp = (new Date(Date.now()+ 86400*90000)).toUTCString();
+            var Performance = readCookie('Performance')
+            var Technical = readCookie('Technical')
+            var Tracking = readCookie('Tracking')
+            if(ret == false){
+                return (document.cookie = 'Technical=false;expires='+exp+'; path=/',
+                document.cookie = 'Tracking=false;expires='+exp+'; path=/',
+                document.cookie = 'Performance=false;expires='+exp+'; path=/')
+            } else if(Technical == null || Performance == null || Tracking == null){
+                return (document.cookie = 'Performance=true;expires='+exp+'; path=/',
+                document.cookie = 'Tracking=False;expires='+exp+'; path=/',
+                document.cookie = 'Technical=true;expires='+exp+'; path=/')
+            }
+        },
+        "validateZipCode":function (zipCode) {
+            var _self = this
+            console.log("validatezipcode function called")
+            var codes = [
+                "56600",
+                "56604",
+                "56605",
+                "56606",
+                "56607",
+                "56608",
+                "56609",
+                "56620",
+                "56623",
+                "56624",
+                "56625",
+                "56640",
+                "56641",
+                "56642",
+                "56643",
+                "56644",
+                "56646",
+                "56647",
+                "56370",
+                "56373",
+                "56375",
+                "56376",
+                "56377",
+                "56380",
+                "56383",
+                "56384",
+                "56386",
+                "56387",
+                "56390",
+                "56270",
+                "56330",
+                "56334",
+                "56335",
+                "56337",
+                "56338",
+                "56340",
+                "56343",
+                "56344",
+                "56346",
+                "56350",
+                "56353",
+                "56356",
+                "56360",
+                "56363",
+                "56366",
+                "52900",
+                "52909",
+                "52910",
+                "52915",
+                "52916",
+                "52918",
+                "52919",
+                "52920",
+                "52923",
+                "52924",
+                "52925",
+                "52926",
+                "52927",
+                "52928",
+                "52929",
+                "52930",
+                "52934",
+                "52936",
+                "52937",
+                "52938",
+                "52939",
+                "52940",
+                "52945",
+                "52946",
+                "52947",
+                "52948",
+                "52949",
+                "52950",
+                "52953",
+                "52956",
+                "52957",
+                "52958",
+                "52959",
+                "52960",
+                "52965",
+                "52966",
+                "52967",
+                "52968",
+                "52970",
+                "52975",
+                "52976",
+                "52977",
+                "52978",
+                "52979",
+                "52980",
+                "52985",
+                "52986",
+                "52987",
+                "52988",
+                "52989",
+                "52990",
+                "52994",
+                "52995",
+                "52996",
+                "52997",
+                "52998",
+                "57000",
+                "57100",
+                "57103",
+                "57120",
+                "57129",
+                "57130",
+                "57138",
+                "57139",
+                "57140",
+                "57150",
+                "57158",
+                "57170",
+                "57171",
+                "57178",
+                "57179",
+                "57180",
+                "57185",
+                "57188",
+                "57189",
+                "57200",
+                "57205",
+                "57210",
+                "57300",
+                "57310",
+                "57400",
+                "57410",
+                "57420",
+                "57425",
+                "57430",
+                "57440",
+                "57450",
+                "57460",
+                "57465",
+                "57500",
+                "57510",
+                "57520",
+                "57530",
+                "57600",
+                "57610",
+                "57620",
+                "57630",
+                "57700",
+                "57708",
+                "57709",
+                "57710",
+                "57718",
+                "57719",
+                "57720",
+                "57730",
+                "57739",
+                "57740",
+                "57750",
+                "57760",
+                "57800",
+                "57809",
+                "57810",
+                "57819",
+                "57820",
+                "57830",
+                "57840",
+                "57849",
+                "57900",
+                "57910",
+                "57920",
+                "57930",
+                "57940",
+                "57950",
+                "54400",
+                "54402",
+                "54405",
+                "54407",
+                "54408",
+                "54409",
+                "54410",
+                "54413",
+                "54414",
+                "54416",
+                "54417",
+                "54420",
+                "54424",
+                "54425",
+                "54426",
+                "54430",
+                "54434",
+                "54435",
+                "54439",
+                "54440",
+                "54449",
+                "54455",
+                "54457",
+                "54459",
+                "54460",
+                "54463",
+                "54464",
+                "54466",
+                "54467",
+                "54469",
+                "54470",
+                "54473",
+                "54474",
+                "54475",
+                "54476",
+                "54477",
+                "55700",
+                "55705",
+                "55707",
+                "55708",
+                "55709",
+                "55710",
+                "55712",
+                "55713",
+                "55714",
+                "55715",
+                "55716",
+                "55717",
+                "55718",
+                "55719",
+                "55720",
+                "55726",
+                "55728",
+                "55729",
+                "55730",
+                "55736",
+                "55737",
+                "55738",
+                "55739",
+                "54800",
+                "54803",
+                "54804",
+                "54805",
+                "54807",
+                "54830",
+                "54831",
+                "54834",
+                "54835",
+                "54836",
+                "54840",
+                "54850",
+                "54855",
+                "54857",
+                "54858",
+                "54860",
+                "54870",
+                "54875",
+                "54877",
+                "54878",
+                "54879",
+                "54700",
+                "54710",
+                "54712",
+                "54713",
+                "54714",
+                "54715",
+                "54716",
+                "54719",
+                "54720",
+                "54725",
+                "54729",
+                "54730",
+                "54740",
+                "54743",
+                "54744",
+                "54745",
+                "54750",
+                "54753",
+                "54759",
+                "54760",
+                "54763",
+                "54764",
+                "54765",
+                "54766",
+                "54767",
+                "54769",
+                "55000",
+                "55010",
+                "55014",
+                "55016",
+                "55017",
+                "55018",
+                "55020",
+                "55023",
+                "55024",
+                "55025",
+                "55027",
+                "55028",
+                "55029",
+                "55030",
+                "55036",
+                "55037",
+                "55038",
+                "55039",
+                "55040",
+                "55050",
+                "55055",
+                "55056",
+                "55057",
+                "55059",
+                "55060",
+                "55063",
+                "55064",
+                "55065",
+                "55066",
+                "55067",
+                "55068",
+                "55069",
+                "55070",
+                "55074",
+                "55075",
+                "55076",
+                "55080",
+                "55084",
+                "55085",
+                "55087",
+                "55090",
+                "55094",
+                "55095",
+                "55100",
+                "55104",
+                "55105",
+                "55107",
+                "55114",
+                "55115",
+                "55117",
+                "55118",
+                "55119",
+                "55120",
+                "55125",
+                "55126",
+                "55127",
+                "55128",
+                "55129",
+                "55130",
+                "55135",
+                "55137",
+                "55138",
+                "55139",
+                "55140",
+                "55146",
+                "55147",
+                "55148",
+                "55149",
+                "55158",
+                "55170",
+                "55176",
+                "55180",
+                "55187",
+                "55188",
+                "55189",
+                "55190",
+                "55200",
+                "55210",
+                "55218",
+                "55220",
+                "55230",
+                "55234",
+                "55235",
+                "55236",
+                "55237",
+                "55238",
+                "55240",
+                "55242",
+                "55243",
+                "55244",
+                "55245",
+                "55246",
+                "55247",
+                "55248",
+                "55249",
+                "55260",
+                "55264",
+                "55266",
+                "55267",
+                "55268",
+                "55269",
+                "55270",
+                "55280",
+                "55284",
+                "55287",
+                "55288",
+                "55289",
+                "55290",
+                "55294",
+                "55295",
+                "55296",
+                "55297",
+                "55298",
+                "55299",
+                "55300",
+                "55308",
+                "55310",
+                "55316",
+                "55317",
+                "55320",
+                "55330",
+                "55338",
+                "55339",
+                "55340",
+                "55347",
+                "55348",
+                "55349",
+                "55360",
+                "55369",
+                "55390",
+                "55400",
+                "55404",
+                "55405",
+                "55407",
+                "55410",
+                "55414",
+                "55415",
+                "55416",
+                "55417",
+                "55418",
+                "55419",
+                "55420",
+                "55425",
+                "55429",
+                "55430",
+                "55450",
+                "55458",
+                "55459",
+                "55490",
+                "55498",
+                "55500",
+                "55506",
+                "55507",
+                "55508",
+                "55509",
+                "55510",
+                "55515",
+                "55516",
+                "55517",
+                "55518",
+                "55519",
+                "55520",
+                "55530",
+                "55540",
+                "55547",
+                "55548",
+                "55549",
+                "52760",
+                "52763",
+                "52764",
+                "52765",
+                "52766",
+                "52767",
+                "52768",
+                "52769",
+                "52770",
+                "52773",
+                "52774",
+                "52775",
+                "52776",
+                "52777",
+                "52778",
+                "52779",
+                "52780",
+                "52783",
+                "52784",
+                "52785",
+                "52786",
+                "52787",
+                "52788",
+                "52789",
+                "52790",
+                "52793",
+                "52794",
+                "52795",
+                "52796",
+                "52797",
+                "52798",
+                "52799",
+                "56530",
+                "56535",
+                "56536",
+                "56537",
+                "56538",
+                "56539",
+                "56540",
+                "56550",
+                "56553",
+                "56555",
+                "56556",
+                "56558",
+                "56560",
+                "56563",
+                "56564",
+                "56565",
+                "56566",
+                "56567",
+                "56568",
+                "56569",
+                "56570",
+                "56576",
+                "56577",
+                "56579",
+                "56580",
+                "56584",
+                "56585",
+                "56586",
+                "56587",
+                "56588",
+                "56589",
+                "56590",
+                "56599",
+                "56400",
+                "56410",
+                "56420",
+                "56428",
+                "56429",
+                "56430",
+                "56440",
+                "56490",
+                "56495",
+                "56500",
+                "56505",
+                "56507",
+                "56508",
+                "56509",
+                "56510",
+                "56512",
+                "56513",
+                "56514",
+                "56515",
+                "56516",
+                "56520",
+                "56524",
+                "56525",
+                "56526",
+                "56527",
+                "56528",
+                "56529",
+                "54880",
+                "54882",
+                "54883",
+                "54884",
+                "53000",
+                "53010",
+                "53030",
+                "53040",
+                "53050",
+                "53060",
+                "53070",
+                "53100",
+                "53110",
+                "53115",
+                "53116",
+                "53117",
+                "53119",
+                "53120",
+                "53124",
+                "53125",
+                "53126",
+                "53127",
+                "53128",
+                "53129",
+                "53130",
+                "53138",
+                "53140",
+                "53150",
+                "53160",
+                "53170",
+                "53177",
+                "53178",
+                "53179",
+                "53200",
+                "53215",
+                "53216",
+                "53217",
+                "53218",
+                "53219",
+                "53220",
+                "53224",
+                "53227",
+                "53228",
+                "53230",
+                "53237",
+                "53239",
+                "53240",
+                "53247",
+                "53248",
+                "53250",
+                "53260",
+                "53270",
+                "53278",
+                "53279",
+                "53280",
+                "53283",
+                "53290",
+                "53296",
+                "53297",
+                "53298",
+                "53300",
+                "53309",
+                "53310",
+                "53320",
+                "53329",
+                "53330",
+                "53338",
+                "53339",
+                "53340",
+                "53348",
+                "53350",
+                "53370",
+                "53378",
+                "53390",
+                "53398",
+                "53400",
+                "53410",
+                "53420",
+                "53425",
+                "53426",
+                "53427",
+                "53428",
+                "53430",
+                "53440",
+                "53450",
+                "53458",
+                "53459",
+                "53460",
+                "53470",
+                "53489",
+                "53490",
+                "53500",
+                "53519",
+                "53520",
+                "53529",
+                "53530",
+                "53533",
+                "53550",
+                "53560",
+                "53569",
+                "53570",
+                "53580",
+                "53598",
+                "53640",
+                "53650",
+                "53653",
+                "53654",
+                "53655",
+                "53660",
+                "53664",
+                "53670",
+                "53680",
+                "53687",
+                "53688",
+                "53689",
+                "53690",
+                "53694",
+                "53695",
+                "53696",
+                "53697",
+                "53698",
+                "53700",
+                "53708",
+                "53710",
+                "53713",
+                "53714",
+                "53716",
+                "53717",
+                "53718",
+                "53719",
+                "53730",
+                "53760",
+                "53770",
+                "53780",
+                "53787",
+                "53788",
+                "53790",
+                '53798',
+                "53799",
+                "53800",
+                "53809",
+                "53810",
+                "53819",
+                "53820",
+                "53830",
+                "53839",
+                "53840",
+                "53900",
+                "53909",
+                "53910",
+                "53930",
+                "53940",
+                "53950",
+                "53960",
+                "53970",
+                '52100',
+                '52104',
+                "52105",
+                "52106",
+                "52107",
+                "54960",
+                "54962",
+                "54963",
+                "54964",
+                "54965",
+                "54966",
+                "54967",
+                "54970",
+                "54972",
+                "54974",
+                "54975",
+                '54976',
+                "54977",
+                "54980",
+                "54983",
+                "54984",
+                "54985",
+                "54986",
+                "54987",
+                "54990",
+                "55740",
+                '55743',
+                '55744',
+                "55745",
+                "55746",
+                '55747',
+                "55748",
+                '55749',
+                "55750",
+                "55752",
+                '55754',
+                "55755",
+                "55757",
+                "55758",
+                "55760",
+                "55763",
+                '55764',
+                '55765',
+                '55766',
+                '55767',
+                "55768",
+                '55769',
+                '55770',
+                "55773",
+                '55776',
+                '55778',
+                '54600',
+                '54602',
+                '54603',
+                '54604',
+                "54605",
+                "54607",
+                '54608',
+                '54610',
+                "54614",
+                "54615",
+                '54616',
+                "54640",
+                '54645',
+                '54650',
+                '54655',
+                '54656',
+                "54658",
+                '56100',
+                "56103",
+                "56105",
+                "56106",
+                "56110",
+                "56120",
+                "56130",
+                '56140',
+                '56150',
+                "56160",
+                '56170',
+                '54000',
+                "54009",
+                '54010',
+                '54015',
+                '54016',
+                '54017',
+                '54020',
+                '54021',
+                '54022',
+                '54023',
+                "54025",
+                "54026",
+                '54028',
+                "54030",
+                '54033',
+                '54037',
+                "54038",
+                '54040',
+                '54049',
+                '54050',
+                "54054",
+                "54055",
+                "54057",
+                "54059",
+                "54060",
+                "54063",
+                "54067",
+                "54068",
+                "54069",
+                "54070",
+                "54073",
+                "54075",
+                "54076",
+                "54080",
+                "54090",
+                "54092",
+                "54093",
+                "54094",
+                "54098",
+                "54100",
+                "54108",
+                "54109",
+                "54110",
+                "54118",
+                "54119",
+                "54120",
+                "54124",
+                "54126",
+                "54127",
+                "54128",
+                "54130",
+                "54134",
+                "54135",
+                "54136",
+                "54140",
+                "54142",
+                "54143",
+                "54145",
+                "54146",
+                "54147",
+                "54149",
+                "54150",
+                "54152",
+                "54158",
+                "54160",
+                "54162",
+                "54168",
+                "54170",
+                "54172",
+                "54173",
+                "54180",
+                "54187",
+                "54189",
+                "54190",
+                "54193",
+                "54195",
+                "54196",
+                "54197",
+                "54198",
+                "54900",
+                "54910",
+                "54913",
+                "54914",
+                "54915",
+                "54916",
+                "54918",
+                "54920",
+                "54924",
+                "54925",
+                "54926",
+                "54927",
+                "54929",
+                "54930",
+                "54932",
+                "54933",
+                "54934",
+                "54935",
+                "54938",
+                "54939",
+                "54940",
+                "54942",
+                "54943",
+                "54944",
+                "54945",
+                "54946",
+                "54948",
+                "54949",
+                "54950",
+                "54954",
+                "54955",
+                "54957",
+                "54958",
+                "54959",
+                "56610",
+                "56613",
+                "56614",
+                "56615",
+                "56616",
+                "56617",
+                "56618",
+                "56619",
+                "55600",
+                "55603",
+                "55604",
+                "55605",
+                "55606",
+                "55607",
+                "55609",
+                "55610",
+                "55613",
+                "55614",
+                "55615",
+                "55616",
+                "55619",
+                "55620",
+                "55628",
+                "55629",
+                "55630",
+                "55634",
+                "55635",
+                "55636",
+                "55637",
+                "55640",
+                "52500",
+                "52503",
+                "52504",
+                "52505",
+                "52506",
+                "53229",
+                "53658",
+                "53659",
+                "54448",
+                "54539",
+                "54570",
+                "54571",
+                "54573",
+                "54574",
+                "54575",
+                "54660",
+                "54665",
+                "54666",
+                "54667",
+                "54668",
+                "54770",
+                "54783",
+                "54784",
+                "54785",
+                "54786",
+                "54890",
+                "54893",
+                "54894",
+                "55643",
+                "55644",
+                "55646",
+                "55785",
+                "55786",
+                "55787",
+                "55790",
+                "55793",
+                "55794",
+                "55795",
+                "55796",
+                "55797",
+                "55799",
+                "55800",
+                "55803",
+                "55804",
+                "55805",
+                "55806",
+                "55807",
+                "55810",
+                "55816",
+                "55817",
+                "55820",
+                "55823",
+                "55824",
+                "55825",
+                "55826",
+                "55829",
+                "55830",
+                "55833",
+                "55834",
+                "55835",
+                "55836",
+                "55837",
+                "55838",
+                "55840",
+                "55843",
+                "55844",
+                "55845",
+                "55846",
+                "55847",
+                "55850",
+                "55852",
+                "55853",
+                "55854",
+                "55855",
+                "55856",
+                "55859",
+                "55870",
+                "55873",
+                "55874",
+                "55875",
+                "55877",
+                "55878",
+                "55880",
+                "55882",
+                "55883",
+                "55884",
+                "55885",
+                "55886",
+                "55887",
+                "55888",
+                "55890",
+                "55893",
+                "55894",
+                "55895",
+                "55899",
+                "55900",
+                "55913",
+                "55914",
+                "55916",
+                "55920",
+                "55923",
+                "55924",
+                "55925",
+                "55926",
+                "55927",
+                "55930",
+                "55934",
+                "55935",
+                "55936",
+                "55937",
+                "55940",
+                "55943",
+                "55950",
+                "55952",
+                "55954",
+                "55955",
+                "55956",
+                "55960",
+                "55963",
+                "55965",
+                "55966",
+                "55970",
+                "55974",
+                "55975",
+                "55976",
+                "55977",
+                "55978",
+                "56000",
+                "56003",
+                "56004",
+                "56005",
+                "56006",
+                "56007",
+                "56010",
+                "56020",
+                "56023",
+                "56024",
+                "56030",
+                "56033",
+                "56034",
+                "56035",
+                "56036",
+                "56037",
+                "56038",
+                "56040",
+                "56050",
+                "56053",
+                "56054",
+                "56055",
+                "56056",
+                "56057",
+                "56070",
+                "56074",
+                "56077",
+                "56080",
+                "56083",
+                "56085",
+                "56086",
+                "56087",
+                "56093",
+                "56094",
+                "56096",
+                "56200",
+                "56203",
+                "56204",
+                "56205",
+                "56207",
+                "56208",
+                "56210",
+                "56213",
+                "56214",
+                "56215",
+                "56216",
+                "56217",
+                "56220",
+                "56223",
+                "56224",
+                "56225",
+                "56226",
+                "56227",
+                "56230",
+                "56233",
+                "56235",
+                "56236",
+                "56237",
+                "56240",
+                "56243",
+                "56244",
+                "56245",
+                "56246",
+                "56247",
+                "56250",
+                "56253",
+                "56254",
+                "56255",
+                "56256",
+                "56257",
+                "56260",
+                "56263",
+                "56264",
+                "56265",
+                "56266",
+                "56267",
+                "56268",
+                "56272",
+                "56273",
+                "56274",
+                "56280",
+                "56300",
+                "56303",
+                "56304",
+                "56305",
+                "56306",
+                "56310",
+                "56314",
+                "56315",
+                "56396",
+                "01000",
+                "01010",
+                "01020",
+                "01030",
+                "01040",
+                "01049",
+                "01050",
+                "01060",
+                "01070",
+                "01080",
+                "01089",
+                "01090",
+                "01100",
+                "01109",
+                "01110",
+                "01120",
+                "01125",
+                "01130",
+                "01139",
+                "01140",
+                "01150",
+                "01160",
+                "01170",
+                "01180",
+                "01200",
+                "01210",
+                "01219",
+                "01220",
+                "01230",
+                "01239",
+                "01240",
+                "01250",
+                "01259",
+                "01260",
+                "01269",
+                "01270",
+                "01275",
+                "01276",
+                "01278",
+                "01279",
+                "01280",
+                "01285",
+                "01289",
+                "01290",
+                "01296",
+                "01298",
+                "01299",
+                "01310",
+                "01320",
+                "01330",
+                "01340",
+                "01376",
+                "01377",
+                "01389",
+                "01400",
+                "01407",
+                "01408",
+                "01410",
+                "01419",
+                "01420",
+                "01430",
+                "01450",
+                "01460",
+                "01470",
+                "01480",
+                "01490",
+                "01500",
+                "01509",
+                "01510",
+                "01520",
+                "01530",
+                "01538",
+                "01539",
+                "01540",
+                "01548",
+                "01549",
+                "01550",
+                "01560",
+                "01566",
+                "01569",
+                "01588",
+                "01590",
+                "01600",
+                "01610",
+                "01618",
+                "01619",
+                "01620",
+                "01630",
+                "01640",
+                "01645",
+                "01650",
+                "01700",
+                "01708",
+                "01710",
+                "01720",
+                "01729",
+                "01730",
+                "01740",
+                "01750",
+                "01759",
+                "01760",
+                "01770",
+                "01780",
+                "01789",
+                "01790",
+                "01800",
+                "01807",
+                "01810",
+                "01820",
+                "01830",
+                "01840",
+                "01849",
+                "01857",
+                "01859",
+                "01860",
+                "01863",
+                "01870",
+                "01900",
+                "01904",
+                "02000",
+                "02010",
+                "02020",
+                "02040",
+                "02050",
+                "02060",
+                "02070",
+                "02080",
+                "02090",
+                "02099",
+                "02100",
+                "02120",
+                "02128",
+                "02129",
+                "02130",
+                "02140",
+                "02150",
+                "02160",
+                "02200",
+                "02230",
+                "02240",
+                "02250",
+                "02300",
+                "02310",
+                "02320",
+                "02330",
+                "02340",
+                "02360",
+                "02400",
+                "02410",
+                "02420",
+                "02440",
+                "02459",
+                "02460",
+                "02470",
+                "02480",
+                "02490",
+                "02500",
+                "02519",
+                "02520",
+                "02530",
+                "02600",
+                "02630",
+                "02640",
+                "02650",
+                "02660",
+                "02670",
+                "02680",
+                "02700",
+                "02710",
+                "02719",
+                "02720",
+                "02730",
+                "02750",
+                "02760",
+                "02770",
+                "02780",
+                "02790",
+                "02800",
+                "02810",
+                "02830",
+                "02840",
+                "02860",
+                "02870",
+                "02900",
+                "02910",
+                "02920",
+                "02930",
+                "02940",
+                "02950",
+                "02960",
+                "02970",
+                "02980",
+                "02990",
+                "03000",
+                "03010",
+                "03020",
+                "03023",
+                "03100",
+                "03103",
+                "03104",
+                "03200",
+                "03230",
+                "03240",
+                "03300",
+                "03303",
+                "03310",
+                "03320",
+                "03330",
+                "03340",
+                "03400",
+                "03410",
+                "03420",
+                "03430",
+                "03440",
+                "03500",
+                "03510",
+                "03520",
+                "03530",
+                "03540",
+                "03550",
+                "03560",
+                "03570",
+                "03580",
+                "03590",
+                "03600",
+                "03610",
+                "03620",
+                "03630",
+                "03640",
+                "03650",
+                "03660",
+                "03700",
+                "03710",
+                "03720",
+                "03730",
+                "03740",
+                "03800",
+                "03810",
+                "03820",
+                "03840",
+                "03900",
+                "03910",
+                "03920",
+                "03930",
+                "03940",
+                "04000",
+                "04010",
+                "04020",
+                "04030",
+                "04040",
+                "04100",
+                "04120",
+                "04200",
+                "04210",
+                "04230",
+                "04240",
+                "04250",
+                "04260",
+                "04300",
+                "04310",
+                "04318",
+                "04320",
+                "04330",
+                "04340",
+                "04360",
+                "04369",
+                "04370",
+                "04380",
+                "04390",
+                "04400",
+                "04410",
+                "04420",
+                "04440",
+                "04450",
+                "04460",
+                "04470",
+                "04480",
+                "04489",
+                "04490",
+                "04500",
+                "04510",
+                "04519",
+                "04530",
+                "04600",
+                "04610",
+                "04620",
+                "04630",
+                "04640",
+                "04650",
+                "04660",
+                "04700",
+                "04710",
+                "04730",
+                "04739",
+                "04800",
+                "04810",
+                "04815",
+                "04830",
+                "04840",
+                "04870",
+                "04890",
+                "04899",
+                "04909",
+                "04910",
+                "04918",
+                "04919",
+                "04920",
+                "04929",
+                "04930",
+                "04938",
+                "04939",
+                "04940",
+                "04950",
+                "04960",
+                "04970",
+                "04980",
+                "05000",
+                "05010",
+                "05020",
+                "05030",
+                "05039",
+                "05050",
+                "05100",
+                "05110",
+                "05118",
+                "05119",
+                "05120",
+                "05129",
+                "05200",
+                "05219",
+                "05220",
+                "05230",
+                "05240",
+                "05260",
+                "05269",
+                "05270",
+                "05280",
+                "05310",
+                "05320",
+                "05330",
+                "05348",
+                "05360",
+                "05370",
+                "05379",
+                "05400",
+                "05410",
+                "05500",
+                "05520",
+                "05530",
+                "05600",
+                "05610",
+                "05700",
+                "05710",
+                "05730",
+                "05750",
+                "05760",
+                "05780",
+                "06000",
+                "06010",
+                "06020",
+                "06030",
+                "06040",
+                "06050",
+                "06060",
+                "06070",
+                "06080",
+                "06090",
+                "06100",
+                "06140",
+                "06170",
+                "06200",
+                "06220",
+                "06240",
+                "06250",
+                "06270",
+                "06280",
+                "06300",
+                "06350",
+                "06400",
+                "06430",
+                "06450",
+                "06470",
+                "06500",
+                "06600",
+                "06700",
+                "06720",
+                "06760",
+                "06780",
+                "06800",
+                "06820",
+                "06840",
+                "06850",
+                "06860",
+                "06870",
+                "06880",
+                "06890",
+                "06900",
+                "06920",
+                "07000",
+                "07010",
+                "07020",
+                "07040",
+                "07050",
+                "07058",
+                "07060",
+                "07069",
+                "07070",
+                "07080",
+                "07089",
+                "07090",
+                "07100",
+                "07109",
+                "07110",
+                "07119",
+                "07130",
+                "07140",
+                "07144",
+                "07149",
+                "07150",
+                "07160",
+                "07164",
+                "07170",
+                "07180",
+                "07183",
+                "07187",
+                "07188",
+                "07189",
+                "07190",
+                "07199",
+                "07200",
+                "07207",
+                "07209",
+                "07210",
+                "07214",
+                "07220",
+                "07224",
+                "07230",
+                "07239",
+                "07240",
+                "07250",
+                "07259",
+                "07268",
+                "07270",
+                "07279",
+                "07280",
+                "07290",
+                "07300",
+                "07310",
+                "07320",
+                "07330",
+                "07340",
+                "07350",
+                "07359",
+                "07360",
+                "07363",
+                "07369",
+                "07370",
+                "07380",
+                "07400",
+                "07410",
+                "07420",
+                "07430",
+                "07440",
+                "07450",
+                "07455",
+                "07456",
+                "07460",
+                "07469",
+                "07470",
+                "07480",
+                "07500",
+                "07509",
+                "07510",
+                "07520",
+                "07530",
+                "07540",
+                "07550",
+                "07560",
+                "07570",
+                "07580",
+                "07600",
+                "07620",
+                "07630",
+                "07640",
+                "07650",
+                "07670",
+                "07680",
+                "07700",
+                "07707",
+                "07708",
+                "07720",
+                "07730",
+                "07739",
+                "07740",
+                "07750",
+                "07754",
+                "07755",
+                "07760",
+                "07770",
+                "07780",
+                "07790",
+                "07800",
+                "07810",
+                "07820",
+                "07830",
+                "07838",
+                "07839",
+                "07840",
+                "07850",
+                "07858",
+                "07859",
+                "07860",
+                "07869",
+                "07870",
+                "07880",
+                "07889",
+                "07890",
+                "07899",
+                "07900",
+                "07910",
+                "07918",
+                "07919",
+                "07920",
+                "07930",
+                "07939",
+                "07940",
+                "07950",
+                "07960",
+                "07969",
+                "07970",
+                "07979",
+                "07980",
+                "07990",
+                "08000",
+                "08010",
+                "08020",
+                "08030",
+                "08040",
+                "08100",
+                "08200",
+                "08210",
+                "08220",
+                "08230",
+                "08240",
+                "08300",
+                "08310",
+                "08320",
+                "08400",
+                "08420",
+                "08500",
+                "08510",
+                "08600",
+                "08610",
+                "08620",
+                "08650",
+                "08700",
+                "08710",
+                "08720",
+                "08730",
+                "08760",
+                "08770",
+                "08800",
+                "08810",
+                "08830",
+                "08840",
+                "08900",
+                "08910",
+                "08920",
+                "08930",
+                "09000",
+                "09010",
+                "09020",
+                "09030",
+                "09040",
+                "09060",
+                "09070",
+                "09080",
+                "09089",
+                "09090",
+                "09099",
+                "09100",
+                "09130",
+                "09140",
+                "09180",
+                "09200",
+                "09208",
+                "09209",
+                "09210",
+                "09220",
+                "09230",
+                "09239",
+                "09240",
+                "09250",
+                "09260",
+                "09270",
+                "09280",
+                "09290",
+                "09300",
+                "09310",
+                "09319",
+                "09320",
+                "09350",
+                "09359",
+                "09360",
+                "09400",
+                "09410",
+                "09420",
+                "09429",
+                "09430",
+                "09438",
+                "09440",
+                "09450",
+                "09460",
+                "09470",
+                "09479",
+                "09480",
+                "09500",
+                "09510",
+                "09520",
+                "09530",
+                "09550",
+                "09560",
+                "09570",
+                "09578",
+                "09600",
+                "09608",
+                "09609",
+                "09620",
+                "09630",
+                "09637",
+                "09638",
+                "09640",
+                "09648",
+                "09660",
+                "09670",
+                "09680",
+                "09689",
+                "09690",
+                "09696",
+                "09698",
+                "09700",
+                "09704",
+                "09705",
+                "09706",
+                "09708",
+                "09709",
+                "09710",
+                "09720",
+                "09730",
+                "09740",
+                "09750",
+                "09760",
+                "09769",
+                "09770",
+                "09780",
+                "09790",
+                "09800",
+                "09810",
+                "09819",
+                "09820",
+                "09828",
+                "09829",
+                "09830",
+                "09837",
+                "09838",
+                "09839",
+                "09840",
+                "09849",
+                "09850",
+                "09856",
+                "09858",
+                "09859",
+                "09860",
+                "09868",
+                "09870",
+                "09880",
+                "09890",
+                "09897",
+                "09900",
+                "09910",
+                "09920",
+                "09930",
+                "09940",
+                "09960",
+                "09969",
+                "09970",
+                "10000",
+                "10010",
+                "10020",
+                "10130",
+                "10200",
+                "10300",
+                "10320",
+                "10330",
+                "10340",
+                "10350",
+                "10360",
+                "10368",
+                "10369",
+                "10370",
+                "10378",
+                "10379",
+                "10380",
+                "10400",
+                "10500",
+                "10580",
+                "10600",
+                "10610",
+                "10620",
+                "10630",
+                "10640",
+                "10660",
+                "10700",
+                "10710",
+                "10800",
+                "10810",
+                "10820",
+                "10830",
+                "10840",
+                "10900",
+                "10910",
+                "10920",
+                "10926",
+                "11000",
+                "11040",
+                "11100",
+                "11200",
+                "11210",
+                "11220",
+                "11230",
+                "11240",
+                "11250",
+                "11260",
+                "11270",
+                "11280",
+                "11289",
+                "11290",
+                "11300",
+                "11310",
+                "11320",
+                "11330",
+                "11340",
+                "11350",
+                "11360",
+                "11370",
+                "11400",
+                "11410",
+                "11420",
+                "11430",
+                "11440",
+                "11450",
+                "11460",
+                "11470",
+                "11480",
+                "11489",
+                "11490",
+                "11500",
+                "11510",
+                "11520",
+                "11529",
+                "11530",
+                "11540",
+                "11550",
+                "11560",
+                "11580",
+                "11590",
+                "11600",
+                "11610",
+                "11619",
+                "11650",
+                "11700",
+                "11800",
+                "11810",
+                "11820",
+                "11830",
+                "11840",
+                "11850",
+                "11860",
+                "11870",
+                "11910",
+                "11920",
+                "11930",
+                "11950",
+                "12000",
+                "12070",
+                "12080",
+                "12100",
+                "12110",
+                "12200",
+                "12250",
+                "12300",
+                "12400",
+                "12410",
+                "12500",
+                "12600",
+                "12700",
+                "12800",
+                "12910",
+                "12920",
+                "12930",
+                "12940",
+                "12950",
+                "13000",
+                "13010",
+                "13020",
+                "13030",
+                "13040",
+                "13050",
+                "13060",
+                "13070",
+                "13080",
+                "13090",
+                "13093",
+                "13094",
+                "13099",
+                "13100",
+                "13110",
+                "13119",
+                "13120",
+                "13123",
+                "13129",
+                "13150",
+                "13180",
+                "13200",
+                "13210",
+                "13219",
+                "13220",
+                "13230",
+                "13250",
+                "13270",
+                "13273",
+                "13278",
+                "13280",
+                "13300",
+                "13310",
+                "13315",
+                "13319",
+                "13360",
+                "13400",
+                "13410",
+                "13419",
+                "13420",
+                "13430",
+                "13440",
+                "13450",
+                "13460",
+                "13508",
+                "13509",
+                "13510",
+                "13520",
+                "13529",
+                "13530",
+                "13540",
+                "13545",
+                "13546",
+                "13549",
+                "13550",
+                "13600",
+                "13610",
+                "13625",
+                "13630",
+                "13640",
+                "13700",
+                "14000",
+                "14010",
+                "14020",
+                "14030",
+                "14039",
+                "14040",
+                "14049",
+                "14050",
+                "14060",
+                "14070",
+                "14080",
+                "14090",
+                "14100",
+                "14108",
+                "14110",
+                "14120",
+                "14140",
+                "14150",
+                "14160",
+                "14200",
+                "14208",
+                "14209",
+                "14210",
+                "14219",
+                "14220",
+                "14230",
+                "14239",
+                "14240",
+                "14248",
+                "14250",
+                "14260",
+                "14266",
+                "14267",
+                "14268",
+                "14269",
+                "14270",
+                "14273",
+                "14275",
+                "14276",
+                "14300",
+                "14308",
+                "14310",
+                "14320",
+                "14325",
+                "14326",
+                "14330",
+                "14340",
+                "14350",
+                "14357",
+                "14360",
+                "14370",
+                "14376",
+                "14377",
+                "14380",
+                "14386",
+                "14387",
+                "14388",
+                "14389",
+                "14390",
+                "14400",
+                "14406",
+                "14408",
+                "14409",
+                "14410",
+                "14420",
+                "14426",
+                "14427",
+                "14429",
+                "14430",
+                "14438",
+                "14439",
+                "14440",
+                "14449",
+                "14456",
+                "14460",
+                "14470",
+                "14476",
+                "14479",
+                "14480",
+                "14490",
+                "14500",
+                "14520",
+                "14529",
+                "14550",
+                "14600",
+                "14608",
+                "14609",
+                "14610",
+                "14620",
+                "14629",
+                "14630",
+                "14640",
+                "14643",
+                "14646",
+                "14647",
+                "14650",
+                "14653",
+                "14654",
+                "14655",
+                "14657",
+                "14658",
+                "14659",
+                "14700",
+                "14710",
+                "14720",
+                "14730",
+                "14734",
+                "14735",
+                "14737",
+                "14738",
+                "14739",
+                "14740",
+                "14748",
+                "14749",
+                "14750",
+                "14760",
+                "14780",
+                "14790",
+                "14900",
+                "15000",
+                "15010",
+                "15020",
+                "15100",
+                "15200",
+                "15210",
+                "15220",
+                "15230",
+                "15240",
+                "15250",
+                "15260",
+                "15270",
+                "15280",
+                "15290",
+                "15300",
+                "15309",
+                "15310",
+                "15320",
+                "15330",
+                "15339",
+                "15340",
+                "15350",
+                "15370",
+                "15380",
+                "15390",
+                "15400",
+                "15410",
+                "15420",
+                "15430",
+                "15440",
+                "15450",
+                "15460",
+                "15470",
+                "15500",
+                "15510",
+                "15520",
+                "15530",
+                "15540",
+                "15600",
+                "15610",
+                "15620",
+                "15630",
+                "15640",
+                "15650",
+                "15660",
+                "15670",
+                "15680",
+                "15700",
+                "15710",
+                "15730",
+                "15740",
+                "15750",
+                "15800",
+                "15810",
+                "15820",
+                "15830",
+                "15840",
+                "15850",
+                "15860",
+                "15870",
+                "15900",
+                "15960",
+                "15970",
+                "15980",
+                "15990",
+                "16000",
+                "16010",
+                "16020",
+                "16029",
+                "16030",
+                "16034",
+                "16035",
+                "16036",
+                "16038",
+                "16040",
+                "16050",
+                "16059",
+                "16060",
+                "16070",
+                "16080",
+                "16090",
+                "16100",
+                "16200",
+                "16210",
+                "16300",
+                "16310",
+                "16320",
+                "16340",
+                "16400",
+                "16410",
+                "16420",
+                "16428",
+                "16429",
+                "16430",
+                "16440",
+                "16443",
+                "16450",
+                "16457",
+                "16459",
+                "16500",
+                "16513",
+                "16514",
+                "16520",
+                "16530",
+                "16533",
+                "16550",
+                "16600",
+                "16604",
+                "16605",
+                "16606",
+                "16607",
+                "16609",
+                "16610",
+                "16614",
+                "16615",
+                "16616",
+                "16617",
+                "16620",
+                "16629",
+                "16630",
+                "16640",
+                "16710",
+                "16720",
+                "16739",
+                "16740",
+                "16749",
+                "16750",
+                "16770",
+                "16776",
+                "16780",
+                "16797",
+                "16799",
+                "16800",
+                "16810",
+                "16813",
+                "16840",
+                "16850",
+                "16860",
+                "16880",
+                "16900"
+            ]
+            
+            var totalCodes = codes.length - 1
+            console.log(totalCodes)
+            for (let i = 0; i < codes.length; i++) {
+                
+                if (zipCode == codes[i]) {
+                    console.log(zipCode, codes[i])
+                    console.log("matched")
+                    this.validZipCode = true
+                    this.showWarningForInvalidZipCode = false
+                    break
+                } 
+                if (totalCodes == [i]) {
+                    console.log(zipCode, codes[i])
+                    if (zipCode != codes[i]) {
+                        console.log("not matched")
+                        _self.validZipCode = false
+                        _self.showWarningForInvalidZipCode = true
+                    setTimeout(function () {
+                        _self.showWarningForInvalidZipCode = false
+                    },2000)
+                    }
+                }
+            }
+        }
+    },
+    'mounted': function(){
+        var _self =  this
+        //_self.agendarllamada()
+        _self.utms()
+        _self.fixedCorona()
+        _self.mesyano()
+        _self.video()
+        _self.seletorSku()
+        _self.GetTransaction()
+        window.onresize = () => {
+            _self.screen = window.innerWidth;
+        };
+        document.querySelector('body').addEventListener('nb:registered', function (event) {
+
+            // Get field using id from registered event
+            let field = document.querySelector('[data-nb-id="' + event.detail.id + '"]');
+        
+            // Handle clear events (input has changed or an API error was returned)
+            field.addEventListener('nb:clear', function(e) {      
+                // Check for errors
+                if (e.detail.result && e.detail.result.isError()) {
+                    if (e.detail.result.isThrottled()) {
+                        // Do stuff when the verification is throttled
+                    }
+                    _self.emailVerifiedNB = true 
+                    // Do stuff when other API errors occur
+                    // - Our recommendation is to hide any loaders and treat these emails the same way you would treat an Unknown email
+                }
+                // Do stuff when input changes, (e.g. hide loader)
+            });
+        
+            // Handle loading status (API request has been made)
+            field.addEventListener('nb:loading', function(e) {
+                // Do stuff while waiting on API response
+            });
+        
+            // Handle results (API call has succeeded)
+            field.addEventListener('nb:result', function(e) {
+                if (e.detail.result.is(_nb.settings.getAcceptedStatusCodes())) {
+                    // Do stuff for good email
+                    _self.emailVerifiedNB = true
+                }
+                else {
+                    console.log('bad to send')
+                    _self.errors.push('Ingresa un correo electrónico válido');
+                    _self.emailVerifiedNB = false
+                    // Do stuff for bad email
+                }
+            });
+        
+            // Handle soft results (fails regex; doesn't bother making API request)
+            field.addEventListener('nb:soft-result', function(e) {
+                // Do stuff when input doesn't even look like an email (i.e. missing @ or no .com/.net/etc...)
+            });
+        });
+        $(document).ready(function ($) {
+
+            var owl = $("#owl-demo-2");
+    
+            owl.owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true,
+                items: 3,
+                loop: true,
+                center: false,
+                rewind: false,
+                mouseDrag: true,
+                touchDrag: true,
+                pullDrag: true,
+                freeDrag: false,
+                margin: 0,
+                stagePadding: 0,
+                merge: false,
+                mergeFit: true,
+                autoWidth: false,
+                startPosition: 0,
+                rtl: false,
+                smartSpeed: 250,
+                fluidSpeed: false,
+                dragEndSpeed: false,
+                responsive: {
+                    0: {
+                        items: 1
+                        // nav: true
+                    },
+                    480: {
+                        items: 2,
+                        nav: false
+                    },
+                    768: {
+                        items: 3,
+                        // nav: true,
+                        loop: false
+                    },
+                    992: {
+                        items: 4,
+                        // nav: true,
+                        loop: false
+                    }
+                },
+                responsiveRefreshRate: 200,
+                responsiveBaseElement: window,
+                fallbackEasing: "swing",
+                info: false,
+                nestedItemSelector: false,
+                itemElement: "div",
+                stageElement: "div",
+                refreshClass: "owl-refresh",
+                loadedClass: "owl-loaded",
+                loadingClass: "owl-loading",
+                rtlClass: "owl-rtl",
+                responsiveClass: "owl-responsive",
+                dragClass: "owl-drag",
+                itemClass: "owl-item",
+                stageClass: "owl-stage",
+                stageOuterClass: "owl-stage-outer",
+                grabClass: "owl-grab",
+                autoHeight: false,
+                lazyLoad: false
+            });
+        
+            $(".next").click(function () {
+                owl.trigger("owl.next");
+            });
+            $(".prev").click(function () {
+                owl.trigger("owl.prev");
+            });
+        });
+        $(document).ready(function (){
+            $("#toFormTop").click(function (){
+                console.log("should work")
+                $('html, body').animate({
+                    scrollTop: $("#first_name").offset().top
+                }, 2000);
+            });
+            $("#toFormBottom").click(function (){
+                console.log("should work")
+                $('html, body').animate({
+                    scrollTop: $("#first_name").offset().top
+                }, 2000);
+            });
+        });
+    },
+    'computed': {},
+    "created":function(){ 
+        var _self = this
+        
+        Vue.use(VueTheMask)
+
+        setTimeout(function () {
+            _self.datapushPag()
+        },1500)
+
+        _self.geoFencing()
+        _self.paginaStatus()
+        _self.check_if_cookies_allowed()
+
+        VueEvent.$on('mes', (mesEvent) => {
+            _self.mes = mesEvent
+            console.log("....", mes)
+        });
+
+        VueEvent.$on('ano', (anoEvent) => {
+            _self.ano = anoEvent
+            console.log("....", ano)
+        });
+    }
+});
+
+var $demianPrueba = `<div> 
+                                <section class="coronavirus" style="order:1;">
+                                    <h4>
+                                        <span>Por el momento kgyiuyioygdbf el Programa de Préstamo IQOS no está disponible. En caso de estar interesado, por favor completa el formulario y nosotros te contactaremos.</span>
+                                    </h4>
+                                </section>
+                                <section v-bind:class="{ pagina }" class="principal version_exitoFeb" style="order:2;">
+                                    <span v-if="screen > 800" class="agendaAtBottomExito col-2 prueba"></span>
+                                    <span v-if="screen > 800" class="agendaAtBottomExito col-4 prueba"><a id="toFormTop" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic" class="btn rgm" style="width: 100%; margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;cursor:pointer;">DEJAR MIS DATOS</a></span>
+                                    <span v-if="screen < 800"  class="agendaAtBottomExito col-2 prueba">
+                                        <a id="toFormTop" style="width:70%;margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;" class='btn  rgm' data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">DEJAR MIS DATOS</a>
+                                    </span>   
+                                </section>
+
+
+
+
+
+                                <section id="iqos-form" class="claro">
+                                    
+                                    <div class="two">
+                                        <h4>Completa el yitfytfiydfr formulario</h4>
+                                        
+                                        <form class="envio" id="form" autocomplete="off" method="POST" novalidate="false" @submit.prevent="checkForm($event)" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
+                                            
+                                            <input type=hidden name="oid" value="00D4P000000h9QV">
+                                            <input type=hidden name="retURL" value="http://www.iqos.com">
+
+
+                                            <!--  ----------------------------------------------------------------------  -->
+                                            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                                            <!--  these lines if you wish to test in debug mode.                          -->
+                                            <!--  <input type="hidden" name="debug" value=1>                              -->
+                                            <!--  <input type="hidden" name="debugEmail" value="alfredo.ramos@pmi.com">   -->
+                                            <!--  ----------------------------------------------------------------------  -->
+                                            
+                                            <p v-show="datos" style="opacity:0.60;cursor:pointer;padding-bottom:1rem;" class="envio" @click="goBack()">1. Datos de contacto</p>
+                                            <p v-show="!datos" class="envio">1. Datos de Usuario</p>
+                                            <br>
+                                            <p v-show="datos" class="envio">2. Datos de envio</p>
+                                            <br>
+                                            <label v-show="!datos" class="lb-input" for="first_name">NOMBRE*</label>
+                                            <input v-show="!datos" id="first_name" data-category="Form Local Lead" data-action="Name" data-label="MX" data-event="Clic" maxlength="40" class="field" name="first_name" size="20" type="text" />
+
+                                            <label v-show="!datos" class="lb-input" for="last_name">Apellido(s)*</label>
+                                            <input v-show="!datos" data-category="Form Local Lead" data-action="Last Name" data-label="MX" data-event="Clic" id="last_name" maxlength="80" name="last_name" class="field" size="20" type="text" />
+
+                                            <label v-show="!datos" class="lb-input" for="email">Email*</label>
+                                            <input v-show="!datos" id="email" data-category="Form Local Lead" data-action="Email" data-label="MX" data-event="Clic" class="field" maxlength="80" name="email" size="20" type="text" />
+                                            
+                                            <div v-show="!datos" class="tooltip envio">
+                                                <label v-show="!datos" class="lb-input" for="phone">TELÉFONO (10 DÍGITOS)*</label>
+                                                <the-mask v-show="!datos" class="field" data-category="Form Local Lead" data-action="Phone" data-label="MX" data-event="Clic" type="text" id="phone" maxlength="10" name="phone" :mask="['##########']" :value="telefone" />
+                                                <span v-show="!datos" class="tooltiptext">Te llamaremos para coordinar la entrega de tu IQOS</span>
+                                            </div>
+                                            
+                                            <label v-show="!datos" class="lb-input" for="00N4P00000GOkeR">¿QUÉ DISPOSITIVO TE GUSTARÍA CONOCER?</label>
+                                            <select v-show="!datos" class="color-dispositivo" data-action="IQOS 2.4 Plus - White" data-category="Form Local Lead" data-label="MX" data-event="Clic" id="00N4P00000GOkeR" name="00N4P00000GOkeR" title="Tipo de dispositivo">
+                                                <option value="IQOS 2.4 Azul">IQOS 2.4 Azul</option>   
+                                                <option value="IQOS 2.4 Blanco">IQOS 2.4 Blanco</option>
+                                            </select>
+
+                                            
+                                            <div v-show="!datos" class="none">
+                                                <input class="state" :value="state" id="00N4P000008mN1c" maxlength="255" name="00N4P000008mN1c" size="20" type="text" />
+                                                <input class="city" :value="city" id="00N4P000008mN26" maxlength="255" name="00N4P000008mN26" size="20" type="text" />
+                                                <input class="mes" :value="mes" id="00N4P00000GZHnH" name="00N4P00000GZHnH" size="20" type="text" />
+                                                <input class="ano" :value="ano" id="00N4P00000GZEGY" name="00N4P00000GZEGY" size="20" type="text" />
+                                                <input class="source" :value="source" id="00N4P000008mN2L" maxlength="255" name="00N4P000008mN2L" size="20" type="text" />
+                                                <input class="medium" :value="medium" id="00N4P000008mN2Q" maxlength="255" name="00N4P000008mN2Q" size="20" type="text" />
+                                                <input class="campaign":value="campaign"  id="00N4P000008mN2a" maxlength="255" name="00N4P000008mN2a" size="20" type="text" />
+                                                <input value="FUMADOR" id="00N4P000008mN13" maxlength="255" name="00N4P000008mN13" size="20" type="text" />
+                                                <input class="term field" :value="term" id="00N4P00000GZEGd" value="true" maxlength="255" name="00N4P00000GZEGd" size="20" type="text" />
+                                                <input :value="GAtransactionId" id="00N4P00000GOgJP" name="00N4P00000GOgJP" size="20" type="text" />
+                                                <input  :value="transaction" id="00N4P00000GOkeC" maxlength="50" name="00N4P00000GOkeC" size="20" type="text" />
+                                            </div>
+
+                                            <fieldset v-show="!datos" >
+                                            <label v-show="!datos" for="aceptoterminos">
+                                                <input v-show="!datos" data-category="Form Local Lead" data-action="Data Acepto Términos y Condiciones" data-label="MX" data-event="Clic" id="aceptoterminos" name="aceptoterminos" type="checkbox" value="1" />
+                                                <span>Acepto <a style="color:blue" href="/terminos-condiciones">Términos y Condiciones</a>.</span>
+                                            </label>
+
+                                                <label for="00N4P00000GZEGJ">
+                                                    <input data-category="Form Local Lead" data-action="Data Privacy Agreement Acceptance" data-label="MX" data-event="Clic" id="00N4P00000GZEGJ" name="00N4P00000GZEGJ" type="checkbox" value="1" />
+                                                    <span>Acepto que los datos que recopilen sean utilizados como se establece en su <a style="color:blue" href="https://www.pmiprivacy.com/es-la/consumer" target="_blank">Aviso de Privacidad</a>.</span>
+                                                </label>
+                                                <label for="00N4P000008mN8e">
+                                                    <input checked="checked" data-category="Form Local Lead" data-action="Opt-in Mktg" data-label="MX" data-event="Clic" id="00N4P000008mN8e" name="00N4P000008mN8e" type="checkbox" value="1" />
+                                                    <span>Quiero recibir información sobre IQOS y productos relacionados por correo electrónico, SMS y similares.</span>
+                                                </label>
+                                            </fieldset>
+                                            
+                                            <div v-show="!datos" class="btn form-btn">
+                                                <input data-category="Form Local Lead" data-action="Send Form" data-label="MX" data-event="Clic" type="submit" value="Ir a datos de envio" class="save" name="submit">
+                                                <svg style="margin-left: 75px;" width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"></path></svg>
+                                            </div>
+
+                                            <br>
+                                            <p v-show="!datos" style="opacity:0.60" class="envio">2. Datos de envio</p>
+                                            <br>
+                                            <label v-show="datos" class="lb-input" for="calle">Calle y número ext.*</label>
+                                            <input v-show="datos" id="calle" class="field" maxlength="80" v-model="calle" name="calle" size="20" type="text" />
+
+                                            <label v-show="datos" class="lb-input" for="nointerno">No. Int / Referencias</label>
+                                            <input v-show="datos" id="nointerno" class="field" maxlength="80" name="nointerno" v-model="nointerno" size="20" type="text" />
+
+                                            <label v-show="datos" class="lb-input" for="codigopostal">Código Postal*</label>
+                                            <the-mask v-show="datos" class="field" type="text" id="codigopostal" maxlength="40" name="codigopostal" v-model="codigopostal" :mask="['#####']" />
+                                            <div v-if="showWarningForInvalidZipCode" style="color:red;font-size:15px;text-align:left">
+                                                {{ feedBackMessageForInvalidZipCode }}
+                                            </div>
+
+                                            <label v-show="datos" class="lb-input" for="estado">Estado </label>
+                                            <select v-show="datos" id="estado" v-model="estado">
+                                                <option disabled value="">CDMX </option>
+                                                <option>CDMX</option>
+                                                <option>Estado de México</option>
+                                            </select>
+
+                                            <label v-show="datos" class="lb-input" for="municipio">Alcaldía / Municipio*</label>
+                                            <input v-show="datos" id="municipio" class="field" maxlength="80" name="municipio" v-model="municipio" size="20" type="text" />
+
+                                            <label v-show="datos" class="lb-input" for="colonia">Colonia*</label>
+                                            <input v-show="datos" id="colonia" class="field" maxlength="80" name="colonia" v-model="colonia" size="20" type="text" />
+
+                                            <label v-show="datos" class="lb-input" for="obs">¿Entre qué calles está?</label>
+                                            <textarea v-show="datos" id="obs" class="field" maxlength="80" name="obs" v-model="obs" size="20" type="text" />
+
+                                            <div v-show="datos" class="btn form-btn">
+                                                <input data-category="Form Local Lead" data-action="Send Form" data-label="MX" data-event="Clic" type="submit" value="Enviar" class="save" name="submit">
+                                                <svg width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"></path></svg>
+                                            </div>
+                                            
+
+
+                                            <transition name="fade">
+                                                <div v-if="Msnenvio">
+                                                    <div class="background-modal" @click="closePopUp($event)"></div>
+                                                    <div class="envio errors">
+                                                        <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+                                                        <b>{{ Msnenvio }}</b>
+                                                    </div>
+                                                </div>
+                                            </transition> 
+
+                                        </form>
+                                        <transition name="fade">
+                                            <div v-if="errors.length" class="errors">
+                                                <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+                                                <b>Para continuar, por favor revisa lo siguiente:</b>
+                                                <ul>
+                                                    <li v-for="error in errors">{{ error }}</li>
+                                                </ul>
+                                            </div>    
+                                        </transition>  
+                                    </div>
+                                </section>
+
+                                <section>
+                                    <div class="" style="padding-right: 15px;
+                                    padding-left: 15px;
+                                    margin-right: auto;
+                                    margin-left: auto;">
+                                        <div id="owl-demo-2" class="owl-carousel owl-theme">
+
+                                            <article class="thumbnail item">
+                                                <div style="display: flex;">
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                </div>
+                                                <div class="caption">
+                                                    <h4 class="testimonials" style="padding:0px">‘La mejor decisión de mi vida’</h4>
+                                                    <p class="flex-text">“En el momento que descubrí IQOS pensé que tal vez si era necesario experimentar y ver que tan cierto era todo lo que mi Coach personal mencionaba... En los primeros días me costó un poco de trabajo adaptarme a mi IQOS, pero con el paso del tiempo se hizo mi aliado y ahora ya no lo suelto...”</p>
+                                                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:fixed;bottom:20px;">Zabdiel</p>
+                                                </div>
+                                            </article>
+
+                                            <article class="thumbnail item">
+                                                <div style="display: flex;">
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star-o" style="font-size:35px;color:#c98224"></i>
+                                                </div>
+                                                <div class="caption">
+                                                    <h4 class="testimonials" style="padding:0px">‘Me encanta’</h4>
+                                                    <p class="flex-text">“Me costó unos días acostumbrarme al sabor pero una vez que lo hice no los cambio por nada, es muy práctico, es increíble que no haya ceniza, entonces lo puedes ocupar en el coche si llueve, y en cualquier lugar sin necesidad de un cenicero y sin el temor de quemar algo...”</p>
+                                                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:fixed;bottom:20px;">Esteban</p>
+                                                </div>
+                                            </article>
+
+                                            <article class="thumbnail item">
+                                                <div style="display: flex;">
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                </div>
+                                                <div class="caption">
+                                                    <h4 class="testimonials" style="padding:0px">‘Deje por completo el cigarro y el humo’</h4>
+                                                    <p class="flex-text">“Me gusta mucho, desde el primer día de uso. Despues de una semana ya no pude soportar el sabor de un cigarro normal. Una excelente alternativa y cambio de habito. Definitivamente no regresaría a fumar.”</p>
+                                                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:fixed;bottom:20px;">Carlos</p>
+                                                </div>
+                                            </article>
+
+                                            <article class="thumbnail item">
+                                                <div style="display: flex;">
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                </div>
+                                                <div class="caption">
+                                                    <h4 class="testimonials" style="padding:0px">‘La mejor decisión’</h4>
+                                                    <p class="flex-text">“...Ha sido una muy buena experiencia, dejé los cigarrillos al día 2 y llevo 6 meses con IQOS. La mejor decisión para quien no quiere dejar de fumar pero si quiere una experiencia distinta sin humo, sin ceniza. Lo recomiendo ampliamente.“</p>
+                                                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:fixed;bottom:20px;">Luis</p>
+                                                </div>
+                                            </article>
+
+                                            <article class="thumbnail item">
+                                                <div style="display: flex;">
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                </div>
+                                                <div class="caption">
+                                                    <h4 class="testimonials" style="padding:0px">‘No más olores desagradables’</h4>
+                                                    <p class="flex-text">"...Me dedico al ramo de bebidas y no podía estar trabajando con olor a cigarro. Fue una gran solución a mi problema. Ya las cosas saben distintos. Me olvide por completo de las críticas “apestas a cenicero” etc."</p>
+                                                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:fixed;bottom:20px;">Gabriel</p>
+                                                </div>
+                                            </article>
+
+                                            <article class="thumbnail item">
+                                                <div style="display: flex;">
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                                                </div>
+                                                <div class="caption">
+                                                    <h4 class="testimonials" style="padding:0px">‘Sin olor a humo de cigarro.’</h4>
+                                                    <p class="flex-text">“Me encantó porque no deja olor a humo de cigarro, que eso para mí al estar en el área de ventas es muy importante.“</p>
+                                                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:fixed;bottom:20px;">Miguel</p>
+                                                </div>
+                                            </article>
+
+                                        </div><!-- #owl-demo-2 -->
+                                    </div><!-- .container -->
+                                </section>
+                                <section id="queEsIqosVideo" class="video">
+                                    <h3>¿Qué es IQOS?</h3>
+                                    <p>IQOS es una mejor opción para consumir tabaco ya que lo calienta en lugar de quemarlo. Al calentar el tabaco se produce vapor, no hay olor a cigarro y por lo tanto, menos molestias a la gente a tu alrededor.</p>
+                                    <div class="container ambiente_prueba" data-category="Clicks" data-action="Play" data-label="que-es-iqos-3-duo-caracteristicas-y-video" data-event="Video">
+                                        <img src="/arquivos/Que es IQOS 2.4 Plus exito(Thumbnail).jpg" />
+                                        <video width="320" height="240" id="myVideo">
+                                        <source src="https://pmi.23video.com/64968568/65417230/d1674608d69d4c4cc83afe5b48c3db8e/video_hd/b235068iqoswhatisiqos24plusmxes-mx6-1-video.mp4 " type="video/mp4">
+                                        Your browser does not support the video tag.
+                                        </video>  
+                                    </div>
+                                </section>
+                                <section class="video" >
+                                    <div style="position: relative;
+                                    text-align:center;">
+                                        <a id="toFormBottom" style="cursor:pointer;background-color: black;letter-spacing: 2px;text-transform: uppercase;" class="btn btn-form" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">Pedir un iqos</a>
+                                    </div>
+                                </section>
+
+                                </div>`;
+
+Vue.component('demian-prueba-component', {
+    'template': $demianPrueba,
     'data': function() {
 
         return {

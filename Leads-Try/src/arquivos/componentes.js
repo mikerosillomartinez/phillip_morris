@@ -8585,7 +8585,7 @@ Vue.component('conoce-replica-template-component', {
 var $leadsAmbientePruebaConoce = `<div>
                 
                 <section class="coronavirus">
-                <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento para la compra de tu primer Kit IQOS.</h4>
+                <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento(*) para la compra de tu primer Kit IQOS.</h4>
                 </section>
                 
                 
@@ -17636,7 +17636,7 @@ var $conoceValTelTest = `<div>
     
 </div>
 </div>
-<div class="col-8 prueba" style="width: 62%;display: flex;justify-content: center;margin-top: 2rem;flex-direction: column;align-items: center;">
+<div class="col-8 prueba" style="width: 75%;display: flex;justify-content: center;margin-top: 2rem;flex-direction: column;align-items: center;">
     <section class="col-10 prueba" id="iqos-form">
         <h1 id="tittleValtelForm" style="color:#FFFFFF;text-transform: uppercase;">Déjanos tus datos y tu número de teléfono,<br />te contactaremos</h1>
 
@@ -17830,7 +17830,7 @@ var $conoceValTelTest = `<div>
                         <div class="refer-a-friend__box-wrapper">
                             <div class="col-12 prueba" style="display:flex">
                                 <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                    <img src="/arquivos/Icono_1.png" /> 
+                                    <img src="/arquivos/DOWNLOAD.png" /> 
                                 </div>
                                 <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
                                     <div class="refer-a-friend__item-text" style="font-size:20px">Regístrate para obtener tu código de descuento</div>
@@ -17853,7 +17853,7 @@ var $conoceValTelTest = `<div>
 
                             <div class="col-12 prueba" style="display:flex">
                                 <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                    <img src="/arquivos/icono_2.png" /> 
+                                    <img src="/arquivos/TAG.png" /> 
                                 </div>
                                 <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
                                     <div class="refer-a-friend__item-text" style="font-size:20px">Recibe tu código de 10% de descuento*</div>
@@ -17877,7 +17877,7 @@ var $conoceValTelTest = `<div>
                             <div class="col-12 prueba" style="display:flex">
                                 <div class="col-3 prueba" style="display: flex;justify-content: end;">
                                     <div class="refer-a-friend__item-icon">
-                                        <img src="/arquivos/icono_3.png" /> 
+                                        <img src="/arquivos/VOUCHER.png" /> 
                                     </div>
                                 </div>
                                 <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">

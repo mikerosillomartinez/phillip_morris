@@ -1,9 +1,12 @@
 var $header = ` <div>
                 <header v-bind:class="{ pagina }">
                     <div class="container">
-                        <img v-if="pagina == 'lp1' || pagina == 'rgm' || pagina == 'get-trial'" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
-                        <img v-if="pagina == 'lp2' && mobile >= 961" src="/arquivos/iqoslogobl.png" alt="iqos" title="iqos" />
-                        <img v-if="pagina == 'lp2' && mobile < 961" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
+                    <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=probar 
+                    "><img v-if="pagina == 'lp1' || pagina == 'rgm' || pagina == 'get-trial'" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" /></a>
+                    <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=probar 
+                    "><img v-if="pagina == 'lp2' && mobile >= 961" src="/arquivos/iqoslogobl.png" alt="iqos" title="iqos" /></a>
+                    <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=probar 
+                    "><img v-if="pagina == 'lp2' && mobile < 961" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" /></a>
                         <div v-if="pagina != 'get-trial'">
                             <a href="tel:8001476769" data-category="Clicks" data-action="Telephone link" data-label="tel:8001476769" data-event="Clic" class="tel"><svg viewBox="0 0 55 65"><defs><clipPath id="prefix__a"><path fill="none" d="M0 0h48.323v51.323H0z"/></clipPath></defs><g transform="rotate(28 12.047 48.32)" clip-path="url(#prefix__a)"><g data-name="Grupo 4"><path data-name="Trazado 3" d="M45.639 35.641a28.936 28.936 0 01-9.584-1.625 2.583 2.583 0 00-2.725.7L27.424 41A41.77 41.77 0 019.732 22.226l5.906-6.3a2.988 2.988 0 00.662-2.896 34.3 34.3 0 01-1.53-10.179A2.762 2.762 0 0012.081 0h-9.4A2.771 2.771 0 000 2.851c0 26.774 20.43 48.472 45.639 48.472a2.762 2.762 0 002.685-2.851v-9.98a2.762 2.762 0 00-2.685-2.851z" fill="#272a33"/></g></g></svg> <span>(800 1 476769)</span></a>
                         </div>
@@ -21,7 +24,7 @@ var $header = ` <div>
                 <transition name="fade">
                     <section class="iqos ageverification" v-if="!popupIqos">
                         <div class="info" v-if="!range"> 
-                            <img src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
+                        <img src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos"/>
                             <p>¿Eres fumador o usuario IQOS mayor de 18 años?</p>
                             <div class="fechaNacimiento">
                                 <div class="dropbox">
@@ -1406,9 +1409,12 @@ Vue.component('cookie-adopta-component', {
 var $headerToTestAv = ` <div>
                 <header v-bind:class="{ pagina }">
                     <div class="container">
-                        <img v-if="pagina == 'lp1' || pagina == 'rgm' || pagina == 'get-trial'" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
-                        <img v-if="pagina == 'lp2' && mobile >= 961" src="/arquivos/iqoslogobl.png" alt="iqos" title="iqos" />
-                        <img v-if="pagina == 'lp2' && mobile < 961" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
+                        <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=conocergm 
+                        "><img v-if="pagina == 'lp1' || pagina == 'rgm' || pagina == 'get-trial'" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" /></a>
+                        <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=conocergm 
+                        "><img v-if="pagina == 'lp2' && mobile >= 961" src="/arquivos/iqoslogobl.png" alt="iqos" title="iqos" /></a>
+                        <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=conocergm 
+                        "><img v-if="pagina == 'lp2' && mobile < 961" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" /></a>
                         <div v-if="pagina != 'get-trial'">
                             <a href="tel:8001476769" data-category="Clicks" data-action="Telephone link" data-label="tel:8001476769" data-event="Clic" class="tel"><svg viewBox="0 0 55 65"><defs><clipPath id="prefix__a"><path fill="none" d="M0 0h48.323v51.323H0z"/></clipPath></defs><g transform="rotate(28 12.047 48.32)" clip-path="url(#prefix__a)"><g data-name="Grupo 4"><path data-name="Trazado 3" d="M45.639 35.641a28.936 28.936 0 01-9.584-1.625 2.583 2.583 0 00-2.725.7L27.424 41A41.77 41.77 0 019.732 22.226l5.906-6.3a2.988 2.988 0 00.662-2.896 34.3 34.3 0 01-1.53-10.179A2.762 2.762 0 0012.081 0h-9.4A2.771 2.771 0 000 2.851c0 26.774 20.43 48.472 45.639 48.472a2.762 2.762 0 002.685-2.851v-9.98a2.762 2.762 0 00-2.685-2.851z" fill="#272a33"/></g></g></svg> <span>(800 1 476769)</span></a>
                         </div>
@@ -1766,10 +1772,9 @@ var $headerPrueba = ` <div>
                 <header v-bind:class="{ pagina }">
                     <div class="container">
                       
-                            <img v-if="pagina == 'lp1' || pagina == 'rgm' || pagina == 'get-trial'" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
-                       
-                        <img v-if="pagina == 'lp2' && mobile >= 961" src="/arquivos/iqoslogobl.png" alt="iqos" title="iqos" />
-                        <img v-if="pagina == 'lp2' && mobile < 961" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
+                           <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=conoce"><img v-if="pagina == 'lp1' || pagina == 'rgm' || pagina == 'get-trial'" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" /></a>
+                           <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=conoce"><img v-if="pagina == 'lp2' && mobile >= 961" src="/arquivos/iqoslogobl.png" alt="iqos" title="iqos" /></a>
+                           <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=conoce"><img v-if="pagina == 'lp2' && mobile < 961" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" /></a>
                         
                     </div>
                 </header>
@@ -5883,7 +5888,7 @@ Vue.component('template-component', {
 
 var $conoce = `<div>
                     <section class="coronavirus" style="order:2;">
-                    <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento para la compra de tu primer Kit IQOS.</h4>
+                    <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento* para la compra de tu primer Kit IQOS.</h4>
                     </section>
 
                     <section v-bind:class="{ pagina }" class="principal version_no_logo" satyle="order:3;" v-if="pagina == 'lp1' || pagina == 'rgm'">
@@ -7615,7 +7620,7 @@ Vue.component('template-component-replica', {
 
 var $conoceReplica = `<div>
                     <section class="coronavirus" style="order:2;">
-                    <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento para la compra de tu primer Kit IQOS.</h4>
+                    <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento* para la compra de tu primer Kit IQOS.</h4>
                     </section>
 
                     <section v-bind:class="{ pagina }" class="principal version_no_logo" satyle="order:3;" v-if="pagina == 'lp1' || pagina == 'rgm'">
@@ -8585,7 +8590,7 @@ Vue.component('conoce-replica-template-component', {
 var $leadsAmbientePruebaConoce = `<div>
                 
                 <section class="coronavirus">
-                <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento(*) para la compra de tu primer Kit IQOS.</h4>
+                <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento* para la compra de tu primer Kit IQOS.</h4>
                 </section>
                 
                 
@@ -9528,8 +9533,8 @@ Vue.component('template-component-ambiente-prueba-conoce', {
 // conoce-iqos/test
 var $leadsTest = `<div>
                     <section class="coronavirus" style="order:2;">
-                    <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento para la compra de tu primer Kit IQOS.</h4>
-                    </section>
+                    <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $300 MXN </b> de descuento* para la compra de tu primer Kit IQOS.</h4>
+                    </section
 
                     <section v-bind:class="{ pagina }" class="principal version_prueba" satyle="order:3;" v-if="pagina == 'lp1' || pagina == 'rgm'">
                     <span class="agendaAtBottomRgmDec col-2 prueba">
@@ -10496,245 +10501,245 @@ Vue.component('template-component-home-test', {
 
 
 
-
+//conoce Icos https://www.conoce-iqos.com/
 var $leadsHome = `<div>
-                <section class="coronavirus" style="order:1;">
-                <h4>Por el momento los dispositivos IQOS están agotados, ¡Regístrate y entérate cuando estén de regreso!</h4>
-                </section>
+<section class="coronavirus" style="order:1;">
+<h4>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento* para la compra de tu primer Kit IQOS.</h4>
+</section>
 
-                <section v-bind:class="{ pagina }" class="principal version_mayo" satyle="order:2;" v-if="pagina == 'lp1' || pagina == 'rgm'">
-
-
-                    <span v-if="screen > 800" class="agendaAtBottomExito col-2 prueba"></span>
-                    <span v-if="screen > 800" class="agendaAtBottomExito col-4 prueba"><a id="toFormTop" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic" class="btn rgm" style="width: 100%; margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;cursor:pointer;">SABER MÁS DE IQOS</a></span>
-                    <span v-if="screen < 800"  class="agendaAtBottomExito col-2 prueba">
-                        <a id="toFormTop" style="margin-top: 30rem;width:70%;margin-bottom: 0px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;" class='btn  rgm' data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">SABER MÁS DE IQOS</a>
-                    </span>   
-                </section>
+<section v-bind:class="{ pagina }" class="principal version_agoust" satyle="order:2;" v-if="pagina == 'lp1' || pagina == 'rgm'">
 
 
+    <span v-if="screen > 800" class="agendaAtBottomExito col-2 prueba"></span>
+    <span v-if="screen > 800" class="agendaAtBottomExito col-4 prueba"><a id="toFormTop" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic" class="btn rgm" style="width: 100%; margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;cursor:pointer;">SABER MÁS DE IQOS</a></span>
+    <span v-if="screen < 800"  class="agendaAtBottomExito col-2 prueba">
+        <a id="toFormTop" style="margin-top: 30rem;width:70%;margin-bottom: 0px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;" class='btn  rgm' data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">SABER MÁS DE IQOS</a>
+    </span>   
+</section>
 
 
 
-                <section id="prueba" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}" v-if="pagina == 'lp1' || pagina == 'lp2'">
-                <h4 style="margin-top:20px;">Regístrate para conocer IQOS y recibir $200 MXN*</h4>
-                <p style="opacity:0.60">Por el momento los dispositivos IQOS están agotados, pero puedes registrarte para recibir noticias de IQOS y enterarte primero que nadie cuando los dispositivos estén disponibles nuevamente.</p>
-                <div v-if="window.width > 767">
-                    <ul class="refer-a-friend__box-items">
-                        <li class="refer-a-friend__box-item">
-                            <div class="refer-a-friend__item-icon">
-                                <img src="/arquivos/Icono_1.png" />                        
-                            </div>
-                            <div class="refer-a-friend__item-text">Regístrate para obtener tu código de descuento</div>
-                            <p class="refer-a-friend__item--info">Completa el formulario de abajo (20 segundos).</p>
-                        </li>
-                        <li class="refer-a-friend__box-item">
-                            <div class="refer-a-friend__item-icon">
-                                <img src="/arquivos/icono_2.png" /> 
-                            </div>
-                            <div class="refer-a-friend__item-text">Recibe tu cupón de descuento por $200 MXN*</div>
-                            <p class="refer-a-friend__item--info">*Recibirás un correo electrónico con tu cupón. Válido para la compra de tu primer Kit IQOS.</p>
-                        </li>
-                        <li class="refer-a-friend__box-item">
-                            <div class="refer-a-friend__item-icon">
-                                <img src="/arquivos/icono_3.png" /> 
-                            </div>
-                            <div class="refer-a-friend__item-text">Mantente enterado de las noticias de IQOS</div>
-                            <p class="refer-a-friend__item--info">Entérate primero que nadie cuando los dispositivos IQOS estén disponibles nuevamente.</p>
-                        </li>
-                    </ul>
+
+
+<section id="prueba" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}" v-if="pagina == 'lp1' || pagina == 'lp2'">
+<h4 style="margin-top:20px;">Podrás adquirir tu primer kit IQOS desde $720 MXN* al utilizar tu código descuento.</h4>
+<p style="opacity:0.60">¡Compártenos tus datos y te mostraremos todo lo que IQOS tiene para ti! Eliminar el humo y la ceniza, lo cambia todo</p>
+<div v-if="window.width > 767">
+    <ul class="refer-a-friend__box-items">
+        <li class="refer-a-friend__box-item">
+            <div class="refer-a-friend__item-icon">
+                <img src="/arquivos/Icono_1.png" />                        
+            </div>
+            <div class="refer-a-friend__item-text">Regístrate para obtener tu código de descuento</div>
+            <p class="refer-a-friend__item--info">Completa el formulario, te tomará 20 segundos.</p>
+        </li>
+        <li class="refer-a-friend__box-item">
+            <div class="refer-a-friend__item-icon">
+                <img src="/arquivos/icono_2.png" /> 
+            </div>
+            <div class="refer-a-friend__item-text">Recibe tu código de 10% de descuento*</div>
+            <p class="refer-a-friend__item--info">*Recibirás un correo electrónico con tu código. Válido para la compra de tu primer Kit IQOS.</p>
+        </li>
+        <li class="refer-a-friend__box-item">
+            <div class="refer-a-friend__item-icon">
+                <img src="/arquivos/icono_3_.png" /> 
+            </div>
+            <div class="refer-a-friend__item-text" style="margin-top: 18px;">Canjea tu código de descuento</div>
+            <p class="refer-a-friend__item--info">Podrás canjear tu código de descuento en IQOS.com, Tiendas IQOS y con Expertos IQOS.</p>
+        </li>
+    </ul>
+</div>
+<div v-else>
+    <div class="refer-a-friend__box-wrapper">
+        <div class="col-12 prueba" style="display:flex">
+            <div class="col-3 prueba" style="display: flex;justify-content: end;">
+                <img src="/arquivos/Icono_1.png" /> 
+            </div>
+            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
+                <div class="refer-a-friend__item-text" style="font-size:20px">Regístrate para obtener tu código de descuento</div>
+            </div>
+        </div>
+        <div class="col-12 prueba" 
+        style="display:flex;
+    
+        min-height: 66px;
+        margin-left: 13px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        border-color: #979797;">
+            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
+            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
+                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Completa el formulario, te tomará 20 segundos.</p>
+            </div>
+        </div>
+
+
+        <div class="col-12 prueba" style="display:flex">
+            <div class="col-3 prueba" style="display: flex;justify-content: end;">
+                <img src="/arquivos/icono_2.png" /> 
+            </div>
+            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
+                <div class="refer-a-friend__item-text" style="font-size:20px">Recibe tu código de 10% de descuento*</div>
+            </div>
+        </div>
+        <div class="col-12 prueba" 
+        style="display:flex;
+    
+        min-height: 66px;
+        margin-left: 13px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        border-color: #979797;">
+            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
+            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
+                <p class="refer-a-friend__item--info" style="opacity: 0.6;">*Recibirás un correo electrónico con tu código. Válido para la compra de tu primer Kit IQOS.</p>
+            </div>
+        </div>
+
+
+        <div class="col-12 prueba" style="display:flex">
+            <div class="col-3 prueba" style="display: flex;justify-content: end;">
+                <div class="refer-a-friend__item-icon">
+                    <img src="/arquivos/icono_3_.png" /> 
                 </div>
-                <div v-else>
-                    <div class="refer-a-friend__box-wrapper">
-                        <div class="col-12 prueba" style="display:flex">
-                            <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                <img src="/arquivos/Icono_1.png" /> 
-                            </div>
-                            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                <div class="refer-a-friend__item-text" style="font-size:20px">Regístrate para obtener tu código de descuento</div>
-                            </div>
-                        </div>
-                        <div class="col-12 prueba" 
-                        style="display:flex;
-                    
-                        min-height: 66px;
-                        margin-left: 13px;
-                        margin-top: 13px;
-                        margin-bottom: 13px;
-                        border-color: #979797;">
-                            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
-                            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Completa el formulario de abajo (20 segundos).</p>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
+                <div class="refer-a-friend__item-text" style="font-size:20px">Canjea tu código de descuento</div>
+            </div>
+        </div>
+        <div class="col-12 prueba" 
+        style="display:flex;
+        
+        min-height: 66px;
+        margin-left: 13px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        border-color: #979797;">
+            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
+            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
+                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Podrás canjear tu código de descuento en IQOS.com, Tiendas IQOS y con Expertos IQOS.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="ambiente_prueba" style="font-size:10px" >*Si te registras en la base de datos de IQOS del 1 de agosto al 31
+de diciembre de 2021 para recibir información sobre IQOS,
+recibirás en tu correo electrónico un código de descuento para
+la compra de tu primer Kit IQOS. Aplican restricciones. Consulta <a style="color:blue" target="_blank" href="https://www.iqos.com/mx/es/codigos-de-descuento.html">Términos y Condiciones</a>.</span></p>
+</section>
 
+<section id="iqos-form" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}">
 
-                        <div class="col-12 prueba" style="display:flex">
-                            <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                <img src="/arquivos/icono_2.png" /> 
-                            </div>
-                            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                <div class="refer-a-friend__item-text" style="font-size:20px">Recibe tu cupón de descuento por $200 MXN*</div>
-                            </div>
-                        </div>
-                        <div class="col-12 prueba" 
-                        style="display:flex;
-                    
-                        min-height: 66px;
-                        margin-left: 13px;
-                        margin-top: 13px;
-                        margin-bottom: 13px;
-                        border-color: #979797;">
-                            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
-                            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">*Recibirás un correo electrónico con tu cupón. Válido para la compra de tu primer Kit IQOS.</p>
-                            </div>
-                        </div>
+<div class="two">
+    
+    <form id="form" autocomplete="off" method="POST" novalidate="false" @submit.prevent="checkForm($event)" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
+        <h4 v-if="pagina == 'lp2'">¿Quieres conocer la experiencia IQOS?</h4>
+        <p v-if="pagina == 'lp2'">Déjanos tus datos y uno de nuestros expertos se pondrá en contacto contigo.</p>
 
+        <input type=hidden name="oid" value="00D4P000000h9QV">
+        <input type=hidden name="retURL" value="http://www.iqos.com">
+        <input type=hidden id="00N4P00000GZTGS" name="00N4P00000GZTGS" value="true">
+        <input type=hidden id="00N4P00000HE6pF" name="00N4P00000HE6pF" :value="hostName" >
 
-                        <div class="col-12 prueba" style="display:flex">
-                            <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                <div class="refer-a-friend__item-icon">
-                                    <img src="/arquivos/icono_3.png" /> 
-                                </div>
-                            </div>
-                            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                <div class="refer-a-friend__item-text" style="font-size:20px">Mantente enterado de las noticias de IQOS</div>
-                            </div>
-                        </div>
-                        <div class="col-12 prueba" 
-                        style="display:flex;
-                        
-                        min-height: 66px;
-                        margin-left: 13px;
-                        margin-top: 13px;
-                        margin-bottom: 13px;
-                        border-color: #979797;">
-                            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
-                            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Entérate primero que nadie cuando los dispositivos IQOS estén disponibles nuevamente.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p class="ambiente_prueba" style="font-size:10px" >*Si te registras en la base de datos de IQOS del 1 de enero al 31
-                de diciembre de 2021 para recibir información sobre IQOS,
-                recibirás en tu correo electrónico un código de descuento para
-                la compra de tu primer Kit IQOS. Aplican restricciones. Consulta <a style="color:blue" target="_blank" href="https://www.iqos.com/mx/es/codigos-de-descuento.html">Términos y Condiciones</a>.</span></p>
-                </section>
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail" value="alfredo.ramos@pmi.com">   -->
+        <!--  ----------------------------------------------------------------------  -->
 
-                <section id="iqos-form" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}">
+        <label class="lb-input" for="first_name">NOMBRE*</label>
+        <input  id="first_name" data-category="Form Local Lead" data-action="Name" data-label="MX" data-event="Clic" maxlength="25" class="field" name="first_name" size="20" type="text" />
 
-                <div class="two">
-                    
-                    <form id="form" autocomplete="off" method="POST" novalidate="false" @submit.prevent="checkForm($event)" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
-                        <h4 v-if="pagina == 'lp2'">¿Quieres conocer la experiencia IQOS?</h4>
-                        <p v-if="pagina == 'lp2'">Déjanos tus datos y uno de nuestros expertos se pondrá en contacto contigo.</p>
+        <label class="lb-input" for="last_name">Apellido(s)*</label>
+        <input data-category="Form Local Lead" data-action="Last Name" data-label="MX" data-event="Clic" id="last_name" maxlength="25" name="last_name" class="field" size="20" type="text" />
 
-                        <input type=hidden name="oid" value="00D4P000000h9QV">
-                        <input type=hidden name="retURL" value="http://www.iqos.com">
-                        <input type=hidden id="00N4P00000GZTGS" name="00N4P00000GZTGS" value="true">
-                        <input type=hidden id="00N4P00000HE6pF" name="00N4P00000HE6pF" :value="hostName" >
+        <label class="lb-input" for="email">Email*</label>
+        <input id="email" data-category="Form Local Lead" data-action="Email" data-label="MX" data-event="Clic" class="field" maxlength="80" name="email" size="20" type="text" />
+        
+        <label class="lb-input" for="phone">TELÉFONO (10 DÍGITOS)</label>
+        <the-mask class="field" data-category="Form Local Lead" data-action="Phone" data-label="MX" data-event="Clic" type="text" id="phone" maxlength="10" name="phone" :mask="['##########']" :value="telefone" />
 
-                        <!--  ----------------------------------------------------------------------  -->
-                        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-                        <!--  these lines if you wish to test in debug mode.                          -->
-                        <!--  <input type="hidden" name="debug" value=1>                              -->
-                        <!--  <input type="hidden" name="debugEmail" value="alfredo.ramos@pmi.com">   -->
-                        <!--  ----------------------------------------------------------------------  -->
+        <div class="none">
+            <input class="state" :value="state" id="00N4P000008mN1c" maxlength="255" name="00N4P000008mN1c" size="20" type="text" />
+            <input class="city" :value="city" id="00N4P000008mN26" maxlength="255" name="00N4P000008mN26" size="20" type="text" />
+            <input class="mes" :value="mes" id="00N4P00000GZHnH" name="00N4P00000GZHnH" size="20" type="text" />
+            <input class="ano" :value="ano" id="00N4P00000GZEGY" name="00N4P00000GZEGY" size="20" type="text" />
+            <input class="source" :value="source" id="00N4P000008mN2L" maxlength="255" name="00N4P000008mN2L" size="20" type="text" />
+            <input class="medium" :value="medium" id="00N4P000008mN2Q" maxlength="255" name="00N4P000008mN2Q" size="20" type="text" />
+            <input class="campaign":value="campaign"  id="00N4P000008mN2a" maxlength="255" name="00N4P000008mN2a" size="20" type="text" />
+            <input value="FUMADOR" id="00N4P000008mN13" maxlength="255" name="00N4P000008mN13" size="20" type="text" />
+            <input class="term field" :value="term" id="00N4P00000GZEGd" value="true" maxlength="255" name="00N4P00000GZEGd" size="20" type="text" />
+        </div>
 
-                        <label class="lb-input" for="first_name">NOMBRE*</label>
-                        <input  id="first_name" data-category="Form Local Lead" data-action="Name" data-label="MX" data-event="Clic" maxlength="25" class="field" name="first_name" size="20" type="text" />
+        <fieldset>
 
-                        <label class="lb-input" for="last_name">Apellido(s)*</label>
-                        <input data-category="Form Local Lead" data-action="Last Name" data-label="MX" data-event="Clic" id="last_name" maxlength="25" name="last_name" class="field" size="20" type="text" />
+            <label for="00N4P00000GZEGJ">
+                <input data-category="Form Local Lead" data-action="Data Privacy Agreement Acceptance" data-label="MX" data-event="Clic" id="00N4P00000GZEGJ" name="00N4P00000GZEGJ" type="checkbox" value="1" />
+                <span>Acepto que los datos que recopilen sean utilizados como se establece en su <a style="color:blue" target="_blank" href="https://www.pmiprivacy.com/es-la/consumer">Aviso de Privacidad</a>.</span>
+            </label>
+            <label for="00N4P000008mN8e">
+                <input checked="checked" data-category="Form Local Lead" data-action="Opt-in Mktg" data-label="MX" data-event="Clic" id="00N4P000008mN8e" name="00N4P000008mN8e" type="checkbox" value="1" />
+                <span>Quiero recibir información sobre IQOS y productos relacionados por correo electrónico, SMS y similares.</span>
+            </label>
+        </fieldset>
 
-                        <label class="lb-input" for="email">Email*</label>
-                        <input id="email" data-category="Form Local Lead" data-action="Email" data-label="MX" data-event="Clic" class="field" maxlength="80" name="email" size="20" type="text" />
-                        
-                        <label class="lb-input" for="phone">TELÉFONO (10 DÍGITOS)</label>
-                        <the-mask class="field" data-category="Form Local Lead" data-action="Phone" data-label="MX" data-event="Clic" type="text" id="phone" maxlength="10" name="phone" :mask="['##########']" :value="telefone" />
+        <div class="btn form-btn">
+            <input data-category="Form Local Lead" data-action="Send Form" data-label="MX" data-event="Clic" type="submit" value="Enviar" class="save" name="submit">
+            <svg width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"></path></svg>
+        </div>
 
-                        <div class="none">
-                            <input class="state" :value="state" id="00N4P000008mN1c" maxlength="255" name="00N4P000008mN1c" size="20" type="text" />
-                            <input class="city" :value="city" id="00N4P000008mN26" maxlength="255" name="00N4P000008mN26" size="20" type="text" />
-                            <input class="mes" :value="mes" id="00N4P00000GZHnH" name="00N4P00000GZHnH" size="20" type="text" />
-                            <input class="ano" :value="ano" id="00N4P00000GZEGY" name="00N4P00000GZEGY" size="20" type="text" />
-                            <input class="source" :value="source" id="00N4P000008mN2L" maxlength="255" name="00N4P000008mN2L" size="20" type="text" />
-                            <input class="medium" :value="medium" id="00N4P000008mN2Q" maxlength="255" name="00N4P000008mN2Q" size="20" type="text" />
-                            <input class="campaign":value="campaign"  id="00N4P000008mN2a" maxlength="255" name="00N4P000008mN2a" size="20" type="text" />
-                            <input value="FUMADOR" id="00N4P000008mN13" maxlength="255" name="00N4P000008mN13" size="20" type="text" />
-                            <input class="term field" :value="term" id="00N4P00000GZEGd" value="true" maxlength="255" name="00N4P00000GZEGd" size="20" type="text" />
-                        </div>
+        <transition name="fade">
+            <div v-if="Msnenvio" class="envio errors">
+                <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+                <b>{{ Msnenvio }}</b>
+            </div>
+        </transition>    
+    </form>
 
-                        <fieldset>
+    <transition name="fade">
+        <div v-if="errors.length" class="errors">
+            <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+            <b>Para continuar, por favor revisa lo siguiente:</b>
+            <ul>
+                <li v-for="error in errors">{{ error }}</li>
+            </ul>
+        </div>    
+    </transition>  
 
-                            <label for="00N4P00000GZEGJ">
-                                <input data-category="Form Local Lead" data-action="Data Privacy Agreement Acceptance" data-label="MX" data-event="Clic" id="00N4P00000GZEGJ" name="00N4P00000GZEGJ" type="checkbox" value="1" />
-                                <span>Acepto que los datos que recopilen sean utilizados como se establece en su <a style="color:blue" target="_blank" href="https://www.pmiprivacy.com/es-la/consumer">Aviso de Privacidad</a>.</span>
-                            </label>
-                            <label for="00N4P000008mN8e">
-                                <input checked="checked" data-category="Form Local Lead" data-action="Opt-in Mktg" data-label="MX" data-event="Clic" id="00N4P000008mN8e" name="00N4P000008mN8e" type="checkbox" value="1" />
-                                <span>Quiero recibir información sobre IQOS y productos relacionados por correo electrónico, SMS y similares.</span>
-                            </label>
-                        </fieldset>
+    <img v-if="pagina == 'lp2'" src="/arquivos/lp2-img3.png" />
+</div>    
+</section>
 
-                        <div class="btn form-btn">
-                            <input data-category="Form Local Lead" data-action="Send Form" data-label="MX" data-event="Clic" type="submit" value="Enviar" class="save" name="submit">
-                            <svg width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"></path></svg>
-                        </div>
+<section id="queEsIqosVideo" class="video">
+    <h3>¿Qué es IQOS?</h3>
+    <p>IQOS es una mejor opción para consumir tabaco ya que lo calienta en lugar de quemarlo. Al calentar el tabaco se produce vapor, no hay olor a cigarro y por lo tanto, menos molestias a la gente a tu alrededor.</p>
+    <div class="container ambiente_prueba" data-category="Clicks" data-action="Play" data-label="que-es-iqos-3-duo-caracteristicas-y-video" data-event="Video">
+        <img src="/arquivos/queEsIqosTumbnailMayo.png" />
+        <video width="320" height="240" id="myVideo">
+        <source src="https://pmi.23video.com/64968578/68793752/1423b77c21d366d862f03171afd1bcbe/video_hd/iqos-new-brand-world-brand-1-7-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>  
+    </div>
+</section>
+<section id="watchVideo" class="video" >
+    <div style="position: relative;
+    text-align:center;">
+        <a id="toForm" style="cursor:pointer;background-color: black;letter-spacing: 2px;text-transform: uppercase;" class="btn btn-form" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">QUIERO REGISTRARME</a>
+    </div>
+</section>
 
-                        <transition name="fade">
-                            <div v-if="Msnenvio" class="envio errors">
-                                <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
-                                <b>{{ Msnenvio }}</b>
-                            </div>
-                        </transition>    
-                    </form>
-
-                    <transition name="fade">
-                        <div v-if="errors.length" class="errors">
-                            <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
-                            <b>Para continuar, por favor revisa lo siguiente:</b>
-                            <ul>
-                                <li v-for="error in errors">{{ error }}</li>
-                            </ul>
-                        </div>    
-                    </transition>  
-
-                    <img v-if="pagina == 'lp2'" src="/arquivos/lp2-img3.png" />
-                </div>    
-                </section>
-
-                <section id="queEsIqosVideo" class="video">
-                    <h3>¿Qué es IQOS?</h3>
-                    <p>IQOS es una mejor opción para consumir tabaco ya que lo calienta en lugar de quemarlo. Al calentar el tabaco se produce vapor, no hay olor a cigarro y por lo tanto, menos molestias a la gente a tu alrededor.</p>
-                    <div class="container ambiente_prueba" data-category="Clicks" data-action="Play" data-label="que-es-iqos-3-duo-caracteristicas-y-video" data-event="Video">
-                        <img src="/arquivos/queEsIqosTumbnailMayo.png" />
-                        <video width="320" height="240" id="myVideo">
-                        <source src="https://pmi.23video.com/64968578/68793752/1423b77c21d366d862f03171afd1bcbe/video_hd/iqos-new-brand-world-brand-1-7-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                        </video>  
-                    </div>
-                </section>
-                <section id="watchVideo" class="video" >
-                    <div style="position: relative;
-                    text-align:center;">
-                        <a id="toForm" style="cursor:pointer;background-color: black;letter-spacing: 2px;text-transform: uppercase;" class="btn btn-form" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">QUIERO REGISTRARME</a>
-                    </div>
-                </section>
-
-                <section class="container boxes">
-                    <h2>¿Cuáles son los beneficios de IQOS?</b></h2>
-                    <ul class="box" :class="{ 'semColor' : pagina == 'lp2'}">
-                        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_CALIENTA.jpg' /></div><p>IQOS calienta el tabaco en lugar de quemarlo.</p></li>
-                        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_NO_PRODUCE.jpg' /></div><p>IQOS no produce humo ni ceniza.</p></li>
-                        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_NO_PRODUCE_HUMO.jpg' /></div><p>IQOS libera el sabor del tabaco real.</p></li>
-                        <li class="tooth"><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_EMITE.jpg' /></div><p>IQOS emite menos sustancias tóxicas.</p></li>
-                    </ul>
-                    <!--<p class="disclaimer" style="font-size:10px">*Información importante: Si los dientes ya están manchados, cambiar a IQOS no eliminará el color de esas manchas. Fuente: Estudio de laboratorio no clínico llevado a cabo en Suiza con dientes humanos y los compuestos dentales más comúnmente usados. Al contrario de las condiciones del mundo real, los dientes no fueron expuestos a otras sustancias que pueden producir manchas, como café, té o vino, las cuales podrían influenciar los resultados.</p>-->
-                </section>
-                                    </div>`;
+<section class="container boxes">
+    <h2>¿Cuáles son los beneficios de IQOS?</b></h2>
+    <ul class="box" :class="{ 'semColor' : pagina == 'lp2'}">
+        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_CALIENTA.jpg' /></div><p>IQOS calienta el tabaco en lugar de quemarlo.</p></li>
+        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_NO_PRODUCE.jpg' /></div><p>IQOS no produce humo ni ceniza.</p></li>
+        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_NO_PRODUCE_HUMO.jpg' /></div><p>IQOS libera el sabor del tabaco real.</p></li>
+        <li class="tooth"><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_EMITE.jpg' /></div><p>IQOS emite menos sustancias tóxicas.</p></li>
+    </ul>
+    <!--<p class="disclaimer" style="font-size:10px">*Información importante: Si los dientes ya están manchados, cambiar a IQOS no eliminará el color de esas manchas. Fuente: Estudio de laboratorio no clínico llevado a cabo en Suiza con dientes humanos y los compuestos dentales más comúnmente usados. Al contrario de las condiciones del mundo real, los dientes no fueron expuestos a otras sustancias que pueden producir manchas, como café, té o vino, las cuales podrían influenciar los resultados.</p>-->
+</section>
+                    </div>`;
 Vue.component('template-component-home', {
     'template': $leadsHome,
     'data': function() {
@@ -11513,7 +11518,7 @@ Vue.component('template-component-home', {
 
 var $leadsHomeAmbientePrueba = `<div>
                                     <section class="coronavirus" style="order:1;">
-                                    <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $200 MXN </b> de descuento para la compra de tu primer Kit IQOS.</h4>
+                                    <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $200 MXN </b> de descuento* para la compra de tu primer Kit IQOS.</h4>
                                     </section>
 
                                     <section v-bind:class="{ pagina }" class="principal version_exitoFeb" satyle="order:2;" v-if="pagina == 'lp1' || pagina == 'rgm'">
@@ -12495,10 +12500,10 @@ Vue.component('template-component-ambiente-prueba', {
 
 
 
-
+//conoce icos https://www.conoce-iqos.com/conoce
 var $leadst = `<div>
                 <section class="coronavirus" style="order:1;">
-                <h4>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento para la compra de tu primer Kit IQOS.</h4>
+                <h4>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento* para la compra de tu primer Kit IQOS.</h4>
                 </section>
 
                 <section v-bind:class="{ pagina }" class="principal version_agoust" satyle="order:2;" v-if="pagina == 'lp1' || pagina == 'rgm'">
@@ -12516,7 +12521,7 @@ var $leadst = `<div>
 
 
                 <section id="prueba" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}" v-if="pagina == 'lp1' || pagina == 'lp2'">
-                <h4 style="margin-top:20px;">Regístrate para conocer IQOS y recibe 10% de descuento*</h4>
+                <h4 style="margin-top:20px;">Podrás adquirir tu primer kit IQOS desde $720 MXN* al utilizar tu código descuento.</h4>
                 <p style="opacity:0.60">¡Compártenos tus datos y te mostraremos todo lo que IQOS tiene para ti! Eliminar el humo y la ceniza, lo cambia todo</p>
                 <div v-if="window.width > 767">
                     <ul class="refer-a-friend__box-items">
@@ -13513,244 +13518,244 @@ Vue.component('leadst-component', {
 
 
 var $rgm = `<div> 
-                <section class="coronavirus" style="order:1;">
-                <h4>Por el momento los dispositivos IQOS están agotados, ¡Regístrate y entérate cuando estén de regreso!</h4>
-                </section>
+<section class="coronavirus" style="order:1;">
+<h4>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento* para la compra de tu primer Kit IQOS.</h4>
+</section>
 
-                <section v-bind:class="{ pagina }" class="principal version_mayo" satyle="order:2;" v-if="pagina == 'lp1' || pagina == 'rgm'">
-
-
-                    <span v-if="screen > 800" class="agendaAtBottomExito col-2 prueba"></span>
-                    <span v-if="screen > 800" class="agendaAtBottomExito col-4 prueba"><a id="toFormTop" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic" class="btn rgm" style="width: 100%; margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;cursor:pointer;">SABER MÁS DE IQOS</a></span>
-                    <span v-if="screen < 800"  class="agendaAtBottomExito col-2 prueba">
-                        <a id="toFormTop" style="margin-top: 30rem;width:70%;margin-bottom: 0px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;" class='btn  rgm' data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">SABER MÁS DE IQOS</a>
-                    </span>   
-                </section>
+<section v-bind:class="{ pagina }" class="principal version_agoust" satyle="order:2;" v-if="pagina == 'lp1' || pagina == 'rgm'">
 
 
+    <span v-if="screen > 800" class="agendaAtBottomExito col-2 prueba"></span>
+    <span v-if="screen > 800" class="agendaAtBottomExito col-4 prueba"><a id="toFormTop" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic" class="btn rgm" style="width: 100%; margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;cursor:pointer;">SABER MÁS DE IQOS</a></span>
+    <span v-if="screen < 800"  class="agendaAtBottomExito col-2 prueba">
+        <a id="toFormTop" style="margin-top: 30rem;width:70%;margin-bottom: 0px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;" class='btn  rgm' data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">SABER MÁS DE IQOS</a>
+    </span>   
+</section>
 
 
 
-                <section id="prueba" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}" v-if="pagina == 'lp1' || pagina == 'lp2'">
-                <h4 style="margin-top:20px;">Regístrate para conocer IQOS y recibir $200 MXN*</h4>
-                <p style="opacity:0.60">Por el momento los dispositivos IQOS están agotados, pero puedes registrarte para recibir noticias de IQOS y enterarte primero que nadie cuando los dispositivos estén disponibles nuevamente.</p>
-                <div v-if="window.width > 767">
-                    <ul class="refer-a-friend__box-items">
-                        <li class="refer-a-friend__box-item">
-                            <div class="refer-a-friend__item-icon">
-                                <img src="/arquivos/Icono_1.png" />                        
-                            </div>
-                            <div class="refer-a-friend__item-text">Regístrate para obtener tu código de descuento</div>
-                            <p class="refer-a-friend__item--info">Completa el formulario de abajo (20 segundos).</p>
-                        </li>
-                        <li class="refer-a-friend__box-item">
-                            <div class="refer-a-friend__item-icon">
-                                <img src="/arquivos/icono_2.png" /> 
-                            </div>
-                            <div class="refer-a-friend__item-text">Recibe tu cupón de descuento por $200 MXN*</div>
-                            <p class="refer-a-friend__item--info">*Recibirás un correo electrónico con tu cupón. Válido para la compra de tu primer Kit IQOS.</p>
-                        </li>
-                        <li class="refer-a-friend__box-item">
-                            <div class="refer-a-friend__item-icon">
-                                <img src="/arquivos/icono_3.png" /> 
-                            </div>
-                            <div class="refer-a-friend__item-text">Mantente enterado de las noticias de IQOS</div>
-                            <p class="refer-a-friend__item--info">Entérate primero que nadie cuando los dispositivos IQOS estén disponibles nuevamente.</p>
-                        </li>
-                    </ul>
+
+
+<section id="prueba" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}" v-if="pagina == 'lp1' || pagina == 'lp2'">
+<h4 style="margin-top:20px;">Podrás adquirir tu primer kit IQOS desde $720 MXN* al utilizar tu código descuento.</h4>
+<p style="opacity:0.60">¡Compártenos tus datos y te mostraremos todo lo que IQOS tiene para ti! Eliminar el humo y la ceniza, lo cambia todo</p>
+<div v-if="window.width > 767">
+    <ul class="refer-a-friend__box-items">
+        <li class="refer-a-friend__box-item">
+            <div class="refer-a-friend__item-icon">
+                <img src="/arquivos/Icono_1.png" />                        
+            </div>
+            <div class="refer-a-friend__item-text">Regístrate para obtener tu código de descuento</div>
+            <p class="refer-a-friend__item--info">Completa el formulario, te tomará 20 segundos.</p>
+        </li>
+        <li class="refer-a-friend__box-item">
+            <div class="refer-a-friend__item-icon">
+                <img src="/arquivos/icono_2.png" /> 
+            </div>
+            <div class="refer-a-friend__item-text">Recibe tu código de 10% de descuento*</div>
+            <p class="refer-a-friend__item--info">*Recibirás un correo electrónico con tu código. Válido para la compra de tu primer Kit IQOS.</p>
+        </li>
+        <li class="refer-a-friend__box-item">
+            <div class="refer-a-friend__item-icon">
+                <img src="/arquivos/icono_3_.png" /> 
+            </div>
+            <div class="refer-a-friend__item-text" style="margin-top: 18px;">Canjea tu código de descuento </div>
+            <p class="refer-a-friend__item--info">Podrás canjear tu código de descuento en IQOS.com, Tiendas IQOS y con Expertos IQOS.</p>
+        </li>
+    </ul>
+</div>
+<div v-else>
+    <div class="refer-a-friend__box-wrapper">
+        <div class="col-12 prueba" style="display:flex">
+            <div class="col-3 prueba" style="display: flex;justify-content: end;">
+                <img src="/arquivos/Icono_1.png" /> 
+            </div>
+            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
+                <div class="refer-a-friend__item-text" style="font-size:20px">Regístrate para obtener tu código de descuento</div>
+            </div>
+        </div>
+        <div class="col-12 prueba" 
+        style="display:flex;
+    
+        min-height: 66px;
+        margin-left: 13px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        border-color: #979797;">
+            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
+            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
+                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Completa el formulario, te tomará 20 segundos.</p>
+            </div>
+        </div>
+
+
+        <div class="col-12 prueba" style="display:flex">
+            <div class="col-3 prueba" style="display: flex;justify-content: end;">
+                <img src="/arquivos/icono_2.png" /> 
+            </div>
+            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
+                <div class="refer-a-friend__item-text" style="font-size:20px">Recibe tu código de 10% de descuento*</div>
+            </div>
+        </div>
+        <div class="col-12 prueba" 
+        style="display:flex;
+    
+        min-height: 66px;
+        margin-left: 13px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        border-color: #979797;">
+            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
+            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
+                <p class="refer-a-friend__item--info" style="opacity: 0.6;">*Recibirás un correo electrónico con tu código. Válido para la compra de tu primer Kit IQOS.</p>
+            </div>
+        </div>
+
+
+        <div class="col-12 prueba" style="display:flex">
+            <div class="col-3 prueba" style="display: flex;justify-content: end;">
+                <div class="refer-a-friend__item-icon">
+                    <img src="/arquivos/icono_3_.png" /> 
                 </div>
-                <div v-else>
-                    <div class="refer-a-friend__box-wrapper">
-                        <div class="col-12 prueba" style="display:flex">
-                            <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                <img src="/arquivos/Icono_1.png" /> 
-                            </div>
-                            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                <div class="refer-a-friend__item-text" style="font-size:20px">Regístrate para obtener tu código de descuento</div>
-                            </div>
-                        </div>
-                        <div class="col-12 prueba" 
-                        style="display:flex;
-                    
-                        min-height: 66px;
-                        margin-left: 13px;
-                        margin-top: 13px;
-                        margin-bottom: 13px;
-                        border-color: #979797;">
-                            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
-                            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Completa el formulario de abajo (20 segundos).</p>
-                            </div>
-                        </div>
+            </div>
+            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
+                <div class="refer-a-friend__item-text" style="font-size:20px"Canjea tu código de descuento </div>
+            </div>
+        </div>
+        <div class="col-12 prueba" 
+        style="display:flex;
+        
+        min-height: 66px;
+        margin-left: 13px;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        border-color: #979797;">
+            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
+            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
+                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Podrás canjear tu código de descuento en IQOS.com, Tiendas IQOS y con Expertos IQOS.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="ambiente_prueba" style="font-size:10px" >*Si te registras en la base de datos de IQOS del 1 de agosto al 31
+de diciembre de 2021 para recibir información sobre IQOS,
+recibirás en tu correo electrónico un código de descuento para
+la compra de tu primer Kit IQOS. Aplican restricciones. Consulta <a style="color:blue" target="_blank" href="https://www.iqos.com/mx/es/codigos-de-descuento.html">Términos y Condiciones</a>.</span></p>
+</section>
 
+<section id="iqos-form" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}">
 
-                        <div class="col-12 prueba" style="display:flex">
-                            <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                <img src="/arquivos/icono_2.png" /> 
-                            </div>
-                            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                <div class="refer-a-friend__item-text" style="font-size:20px">Recibe tu cupón de descuento por $200 MXN*</div>
-                            </div>
-                        </div>
-                        <div class="col-12 prueba" 
-                        style="display:flex;
-                    
-                        min-height: 66px;
-                        margin-left: 13px;
-                        margin-top: 13px;
-                        margin-bottom: 13px;
-                        border-color: #979797;">
-                            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
-                            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">*Recibirás un correo electrónico con tu cupón. Válido para la compra de tu primer Kit IQOS.</p>
-                            </div>
-                        </div>
+<div class="two">
+    
+    <form id="form" autocomplete="off" method="POST" novalidate="false" @submit.prevent="checkForm($event)" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
+        <h4 v-if="pagina == 'lp2'">¿Quieres conocer la experiencia IQOS?</h4>
+        <p v-if="pagina == 'lp2'">Déjanos tus datos y uno de nuestros expertos se pondrá en contacto contigo.</p>
 
+        <input type=hidden name="oid" value="00D4P000000h9QV">
+        <input type=hidden name="retURL" value="http://www.iqos.com">
+        <input type=hidden id="00N4P00000GZTGS" name="00N4P00000GZTGS" value="true">
+        <input type=hidden id="00N4P00000HE6pF" name="00N4P00000HE6pF" :value="hostName" >
 
-                        <div class="col-12 prueba" style="display:flex">
-                            <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                <div class="refer-a-friend__item-icon">
-                                    <img src="/arquivos/icono_3.png" /> 
-                                </div>
-                            </div>
-                            <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                <div class="refer-a-friend__item-text" style="font-size:20px">Mantente enterado de las noticias de IQOS</div>
-                            </div>
-                        </div>
-                        <div class="col-12 prueba" 
-                        style="display:flex;
-                        
-                        min-height: 66px;
-                        margin-left: 13px;
-                        margin-top: 13px;
-                        margin-bottom: 13px;
-                        border-color: #979797;">
-                            <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
-                            <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                <p class="refer-a-friend__item--info" style="opacity: 0.6;">Entérate primero que nadie cuando los dispositivos IQOS estén disponibles nuevamente.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p class="ambiente_prueba" style="font-size:10px" >*Si te registras en la base de datos de IQOS del 1 de enero al 31
-                de diciembre de 2021 para recibir información sobre IQOS,
-                recibirás en tu correo electrónico un código de descuento para
-                la compra de tu primer Kit IQOS. Aplican restricciones. Consulta <a style="color:blue" target="_blank" href="https://www.iqos.com/mx/es/codigos-de-descuento.html">Términos y Condiciones</a>.</span></p>
-                </section>
+        <!--  ----------------------------------------------------------------------  -->
+        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+        <!--  these lines if you wish to test in debug mode.                          -->
+        <!--  <input type="hidden" name="debug" value=1>                              -->
+        <!--  <input type="hidden" name="debugEmail" value="alfredo.ramos@pmi.com">   -->
+        <!--  ----------------------------------------------------------------------  -->
 
-                <section id="iqos-form" :class="{ 'claro' : (pagina == 'lp1' || pagina == 'rgm'), 'gray' : pagina == 'lp2'}">
+        <label class="lb-input" for="first_name">NOMBRE*</label>
+        <input  id="first_name" data-category="Form Local Lead" data-action="Name" data-label="MX" data-event="Clic" maxlength="25" class="field" name="first_name" size="20" type="text" />
 
-                <div class="two">
-                    
-                    <form id="form" autocomplete="off" method="POST" novalidate="false" @submit.prevent="checkForm($event)" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
-                        <h4 v-if="pagina == 'lp2'">¿Quieres conocer la experiencia IQOS?</h4>
-                        <p v-if="pagina == 'lp2'">Déjanos tus datos y uno de nuestros expertos se pondrá en contacto contigo.</p>
+        <label class="lb-input" for="last_name">Apellido(s)*</label>
+        <input data-category="Form Local Lead" data-action="Last Name" data-label="MX" data-event="Clic" id="last_name" maxlength="25" name="last_name" class="field" size="20" type="text" />
 
-                        <input type=hidden name="oid" value="00D4P000000h9QV">
-                        <input type=hidden name="retURL" value="http://www.iqos.com">
-                        <input type=hidden id="00N4P00000GZTGS" name="00N4P00000GZTGS" value="true">
-                        <input type=hidden id="00N4P00000HE6pF" name="00N4P00000HE6pF" :value="hostName" >
+        <label class="lb-input" for="email">Email*</label>
+        <input id="email" data-category="Form Local Lead" data-action="Email" data-label="MX" data-event="Clic" class="field" maxlength="80" name="email" size="20" type="text" />
+        
+        <label class="lb-input" for="phone">TELÉFONO (10 DÍGITOS)</label>
+        <the-mask class="field" data-category="Form Local Lead" data-action="Phone" data-label="MX" data-event="Clic" type="text" id="phone" maxlength="10" name="phone" :mask="['##########']" :value="telefone" />
 
-                        <!--  ----------------------------------------------------------------------  -->
-                        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-                        <!--  these lines if you wish to test in debug mode.                          -->
-                        <!--  <input type="hidden" name="debug" value=1>                              -->
-                        <!--  <input type="hidden" name="debugEmail" value="alfredo.ramos@pmi.com">   -->
-                        <!--  ----------------------------------------------------------------------  -->
+        <div class="none">
+            <input class="state" :value="state" id="00N4P000008mN1c" maxlength="255" name="00N4P000008mN1c" size="20" type="text" />
+            <input class="city" :value="city" id="00N4P000008mN26" maxlength="255" name="00N4P000008mN26" size="20" type="text" />
+            <input class="mes" :value="mes" id="00N4P00000GZHnH" name="00N4P00000GZHnH" size="20" type="text" />
+            <input class="ano" :value="ano" id="00N4P00000GZEGY" name="00N4P00000GZEGY" size="20" type="text" />
+            <input class="source" :value="source" id="00N4P000008mN2L" maxlength="255" name="00N4P000008mN2L" size="20" type="text" />
+            <input class="medium" :value="medium" id="00N4P000008mN2Q" maxlength="255" name="00N4P000008mN2Q" size="20" type="text" />
+            <input class="campaign":value="campaign"  id="00N4P000008mN2a" maxlength="255" name="00N4P000008mN2a" size="20" type="text" />
+            <input value="FUMADOR" id="00N4P000008mN13" maxlength="255" name="00N4P000008mN13" size="20" type="text" />
+            <input class="term field" :value="term" id="00N4P00000GZEGd" value="true" maxlength="255" name="00N4P00000GZEGd" size="20" type="text" />
+        </div>
 
-                        <label class="lb-input" for="first_name">NOMBRE*</label>
-                        <input  id="first_name" data-category="Form Local Lead" data-action="Name" data-label="MX" data-event="Clic" maxlength="25" class="field" name="first_name" size="20" type="text" />
+        <fieldset>
 
-                        <label class="lb-input" for="last_name">Apellido(s)*</label>
-                        <input data-category="Form Local Lead" data-action="Last Name" data-label="MX" data-event="Clic" id="last_name" maxlength="25" name="last_name" class="field" size="20" type="text" />
+            <label for="00N4P00000GZEGJ">
+                <input data-category="Form Local Lead" data-action="Data Privacy Agreement Acceptance" data-label="MX" data-event="Clic" id="00N4P00000GZEGJ" name="00N4P00000GZEGJ" type="checkbox" value="1" />
+                <span>Acepto que los datos que recopilen sean utilizados como se establece en su <a style="color:blue" target="_blank" href="https://www.pmiprivacy.com/es-la/consumer">Aviso de Privacidad</a>.</span>
+            </label>
+            <label for="00N4P000008mN8e">
+                <input checked="checked" data-category="Form Local Lead" data-action="Opt-in Mktg" data-label="MX" data-event="Clic" id="00N4P000008mN8e" name="00N4P000008mN8e" type="checkbox" value="1" />
+                <span>Quiero recibir información sobre IQOS y productos relacionados por correo electrónico, SMS y similares.</span>
+            </label>
+        </fieldset>
 
-                        <label class="lb-input" for="email">Email*</label>
-                        <input id="email" data-category="Form Local Lead" data-action="Email" data-label="MX" data-event="Clic" class="field" maxlength="80" name="email" size="20" type="text" />
-                        
-                        <label class="lb-input" for="phone">TELÉFONO (10 DÍGITOS)</label>
-                        <the-mask class="field" data-category="Form Local Lead" data-action="Phone" data-label="MX" data-event="Clic" type="text" id="phone" maxlength="10" name="phone" :mask="['##########']" :value="telefone" />
+        <div class="btn form-btn">
+            <input data-category="Form Local Lead" data-action="Send Form" data-label="MX" data-event="Clic" type="submit" value="Enviar" class="save" name="submit">
+            <svg width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"></path></svg>
+        </div>
 
-                        <div class="none">
-                            <input class="state" :value="state" id="00N4P000008mN1c" maxlength="255" name="00N4P000008mN1c" size="20" type="text" />
-                            <input class="city" :value="city" id="00N4P000008mN26" maxlength="255" name="00N4P000008mN26" size="20" type="text" />
-                            <input class="mes" :value="mes" id="00N4P00000GZHnH" name="00N4P00000GZHnH" size="20" type="text" />
-                            <input class="ano" :value="ano" id="00N4P00000GZEGY" name="00N4P00000GZEGY" size="20" type="text" />
-                            <input class="source" :value="source" id="00N4P000008mN2L" maxlength="255" name="00N4P000008mN2L" size="20" type="text" />
-                            <input class="medium" :value="medium" id="00N4P000008mN2Q" maxlength="255" name="00N4P000008mN2Q" size="20" type="text" />
-                            <input class="campaign":value="campaign"  id="00N4P000008mN2a" maxlength="255" name="00N4P000008mN2a" size="20" type="text" />
-                            <input value="FUMADOR" id="00N4P000008mN13" maxlength="255" name="00N4P000008mN13" size="20" type="text" />
-                            <input class="term field" :value="term" id="00N4P00000GZEGd" value="true" maxlength="255" name="00N4P00000GZEGd" size="20" type="text" />
-                        </div>
+        <transition name="fade">
+            <div v-if="Msnenvio" class="envio errors">
+                <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+                <b>{{ Msnenvio }}</b>
+            </div>
+        </transition>    
+    </form>
 
-                        <fieldset>
+    <transition name="fade">
+        <div v-if="errors.length" class="errors">
+            <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+            <b>Para continuar, por favor revisa lo siguiente:</b>
+            <ul>
+                <li v-for="error in errors">{{ error }}</li>
+            </ul>
+        </div>    
+    </transition>  
 
-                            <label for="00N4P00000GZEGJ">
-                                <input data-category="Form Local Lead" data-action="Data Privacy Agreement Acceptance" data-label="MX" data-event="Clic" id="00N4P00000GZEGJ" name="00N4P00000GZEGJ" type="checkbox" value="1" />
-                                <span>Acepto que los datos que recopilen sean utilizados como se establece en su <a style="color:blue" target="_blank" href="https://www.pmiprivacy.com/es-la/consumer">Aviso de Privacidad</a>.</span>
-                            </label>
-                            <label for="00N4P000008mN8e">
-                                <input checked="checked" data-category="Form Local Lead" data-action="Opt-in Mktg" data-label="MX" data-event="Clic" id="00N4P000008mN8e" name="00N4P000008mN8e" type="checkbox" value="1" />
-                                <span>Quiero recibir información sobre IQOS y productos relacionados por correo electrónico, SMS y similares.</span>
-                            </label>
-                        </fieldset>
+    <img v-if="pagina == 'lp2'" src="/arquivos/lp2-img3.png" />
+</div>    
+</section>
 
-                        <div class="btn form-btn">
-                            <input data-category="Form Local Lead" data-action="Send Form" data-label="MX" data-event="Clic" type="submit" value="Enviar" class="save" name="submit">
-                            <svg width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"></path></svg>
-                        </div>
+<section id="queEsIqosVideo" class="video">
+    <h3>¿Qué es IQOS?</h3>
+    <p>IQOS es una mejor opción para consumir tabaco ya que lo calienta en lugar de quemarlo. Al calentar el tabaco se produce vapor, no hay olor a cigarro y por lo tanto, menos molestias a la gente a tu alrededor.</p>
+    <div class="container ambiente_prueba" data-category="Clicks" data-action="Play" data-label="que-es-iqos-3-duo-caracteristicas-y-video" data-event="Video">
+        <img src="/arquivos/queEsIqosTumbnailMayo.png" />
+        <video width="320" height="240" id="myVideo">
+        <source src="https://pmi.23video.com/64968578/68793752/1423b77c21d366d862f03171afd1bcbe/video_hd/iqos-new-brand-world-brand-1-7-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>  
+    </div>
+</section>
+<section id="watchVideo" class="video" >
+    <div style="position: relative;
+    text-align:center;">
+        <a id="toForm" style="cursor:pointer;background-color: black;letter-spacing: 2px;text-transform: uppercase;" class="btn btn-form" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">QUIERO REGISTRARME</a>
+    </div>
+</section>
 
-                        <transition name="fade">
-                            <div v-if="Msnenvio" class="envio errors">
-                                <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
-                                <b>{{ Msnenvio }}</b>
-                            </div>
-                        </transition>    
-                    </form>
-
-                    <transition name="fade">
-                        <div v-if="errors.length" class="errors">
-                            <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
-                            <b>Para continuar, por favor revisa lo siguiente:</b>
-                            <ul>
-                                <li v-for="error in errors">{{ error }}</li>
-                            </ul>
-                        </div>    
-                    </transition>  
-
-                    <img v-if="pagina == 'lp2'" src="/arquivos/lp2-img3.png" />
-                </div>    
-                </section>
-
-                <section id="queEsIqosVideo" class="video">
-                    <h3>¿Qué es IQOS?</h3>
-                    <p>IQOS es una mejor opción para consumir tabaco ya que lo calienta en lugar de quemarlo. Al calentar el tabaco se produce vapor, no hay olor a cigarro y por lo tanto, menos molestias a la gente a tu alrededor.</p>
-                    <div class="container ambiente_prueba" data-category="Clicks" data-action="Play" data-label="que-es-iqos-3-duo-caracteristicas-y-video" data-event="Video">
-                        <img src="/arquivos/queEsIqosTumbnailMayo.png" />
-                        <video width="320" height="240" id="myVideo">
-                        <source src="https://pmi.23video.com/64968578/68793752/1423b77c21d366d862f03171afd1bcbe/video_hd/iqos-new-brand-world-brand-1-7-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                        </video>  
-                    </div>
-                </section>
-                <section id="watchVideo" class="video" >
-                    <div style="position: relative;
-                    text-align:center;">
-                        <a id="toForm" style="cursor:pointer;background-color: black;letter-spacing: 2px;text-transform: uppercase;" class="btn btn-form" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">QUIERO REGISTRARME</a>
-                    </div>
-                </section>
-
-                <section class="container boxes">
-                    <h2>¿Cuáles son los beneficios de IQOS?</b></h2>
-                    <ul class="box" :class="{ 'semColor' : pagina == 'lp2'}">
-                        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_CALIENTA.jpg' /></div><p>IQOS calienta el tabaco en lugar de quemarlo.</p></li>
-                        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_NO_PRODUCE.jpg' /></div><p>IQOS no produce ceniza.</p></li>
-                        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_NO_PRODUCE_HUMO.jpg' /></div><p>IQOS no produce humo.</p></li>
-                        <li class="tooth"><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_EMITE.jpg' /></div><p>IQOS emite menos sustancias tóxicas</p></li>
-                    </ul>
-                    <!--<p class="disclaimer" style="font-size:10px">*Información importante: Si los dientes ya están manchados, cambiar a IQOS no eliminará el color de esas manchas. Fuente: Estudio de laboratorio no clínico llevado a cabo en Suiza con dientes humanos y los compuestos dentales más comúnmente usados. Al contrario de las condiciones del mundo real, los dientes no fueron expuestos a otras sustancias que pueden producir manchas, como café, té o vino, las cuales podrían influenciar los resultados.</p>-->
-                </section>
-                    
-                    </div>`;
+<section class="container boxes">
+    <h2>¿Cuáles son los beneficios de IQOS?</b></h2>
+    <ul class="box" :class="{ 'semColor' : pagina == 'lp2'}">
+        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_CALIENTA.jpg' /></div><p>IQOS calienta el tabaco en lugar de quemarlo.</p></li>
+        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_NO_PRODUCE.jpg' /></div><p>IQOS no produce ceniza.</p></li>
+        <li><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_NO_PRODUCE_HUMO.jpg' /></div><p>IQOS no produce humo.</p></li>
+        <li class="tooth"><div><img style="width: 100%;height: auto;" src='/arquivos/IQOS_EMITE.jpg' /></div><p>IQOS emite menos sustancias tóxicas</p></li>
+    </ul>
+    <!--<p class="disclaimer" style="font-size:10px">*Información importante: Si los dientes ya están manchados, cambiar a IQOS no eliminará el color de esas manchas. Fuente: Estudio de laboratorio no clínico llevado a cabo en Suiza con dientes humanos y los compuestos dentales más comúnmente usados. Al contrario de las condiciones del mundo real, los dientes no fueron expuestos a otras sustancias que pueden producir manchas, como café, té o vino, las cuales podrían influenciar los resultados.</p>-->
+</section>
+    
+    </div>`;
 Vue.component('rgm-component', {
     'template': $rgm,
     'data': function() {
@@ -14448,7 +14453,7 @@ Vue.component('rgm-component', {
 
 var $rgmPrueba = `<div> 
                 <section class="coronavirus" style="order:1;">
-                <h4>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento para la compra de tu primer Kit IQOS.</h4>
+                <h4>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento* para la compra de tu primer Kit IQOS.</h4>
                 </section>
 
                 <section v-bind:class="{ pagina }" class="principal version_agoust" satyle="order:2;" v-if="pagina == 'lp1' || pagina == 'rgm'">
@@ -15382,7 +15387,7 @@ Vue.component('rgm-prueba-component', {
 var $leadsConoce = `<div>
                 
                 <section class="coronavirus">
-                <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $500 MXN </b> de descuento para la compra de tu primer Kit IQOS.</h4>
+                <h4>Por tiempo limitado, <b> regístrate para recibir más información de IQOS y recibe $500 MXN </b> de descuento* para la compra de tu primer Kit IQOS.</h4>
                 </section>
                 
                 
@@ -16334,29 +16339,29 @@ var $conoceValTel = `<div>
 <div class="col-4 prueba" style="width:38%;text-align: center;display: flex;align-self: flex-end;">
     <div id="val" style="color:#FFFFFF">
     <h1 id="tittleValtelForm" style="margin-top:20px;margin-bottom:10px;">IQOS CALIENTA TABACO REAL.<p id="pvaltel">MENOS OLOR, SIN HUMO, SIN CENIZA.</p></h1>
-    <p id="pvaltelMiddle" >RECIBE $200MXN* DE DESCUENTO<br /> EN LA COMPRA DE TU PRIMER KIT IQOS</p>
+    <p id="pvaltelMiddle" >RECIBE TU CÓDIGO DE 10% DE DESCUENTO*<br /> EN LA COMPRA DE TU PRIMER KIT IQOS</p>
     <div style="margin-top:10px:" v-if="window.width > 767">
         <ul class="refer-a-friend__box-items">
             <li class="refer-a-friend__box-item">
                 <div class="refer-a-friend__item-icon">
-                    <img src="/arquivos/Icono_1.png" />                      
+                    <img src="/arquivos/DOWNLOAD.png" />                      
                 </div>
                 <div class="refer-a-friend__item-text">Regístrate para obtener tu código de descuento</div>
-                <p class="refer-a-friend__item--info">Completa el formulario (20 segundos).</p>
+                <p class="refer-a-friend__item--info">Completa el formulario, te tomará 20 segundos.</p>
             </li>
             <li class="refer-a-friend__box-item">
                 <div class="refer-a-friend__item-icon">
-                    <img src="/arquivos/icono_2.png" />
+                    <img src="/arquivos/TAG.png" />
                 </div>
-                <div class="refer-a-friend__item-text">Recibe tu cupón de descuento por $200 MXN*</div>
-                <p class="refer-a-friend__item--info">*Recibirás un correo electrónico con tu cupón. Válido para la compra de tu primer Kit IQOS.</p>
+                <div class="refer-a-friend__item-text">Recibe tu código de 10% de descuento*</div>
+                <p class="refer-a-friend__item--info">*Recibirás un correo electrónico con tu código. Válido para la compra de tu primer Kit IQOS.</p>
             </li>
             <li class="refer-a-friend__box-item">
                 <div class="refer-a-friend__item-icon">
-                    <img src="/arquivos/icono_3.png" /> 
+                    <img src="/arquivos/VOUCHER.png" /> 
                 </div>
-                <div class="refer-a-friend__item-text">Mantente enterado de las noticias de IQOS</div>
-                <p class="refer-a-friend__item--info">Entérate primero que nadie cuando los dispositivos IQOS estén disponibles nuevamente.</p>
+                <div class="refer-a-friend__item-text">Canjea tu código de descuento</div>
+                <p class="refer-a-friend__item--info">Podrás canjear tu código de descuento en IQOS.com, Tiendas IQOS y con Expertos IQOS.</p>
             </li>
         </ul>
     </div>
@@ -16364,7 +16369,7 @@ var $conoceValTel = `<div>
     
 </div>
 </div>
-<div class="col-8 prueba" style="width: 62%;display: flex;justify-content: center;margin-top: 2rem;flex-direction: column;align-items: center;">
+<div class="col-8 prueba" style="width: 75%;display: flex;justify-content: center;margin-top: 2rem;flex-direction: column;align-items: center;">
     <section class="col-10 prueba" id="iqos-form">
         <h1 id="tittleValtelForm" style="color:#FFFFFF;text-transform: uppercase;">Déjanos tus datos y tu número de teléfono,<br />te contactaremos</h1>
 
@@ -16535,7 +16540,7 @@ var $conoceValTel = `<div>
            
             
         </div>  
-        <p class="ambiente_prueba" style="font-size:10px;color:#FFF;font-weigth:bolder;margin-top:10px;" >*Si te registras en la base de datos de IQOS del 1 de enero al 30 de abril de 2021 para recibir información sobre IQOS, recibirás en tu correo electrónico un código de descuento para le compra de tu primer KIT IQOS. Aplican restricciones. Consulta <a style="color:#FFFFFF" target="_blank"  href="https://www.iqos.com/mx/es/terminos-condiciones.html">Términos y Condiciones</a>.</p>  
+        <p class="ambiente_prueba" style="font-size:10px;color:#FFF;font-weigth:bolder;margin-top:10px;" >*Si te registras en la base de datos de IQOS del 1 de agosto al 31 de diciembre de 2021 para recibir información sobre IQOS, recibirás en tu correo electrónico un código de descuento para le compra de tu primer KIT IQOS. Aplican restricciones. Consulta <a style="color:#FFFFFF" target="_blank"  href="https://www.iqos.com/mx/es/terminos-condiciones.html">Términos y Condiciones</a>.</p>  
     </section>
     
 </div>
@@ -16558,7 +16563,7 @@ var $conoceValTel = `<div>
                         <div class="refer-a-friend__box-wrapper">
                             <div class="col-12 prueba" style="display:flex">
                                 <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                    <img src="/arquivos/Icono_1.png" /> 
+                                    <img src="/arquivos/DOWNLOAD.png" /> 
                                 </div>
                                 <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
                                     <div class="refer-a-friend__item-text" style="font-size:20px">Regístrate para obtener tu código de descuento</div>
@@ -16574,17 +16579,17 @@ var $conoceValTel = `<div>
                             border-color: #979797;">
                                 <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
                                 <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                    <p class="refer-a-friend__item--info" style="opacity: 0.6;">Completa el formulario de abajo (20 segundos).</p>
+                                    <p class="refer-a-friend__item--info" style="opacity: 0.6;">Completa el formulario, te tomará 20 segundos.</p>
                                 </div>
                             </div>
 
 
                             <div class="col-12 prueba" style="display:flex">
                                 <div class="col-3 prueba" style="display: flex;justify-content: end;">
-                                    <img src="/arquivos/icono_2.png" /> 
+                                    <img src="/arquivos/TAG.png" /> 
                                 </div>
                                 <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                    <div class="refer-a-friend__item-text" style="font-size:20px">Recibe tu cupón de descuento por $200 MXN*</div>
+                                    <div class="refer-a-friend__item-text" style="font-size:20px">Recibe tu código de 10% de descuento*</div>
                                 </div>
                             </div>
                             <div class="col-12 prueba" 
@@ -16597,7 +16602,7 @@ var $conoceValTel = `<div>
                             border-color: #979797;">
                                 <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
                                 <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                    <p class="refer-a-friend__item--info" style="opacity: 0.6;">*Recibirás un correo electrónico con tu cupón. Válido para la compra de tu primer Kit IQOS.</p>
+                                    <p class="refer-a-friend__item--info" style="opacity: 0.6;">*Recibirás un correo electrónico con tu código. Válido para la compra de tu primer Kit IQOS.</p>
                                 </div>
                             </div>
 
@@ -16605,11 +16610,11 @@ var $conoceValTel = `<div>
                             <div class="col-12 prueba" style="display:flex">
                                 <div class="col-3 prueba" style="display: flex;justify-content: end;">
                                     <div class="refer-a-friend__item-icon">
-                                        <img src="/arquivos/icono_3.png" /> 
+                                        <img src="/arquivos/VOUCHER.png" /> 
                                     </div>
                                 </div>
                                 <div class="col-9 prueba" style="display: flex;justify-content: end;align-items: center;">
-                                    <div class="refer-a-friend__item-text" style="font-size:20px">Mantente enterado de las noticias de IQOS</div>
+                                    <div class="refer-a-friend__item-text" style="font-size:20px">Canjea tu código de descuento</div>
                                 </div>
                             </div>
                             <div class="col-12 prueba" 
@@ -16622,7 +16627,7 @@ var $conoceValTel = `<div>
                             border-color: #979797;">
                                 <div style="border-right: 1px solid rgb(151, 151, 151);" class="col-1 prueba"></div>
                                 <div class="col-11 prueba" style="display: flex;align-items: center;padding-left: 10px;">
-                                    <p class="refer-a-friend__item--info" style="opacity: 0.6;">Entérate primero que nadie cuando los dispositivos IQOS estén disponibles nuevamente.</p>
+                                    <p class="refer-a-friend__item--info" style="opacity: 0.6;">Podrás canjear tu código de descuento en IQOS.com, Tiendas IQOS y con Expertos IQOS.</p>
                                 </div>
                             </div>
                         </div>
@@ -16795,7 +16800,7 @@ var $conoceValTel = `<div>
                        
                         
                     </div>  
-                    <p class="ambiente_prueba" style="font-size:10px;color:#000;margin-top:10px;margin-bottom:10px;" >*Si te registras en la base de datos de IQOS del 1 de enero al 30 de abril de 2021 para recibir información sobre IQOS, recibirás en tu correo electrónico un código de descuento para le compra de tu primer KIT IQOS. Aplican restricciones. Consulta <a style="color:#FFFFFF" target="_blank"  href="https://www.iqos.com/mx/es/terminos-condiciones.html">Términos y Condiciones</a>.</p>  
+                    <p class="ambiente_prueba" style="font-size:10px;color:#000;margin-top:10px;margin-bottom:10px;" >*Si te registras en la base de datos de IQOS del 1 de agosto al 31 de diciembre de 2021 para recibir información sobre IQOS, recibirás en tu correo electrónico un código de descuento para le compra de tu primer KIT IQOS. Aplican restricciones. Consulta <a style="color:#FFFFFF" target="_blank"  href="https://www.iqos.com/mx/es/terminos-condiciones.html">Términos y Condiciones</a>.</p>  
                 </section>
                 </div>
                    
@@ -17599,6 +17604,224 @@ Vue.component('conocevaltel-component', {
         window.removeEventListener('resize', _self.handleResize)
     }
 });
+var $headervaltel = ` <div>
+                <header v-bind:class="{ pagina }">
+                    <div class="container">
+                      
+                           <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=probar"><img v-if="pagina == 'lp1' || pagina == 'rgm' || pagina == 'get-trial'" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" /></a>
+                           <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=probar"><img v-if="pagina == 'lp2' && mobile >= 961" src="/arquivos/iqoslogobl.png" alt="iqos" title="iqos" /></a>
+                           <a href="https://www.iqos.com/mx/es/home.html?utm_source=iqosreferral&utm_medium=localwebsite&utm_campaign=probar"><img v-if="pagina == 'lp2' && mobile < 961" src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" /></a>
+                        
+                    </div>
+                </header>
+                <transition name="fade">
+                    <section class="iqos geoFencing" v-if="!geoFencingmodal">
+                        <div class="info"> 
+                            <img src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
+                            <p>Este sitio contiene información sobre un producto electrónico para el consumo de tabaco y está reservado para fumadores mayores de 18 años que viven en México. Haz click aquí para ser redirigido a tu página local.</p>
+                            <a href="https://www.iqos.com/" class="btn negro" data-eventdata-category="home" data-eventaction="country" data-eventlabel="Continuar" clicC="ntryRedirect">Continuar <svg width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"></path></svg></a>
+                        </div>
+                    </section>
+                </transition>
+                <transition name="fade">
+                    <section class="iqos ageverification" v-if="!popupIqos">
+                        <div class="info" v-if="!range"> 
+                            <img src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
+                            <p>¿Eres fumador o usuario IQOS mayor de 18 años?</p>
+                            <div class="fechaNacimiento">
+                                <div class="dropbox">
+                                    <select name="mes" data-category="Dialog (Age Verification)" data-action="Month" data-label="MX" data-event="Clic" id="mes">
+                                        <option value="" disabled selected="selected">Mes</option>   
+                                        <option v-for="{mes, val} in meses" :value="val">{{mes}}</option> 
+                                    </select>
+                                </div>
+                                <span class="separador"></span>
+                                <div class="dropbox">
+                                    <select data-category="Dialog (Age Verification)" data-action="Year" data-label="MX" data-event="Clic" name="ano" id="ano">
+                                        <option value="" disabled selected="selected">Año</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <transition name="fade">
+                                <div v-if="errorPopup.length" class="errors">
+                                    <a href="#" @click.prevent="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+                                    <b>Para continuar, por favor revisa lo siguiente:</b>
+                                    <ul>
+                                        <li v-for="error in errorPopup">{{error}}</li>
+                                    </ul>
+                                </div>
+                            </transition>
+                            <a href="#" data-category="Dialog (Age Verification)" data-action="Button Click - yes" data-label="MX" data-event="Clic" @click.prevent="iqosPopUp($event, 'si')" class="btn si">SÍ <svg width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"/></svg></a>
+                        </div>
+                        <div class="info" v-else> 
+                            <img src="/arquivos/newIqosLogoMay.png" alt="iqos" title="iqos" />
+                            <p>Debe ser mayor de 18 años para acceder al contenido de este sitio.</p>
+                            <small>Este sitio contiene información sobre un producto usado con tabaco. Está reservado para personas mayores de 18 años que residen en México.</small>
+                        </div>
+                    </section>
+                </transition>
+                </div>`;
+Vue.component('headervaltel-component', {
+    'template': $headervaltel,
+    'data': function() {
+
+        return {
+            "pagina": "lp1",
+            "mobile": window.innerWidth,
+            "geoFencingmodal": true,
+            "popupIqos": this.$cookies.get('popupIqos'),
+            "range": false,
+            "meses": [{mes: 'Enero',val: "01"},{mes: 'Febrero',val: "02"},{mes: 'Marzo',val: "03"},{mes: 'Abril',val: "04"},{mes: 'Mayo',val: "05"},{mes: 'Junio',val: "06"},{mes: 'Julio',val: "07"},{mes: 'Agosto',val: "08"},{mes: 'Septiembre',val: "09"},{mes: 'Octubre',val: "10"},{mes: 'Noviembre',val: "11"},{mes: 'Diciembre',val: "12"}],
+            "errorPopup": [],
+        };
+
+    },
+    'methods': {
+        "geoFencing": function () {
+            var _self = this
+            $.get( "https://get.geojs.io/v1/ip/geo.json", function (data){
+                var countrycode = data.country_code;
+                var parseParam = location.search;
+
+                if ( parseParam == "?gr=false" ) {
+                    _self.geoFencingmodal = true
+                } else {
+                    if( countrycode != 'MX') {
+                        _self.geoFencingmodal = false
+                    }
+                }
+            })
+        },
+        "paginaStatus": function(){
+            if ($("body").hasClass("lp1")) {
+                this.pagina = "lp1"
+            } else if ($("body").hasClass("lp2")) {
+                this.pagina = "lp2"
+            } else if ($("body").hasClass("rgm")) {
+                this.pagina = "rgm"
+            } else if ($("body").hasClass("get-trial")) {
+                this.pagina = "get-trial"
+            }
+        },
+        "iqosPopUp": function(event,responta) {
+            event.preventDefault();
+            this.errorPopup = [];
+            
+            window.mes = $(".ageverification #mes option:selected").val()
+            window.ano = $(".ageverification #ano option:selected").val()
+
+            if (window.mes == "" && window.ano == "" ) {
+                this.errorPopup.push("Los campos anteriores son obligatorios.");
+            } else if (window.mes == "") {
+                this.errorPopup.push("Los campos anteriores son obligatorios.");
+            } else if (window.ano == "") {
+                this.errorPopup.push("Los campos anteriores son obligatorios.");
+            } else {
+                var date = new Date();
+                var ano = date.getFullYear();
+                var mes = date.getMonth();
+
+                if (ano - parseFloat(window.ano) == 17 && parseFloat($(".ageverification #mes option:selected").val()) <= mes) {
+                    sucess()
+                } else if (ano - parseFloat(window.ano) < 18) {
+                    this.range = true
+                    try {
+                        window.dataLayer.push({
+                            "category": "Dialog (Age Verification)",
+                            "action": "Button Click - No",
+                            "label": "MX",
+                            "event": "eventunder18"
+                        })
+                    } catch (e) {console.log(e)}
+                        
+                } else {
+                    sucess()
+                }                    
+                        
+                function sucess () {
+                    this.$cookies.set('popupIqos', responta, '90d')
+                    this.$cookies.set('mes', $(".ageverification #mes option:selected").val(), '90d')
+                    this.$cookies.set('ano', $(".ageverification #ano option:selected").val(), '90d')
+
+                    $(".ageverification").fadeOut()
+                    $("html, body").css({"overflow":"auto"});
+
+                    VueEvent.$emit('mes', window.mes)
+                    VueEvent.$emit('ano', window.ano)
+
+                    $("footer .btn.disabled").removeClass("disabled")
+                }
+                
+            }
+            
+        },
+        "contagemAno": function () {
+            var date = new Date();
+            var ano = date.getFullYear();
+        
+            for (let i = 1900; i < ano; i++) {
+                $("#ano").append(
+                    $('<option />')
+                    .text([i])
+                    .val([i])
+                )
+            }
+            
+        },
+        "closePopUp": function(e) {
+            this.errorPopup = [];
+            e.preventDefault();
+        },
+        
+        "bodySemrolagem": function () {
+            console.log("bodysemrolaged called")
+            console.log("popUpiqos",this.popupIqos)
+            if (this.popupIqos == true || (this.$cookies.get('mes') && this.$cookies.get('ano'))) {
+                console.log("first condition when tru overflow auto")
+                $("html, body").css({"overflow":"auto"});
+            } else if(this.popupIqos == 'si') {
+                console.log("second condition when tru overflow auto popUp = si becuause comming from iqos.com")
+                $("html, body").css({"overflow":"auto"});
+            } else {
+                console.log("last condition when tru overflow hidden")
+                $("html, body").css({"overflow":"hidden"});
+            }
+        },
+        "noMostrarPopup": function () {
+
+            var _self =  this
+            console.log(document.referrer, "referrer")
+            var commingFrom = document.referrer.slice(0,20)
+            console.log("commingFrom", commingFrom)
+            console.log(document.referrer.indexOf("_ga"), "referrerindex")
+            if (commingFrom == "https://www.iqos.com" ) {
+                this.popupIqos = true
+                this.$cookies.set('popupIqos', 'si', '90d')
+                $("html, body").css({"overflow":"auto"});
+                _self.bodySemrolagem()
+            }
+            
+        }
+    },
+    'mounted': function(){
+        this.contagemAno()
+
+        window.onresize = () => {
+            this.mobile = window.innerWidth;
+        };
+    },
+    "watch": {},
+    'computed': {},
+    "created":function(){ 
+        var _self = this
+        
+        _self.geoFencing()
+        _self.paginaStatus()
+        _self.bodySemrolagem()
+        _self.noMostrarPopup()
+    }
+}); 
 
 var $conoceValTelTest = `<div>
 
@@ -17611,21 +17834,21 @@ var $conoceValTelTest = `<div>
         <ul class="refer-a-friend__box-items">
             <li class="refer-a-friend__box-item">
                 <div class="refer-a-friend__item-icon">
-                    <img src="/arquivos/Icono_1.png" />                      
+                    <img src="/arquivos/DOWNLOAD.png" />                      
                 </div>
                 <div class="refer-a-friend__item-text">Regístrate para obtener tu código de descuento</div>
                 <p class="refer-a-friend__item--info">Completa el formulario, te tomará 20 segundos.</p>
             </li>
             <li class="refer-a-friend__box-item">
                 <div class="refer-a-friend__item-icon">
-                    <img src="/arquivos/icono_2.png" />
+                    <img src="/arquivos/TAG.png" />
                 </div>
                 <div class="refer-a-friend__item-text">Recibe tu código de 10% de descuento*</div>
                 <p class="refer-a-friend__item--info">*Recibirás un correo electrónico con tu código. Válido para la compra de tu primer Kit IQOS.</p>
             </li>
             <li class="refer-a-friend__box-item">
                 <div class="refer-a-friend__item-icon">
-                    <img src="/arquivos/icono_3_.png" /> 
+                    <img src="/arquivos/VOUCHER.png" /> 
                 </div>
                 <div class="refer-a-friend__item-text">Canjea tu código de descuento</div>
                 <p class="refer-a-friend__item--info">Podrás canjear tu código de descuento en IQOS.com, Tiendas IQOS y con Expertos IQOS.</p>
@@ -22758,7 +22981,7 @@ Vue.component('adopta-unbranded-component', {
 var $gettrital = `<div> 
                             <section class="coronavirus" style="order:1;">
                                 <h4>
-                                    <span>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento para la compra de tu primer Kit IQOS.</span>
+                                    <span>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento* para la compra de tu primer Kit IQOS.</span>
                                 </h4>
                             </section>
                             <section v-bind:class="{ pagina }" class="principal version_exitoMayo" style="order:2;">
@@ -23815,241 +24038,240 @@ Vue.component('gettrital-component', {
     }
 }); 
 
-
+//Probar Icos
 var $gettritalTest = `<div> 
-                            <section class="coronavirus" style="order:1;">
-                                <h4>
-                                    <span>Por el momento el Programa de Préstamo IQOS no está disponible. En caso de estar interesado, por favor completa el formulario y nosotros te contactaremos.</span>
-                                </h4>
-                            </section>
-                            <section v-bind:class="{ pagina }" class="principal version_exitoMayo" style="order:2;">
-                                <span v-if="screen > 800" class="agendaAtBottomExito col-2 prueba"></span>
-                                <span v-if="screen > 800" class="agendaAtBottomExito col-4 prueba"><a id="toFormTop" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic" class="btn rgm" style="width: 100%; margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;cursor:pointer;">DEJAR MIS DATOS</a></span>
-                                <span v-if="screen < 800"  class="agendaAtBottomExito col-2 prueba">
-                                    <a id="toFormTop" style="width:70%;margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;" class='btn  rgm' data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">DEJAR MIS DATOS</a>
-                                </span>   
-                            </section>
-                            <section id="iqos-form" class="claro">
-                                
-                                <div class="two">
-                                    <h4>Completa el formulario</h4>
-                                    <form id="form" autocomplete="off" method="POST" novalidate="false" @submit.prevent="checkForm($event)" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
-                                        
-                                        <input type=hidden name="oid" value="00D4P000000h9QV">
-                                        <input type=hidden name="retURL" value="http://www.iqos.com">
-                                        <input type=hidden id="00N4P00000HE6pF" name="00N4P00000HE6pF" :value="hostName" >
+<section class="coronavirus" style="order:1;">
+    <h4>
+        <span>Por tiempo limitado, regístrate para recibir más información de IQOS y recibe 10% de descuento* para la compra de tu primer Kit IQOS.</span>
+    </h4>
+</section>
+<section v-bind:class="{ pagina }" class="principal version_exitoMayo" style="order:2;">
+    <span v-if="screen > 800" class="agendaAtBottomExito col-2 prueba"></span>
+    <span v-if="screen > 800" class="agendaAtBottomExito col-4 prueba"><a id="toFormTop" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic" class="btn rgm" style="width: 100%; margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;cursor:pointer;">DEJAR MIS DATOS</a></span>
+    <span v-if="screen < 800"  class="agendaAtBottomExito col-2 prueba">
+        <a id="toFormTop" style="width:70%;margin-bottom: 20px;background: #fff;color: #272a23;font-size: 12px;letter-spacing: 2.5px;font-weight: bold;" class='btn  rgm' data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">DEJAR MIS DATOS</a>
+    </span>   
+</section>
+<section id="iqos-form" class="claro">
+    
+    <div class="two">
+        <h4>Completa el formulario</h4>
+        <form id="form" autocomplete="off" method="POST" novalidate="false" @submit.prevent="checkForm($event)" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
+            
+            <input type=hidden name="oid" value="00D4P000000h9QV">
+            <input type=hidden name="retURL" value="http://www.iqos.com">
+            <input type=hidden id="00N4P00000HE6pF" name="00N4P00000HE6pF" :value="hostName" >
 
 
-                                        <!--  ----------------------------------------------------------------------  -->
-                                        <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
-                                        <!--  these lines if you wish to test in debug mode.                          -->
-                                        <!--  <input type="hidden" name="debug" value=1>                              -->
-                                        <!--  <input type="hidden" name="debugEmail" value="alfredo.ramos@pmi.com">   -->
-                                        <!--  ----------------------------------------------------------------------  -->
-                                    
-                                        <label class="lb-input" for="first_name">NOMBRE*</label>
-                                        <input  id="first_name" data-category="Form Local Lead" data-action="Name" data-label="MX" data-event="Clic" maxlength="25" class="field" name="first_name" size="20" type="text" />
+            <!--  ----------------------------------------------------------------------  -->
+            <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+            <!--  these lines if you wish to test in debug mode.                          -->
+            <!--  <input type="hidden" name="debug" value=1>                              -->
+            <!--  <input type="hidden" name="debugEmail" value="alfredo.ramos@pmi.com">   -->
+            <!--  ----------------------------------------------------------------------  -->
+        
+            <label class="lb-input" for="first_name">NOMBRE*</label>
+            <input  id="first_name" data-category="Form Local Lead" data-action="Name" data-label="MX" data-event="Clic" maxlength="25" class="field" name="first_name" size="20" type="text" />
 
-                                        <label class="lb-input" for="last_name">Apellido(s)*</label>
-                                        <input data-category="Form Local Lead" data-action="Last Name" data-label="MX" data-event="Clic" id="last_name" maxlength="25" name="last_name" class="field" size="20" type="text" />
+            <label class="lb-input" for="last_name">Apellido(s)*</label>
+            <input data-category="Form Local Lead" data-action="Last Name" data-label="MX" data-event="Clic" id="last_name" maxlength="25" name="last_name" class="field" size="20" type="text" />
 
-                                        <label class="lb-input" for="email">Email*</label>
-                                        <input id="email" data-category="Form Local Lead" data-action="Email" data-label="MX" data-event="Clic" class="field" maxlength="80" name="email" size="20" type="text" />
-                                        
-                                        <div class="tooltip">
-                                            <label class="lb-input" for="phone">TELÉFONO (10 DÍGITOS)*</label>
-                                            <the-mask class="field" data-category="Form Local Lead" data-action="Phone" data-label="MX" data-event="Clic" type="text" id="phone" maxlength="10" name="phone" :mask="['##########']" :value="telefone" />
-                                            <span class="tooltiptext">Te llamaremos para coordinar la entrega de tu IQOS</span>
-                                        </div>
-                                        
-                                        <label class="lb-input" for="00N4P00000GOkeR">¿QUÉ DISPOSITIVO TE GUSTARÍA CONOCER?</label>
-                                        <select class="color-dispositivo" data-action="IQOS 2.4 Plus - White" data-category="Form Local Lead" data-label="MX" data-event="Clic" id="00N4P00000GOkeR" name="00N4P00000GOkeR" title="Tipo de dispositivo">
-                                            <option value="IQOS 2.4 Azul">IQOS 2.4 Azul</option>   
-                                            <option value="IQOS 2.4 Blanco">IQOS 2.4 Blanco</option>
-                                        </select>
+            <label class="lb-input" for="email">Email*</label>
+            <input id="email" data-category="Form Local Lead" data-action="Email" data-label="MX" data-event="Clic" class="field" maxlength="80" name="email" size="20" type="text" />
+            
+            <div class="tooltip">
+                <label class="lb-input" for="phone">TELÉFONO (10 DÍGITOS)*</label>
+                <the-mask class="field" data-category="Form Local Lead" data-action="Phone" data-label="MX" data-event="Clic" type="text" id="phone" maxlength="10" name="phone" :mask="['##########']" :value="telefone" />
+                <span class="tooltiptext">Te llamaremos para coordinar la entrega de tu IQOS</span>
+            </div>
+            
+            <label class="lb-input" for="00N4P00000GOkeR">¿QUÉ DISPOSITIVO TE GUSTARÍA CONOCER?</label>
+            <select class="color-dispositivo" data-action="IQOS 2.4 Plus - White" data-category="Form Local Lead" data-label="MX" data-event="Clic" id="00N4P00000GOkeR" name="00N4P00000GOkeR" title="Tipo de dispositivo">
+                <option value="IQOS 2.4 Azul">IQOS 2.4 Azul</option>   
+                <option value="IQOS 2.4 Blanco">IQOS 2.4 Blanco</option>
+            </select>
 
-                                        
-                                        
-                                        <div class="none">
-                                            <input class="state" :value="state" id="00N4P000008mN1c" maxlength="255" name="00N4P000008mN1c" size="20" type="text" />
-                                            <input class="city" :value="city" id="00N4P000008mN26" maxlength="255" name="00N4P000008mN26" size="20" type="text" />
-                                            <input class="mes" :value="mes" id="00N4P00000GZHnH" name="00N4P00000GZHnH" size="20" type="text" />
-                                            <input class="ano" :value="ano" id="00N4P00000GZEGY" name="00N4P00000GZEGY" size="20" type="text" />
-                                            <input class="source" :value="source" id="00N4P000008mN2L" maxlength="255" name="00N4P000008mN2L" size="20" type="text" />
-                                            <input class="medium" :value="medium" id="00N4P000008mN2Q" maxlength="255" name="00N4P000008mN2Q" size="20" type="text" />
-                                            <input class="campaign":value="campaign"  id="00N4P000008mN2a" maxlength="255" name="00N4P000008mN2a" size="20" type="text" />
-                                            <input value="FUMADOR" id="00N4P000008mN13" maxlength="255" name="00N4P000008mN13" size="20" type="text" />
-                                            <input class="term field" :value="term" id="00N4P00000GZEGd" value="true" maxlength="255" name="00N4P00000GZEGd" size="20" type="text" />
-                                            <input :value="GAtransactionId" id="00N4P00000GOgJP" name="00N4P00000GOgJP" size="20" type="text" />
-                                        </div>
+            
+            
+            <div class="none">
+                <input class="state" :value="state" id="00N4P000008mN1c" maxlength="255" name="00N4P000008mN1c" size="20" type="text" />
+                <input class="city" :value="city" id="00N4P000008mN26" maxlength="255" name="00N4P000008mN26" size="20" type="text" />
+                <input class="mes" :value="mes" id="00N4P00000GZHnH" name="00N4P00000GZHnH" size="20" type="text" />
+                <input class="ano" :value="ano" id="00N4P00000GZEGY" name="00N4P00000GZEGY" size="20" type="text" />
+                <input class="source" :value="source" id="00N4P000008mN2L" maxlength="255" name="00N4P000008mN2L" size="20" type="text" />
+                <input class="medium" :value="medium" id="00N4P000008mN2Q" maxlength="255" name="00N4P000008mN2Q" size="20" type="text" />
+                <input class="campaign":value="campaign"  id="00N4P000008mN2a" maxlength="255" name="00N4P000008mN2a" size="20" type="text" />
+                <input value="FUMADOR" id="00N4P000008mN13" maxlength="255" name="00N4P000008mN13" size="20" type="text" />
+                <input class="term field" :value="term" id="00N4P00000GZEGd" value="true" maxlength="255" name="00N4P00000GZEGd" size="20" type="text" />
+                <input :value="GAtransactionId" id="00N4P00000GOgJP" name="00N4P00000GOgJP" size="20" type="text" />
+            </div>
 
-                                        <fieldset>
-                                            <label for="aceptoterminos">
-                                                <input data-category="Form Local Lead" data-action="Data Acepto Términos y Condiciones" data-label="MX" data-event="Clic" id="aceptoterminos" name="aceptoterminos" type="checkbox" value="1" />
-                                                <span>Acepto <a style="color:blue" target="_blank"  href="/terminos-condiciones">Términos y Condiciones</a>.</span>
-                                            </label>
+            <fieldset>
+                <label for="aceptoterminos">
+                    <input data-category="Form Local Lead" data-action="Data Acepto Términos y Condiciones" data-label="MX" data-event="Clic" id="aceptoterminos" name="aceptoterminos" type="checkbox" value="1" />
+                    <span>Acepto <a style="color:blue" target="_blank"  href="/terminos-condiciones">Términos y Condiciones</a>.</span>
+                </label>
 
-                                            <label for="00N4P00000GZEGJ">
-                                                <input data-category="Form Local Lead" data-action="Data Privacy Agreement Acceptance" data-label="MX" data-event="Clic" id="00N4P00000GZEGJ" name="00N4P00000GZEGJ" type="checkbox" value="1" />
-                                                <span>Acepto que los datos que recopilen sean utilizados como se establece en su <a style="color:blue" target="_blank" href="https://www.pmiprivacy.com/es-la/consumer">Aviso de Privacidad</a>.</span>
-                                            </label>
-                                            <label for="00N4P000008mN8e">
-                                                <input checked="checked" data-category="Form Local Lead" data-action="Opt-in Mktg" data-label="MX" data-event="Clic" id="00N4P000008mN8e" name="00N4P000008mN8e" type="checkbox" value="1" />
-                                                <span>Quiero recibir información sobre IQOS y productos relacionados por correo electrónico, SMS y similares.</span>
-                                            </label>
-                                        </fieldset>
+                <label for="00N4P00000GZEGJ">
+                    <input data-category="Form Local Lead" data-action="Data Privacy Agreement Acceptance" data-label="MX" data-event="Clic" id="00N4P00000GZEGJ" name="00N4P00000GZEGJ" type="checkbox" value="1" />
+                    <span>Acepto que los datos que recopilen sean utilizados como se establece en su <a style="color:blue" target="_blank" href="https://www.pmiprivacy.com/es-la/consumer">Aviso de Privacidad</a>.</span>
+                </label>
+                <label for="00N4P000008mN8e">
+                    <input checked="checked" data-category="Form Local Lead" data-action="Opt-in Mktg" data-label="MX" data-event="Clic" id="00N4P000008mN8e" name="00N4P000008mN8e" type="checkbox" value="1" />
+                    <span>Quiero recibir información sobre IQOS y productos relacionados por correo electrónico, SMS y similares.</span>
+                </label>
+            </fieldset>
 
-                                        <div class="btn form-btn">
-                                            <input data-category="Form Local Lead" data-action="Send Form" data-label="MX" data-event="Clic" type="submit" value="Enviar" class="save" name="submit">
-                                            <svg width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"></path></svg>
-                                        </div>
+            <div class="btn form-btn">
+                <input data-category="Form Local Lead" data-action="Send Form" data-label="MX" data-event="Clic" type="submit" value="Enviar" class="save" name="submit">
+                <svg width="20" height="20"><path data-name="Trazado 40" d="M10 0L8.182 1.818 15.065 8.7H0v2.6h15.065l-6.883 6.882L10 20l10-10z" fill="#c2984e"></path></svg>
+            </div>
 
-                                        <transition name="fade">
-                                            <div v-if="Msnenvio">
-                                                <div class="background-modal" @click="closePopUp($event)"></div>
-                                                <div class="envio errors">
-                                                    <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
-                                                    <b>{{ Msnenvio }}</b>
-                                                </div>
-                                            </div>
-                                        </transition> 
+            <transition name="fade">
+                <div v-if="Msnenvio">
+                    <div class="background-modal" @click="closePopUp($event)"></div>
+                    <div class="envio errors">
+                        <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+                        <b>{{ Msnenvio }}</b>
+                    </div>
+                </div>
+            </transition> 
 
-                                    </form>
-                                    <transition name="fade">
-                                        <div v-if="errors.length" class="errors">
-                                            <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
-                                            <b>Para continuar, por favor revisa lo siguiente:</b>
-                                            <ul>
-                                                <li v-for="error in errors">{{ error }}</li>
-                                            </ul>
-                                        </div>    
-                                    </transition>  
-                                </div>
-                            </section>
+        </form>
+        <transition name="fade">
+            <div v-if="errors.length" class="errors">
+                <a href="#" @click="closePopUp($event)" class='close'><svg aria-hidden="true" focusable="false" data-prefix="fal" data-icon="times" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-times fa-w-10"><path fill="currentColor" d="M193.94 256L296.5 153.44l21.15-21.15c3.12-3.12 3.12-8.19 0-11.31l-22.63-22.63c-3.12-3.12-8.19-3.12-11.31 0L160 222.06 36.29 98.34c-3.12-3.12-8.19-3.12-11.31 0L2.34 120.97c-3.12 3.12-3.12 8.19 0 11.31L126.06 256 2.34 379.71c-3.12 3.12-3.12 8.19 0 11.31l22.63 22.63c3.12 3.12 8.19 3.12 11.31 0L160 289.94 262.56 392.5l21.15 21.15c3.12 3.12 8.19 3.12 11.31 0l22.63-22.63c3.12-3.12 3.12-8.19 0-11.31L193.94 256z" class=""></path></svg></a>
+                <b>Para continuar, por favor revisa lo siguiente:</b>
+                <ul>
+                    <li v-for="error in errors">{{ error }}</li>
+                </ul>
+            </div>    
+        </transition>  
+    </div>
+</section>
 
-                            <section>
-                                <div class="" style="padding-right: 15px;
-                                padding-left: 15px;
-                                margin-right: auto;
-                                margin-left: auto;">
-                                    <div id="owl-demo-2" class="owl-carousel owl-theme">
+<section>
+    <div class="" style="padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;">
+        <div id="owl-demo-2" class="owl-carousel owl-theme">
 
-                                        <article class="thumbnail item">
-                                            <div style="display: flex;">
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                            </div>
-                                            <div class="caption">
-                                                <h4 class="testimonials" style="padding:0px">‘La mejor decisión de mi vida’</h4>
-                                                <p class="flex-text">“En el momento que descubrí IQOS pensé que tal vez si era necesario experimentar y ver que tan cierto era todo lo que mi Coach personal mencionaba... En los primeros días me costó un poco de trabajo adaptarme a mi IQOS, pero con el paso del tiempo se hizo mi aliado y ahora ya no lo suelto...”</p>
-                                                <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Zabdiel</p>
-                                            </div>
-                                        </article>
+            <article class="thumbnail item">
+                <div style="display: flex;">
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                </div>
+                <div class="caption">
+                    <h4 class="testimonials" style="padding:0px">‘La mejor decisión de mi vida’</h4>
+                    <p class="flex-text">“En el momento que descubrí IQOS pensé que tal vez si era necesario experimentar y ver que tan cierto era todo lo que mi Coach personal mencionaba... En los primeros días me costó un poco de trabajo adaptarme a mi IQOS, pero con el paso del tiempo se hizo mi aliado y ahora ya no lo suelto...”</p>
+                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Zabdiel</p>
+                </div>
+            </article>
 
-                                        <article class="thumbnail item">
-                                            <div style="display: flex;">
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star-o" style="font-size:35px;color:#c98224"></i>
-                                            </div>
-                                            <div class="caption">
-                                                <h4 class="testimonials" style="padding:0px">‘Me encanta’</h4>
-                                                <p class="flex-text">“Me costó unos días acostumbrarme al sabor pero una vez que lo hice no los cambio por nada, es muy práctico, es increíble que no haya ceniza, entonces lo puedes ocupar en el coche si llueve, y en cualquier lugar sin necesidad de un cenicero y sin el temor de quemar algo...”</p>
-                                                <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Esteban</p>
-                                            </div>
-                                        </article>
+            <article class="thumbnail item">
+                <div style="display: flex;">
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star-o" style="font-size:35px;color:#c98224"></i>
+                </div>
+                <div class="caption">
+                    <h4 class="testimonials" style="padding:0px">‘Me encanta’</h4>
+                    <p class="flex-text">“Me costó unos días acostumbrarme al sabor pero una vez que lo hice no los cambio por nada, es muy práctico, es increíble que no haya ceniza, entonces lo puedes ocupar en el coche si llueve, y en cualquier lugar sin necesidad de un cenicero y sin el temor de quemar algo...”</p>
+                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Esteban</p>
+                </div>
+            </article>
 
-                                        <article class="thumbnail item">
-                                            <div style="display: flex;">
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                            </div>
-                                            <div class="caption">
-                                                <h4 class="testimonials" style="padding:0px">‘Deje por completo el cigarro y el humo’</h4>
-                                                <p class="flex-text">“Me gusta mucho, desde el primer día de uso. Despues de una semana ya no pude soportar el sabor de un cigarro normal. Una excelente alternativa y cambio de habito. Definitivamente no regresaría a fumar.”</p>
-                                                <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Carlos</p>
-                                            </div>
-                                        </article>
+            <article class="thumbnail item">
+                <div style="display: flex;">
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                </div>
+                <div class="caption">
+                    <h4 class="testimonials" style="padding:0px">‘Deje por completo el cigarro y el humo’</h4>
+                    <p class="flex-text">“Me gusta mucho, desde el primer día de uso. Despues de una semana ya no pude soportar el sabor de un cigarro normal. Una excelente alternativa y cambio de habito. Definitivamente no regresaría a fumar.”</p>
+                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Carlos</p>
+                </div>
+            </article>
 
-                                        <article class="thumbnail item">
-                                            <div style="display: flex;">
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                            </div>
-                                            <div class="caption">
-                                                <h4 class="testimonials" style="padding:0px">‘La mejor decisión’</h4>
-                                                <p class="flex-text">“...Ha sido una muy buena experiencia, dejé los cigarrillos al día 2 y llevo 6 meses con IQOS. La mejor decisión para quien no quiere dejar de fumar pero si quiere una experiencia distinta sin humo, sin ceniza. Lo recomiendo ampliamente.“</p>
-                                                <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Luis</p>
-                                            </div>
-                                        </article>
+            <article class="thumbnail item">
+                <div style="display: flex;">
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                </div>
+                <div class="caption">
+                    <h4 class="testimonials" style="padding:0px">‘La mejor decisión’</h4>
+                    <p class="flex-text">“...Ha sido una muy buena experiencia, dejé los cigarrillos al día 2 y llevo 6 meses con IQOS. La mejor decisión para quien no quiere dejar de fumar pero si quiere una experiencia distinta sin humo, sin ceniza. Lo recomiendo ampliamente.“</p>
+                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Luis</p>
+                </div>
+            </article>
 
-                                        <article class="thumbnail item">
-                                            <div style="display: flex;">
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                            </div>
-                                            <div class="caption">
-                                                <h4 class="testimonials" style="padding:0px">‘No más olores desagradables’</h4>
-                                                <p class="flex-text">"...Me dedico al ramo de bebidas y no podía estar trabajando con olor a cigarro. Fue una gran solución a mi problema. Ya las cosas saben distintos. Me olvide por completo de las críticas “apestas a cenicero” etc."</p>
-                                                <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Gabriel</p>
-                                            </div>
-                                        </article>
+            <article class="thumbnail item">
+                <div style="display: flex;">
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                </div>
+                <div class="caption">
+                    <h4 class="testimonials" style="padding:0px">‘No más olores desagradables’</h4>
+                    <p class="flex-text">"...Me dedico al ramo de bebidas y no podía estar trabajando con olor a cigarro. Fue una gran solución a mi problema. Ya las cosas saben distintos. Me olvide por completo de las críticas “apestas a cenicero” etc."</p>
+                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Gabriel</p>
+                </div>
+            </article>
 
-                                        <article class="thumbnail item">
-                                            <div style="display: flex;">
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                                <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
-                                            </div>
-                                            <div class="caption">
-                                                <h4 class="testimonials" style="padding:0px">‘Sin olor a humo de cigarro.’</h4>
-                                                <p class="flex-text">“Me encantó porque no deja olor a humo de cigarro, que eso para mí al estar en el área de ventas es muy importante.“</p>
-                                                <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Miguel</p>
-                                            </div>
-                                        </article>
+            <article class="thumbnail item">
+                <div style="display: flex;">
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                    <i class="fa fa-star" style="font-size:35px;color:#c98224"></i>
+                </div>
+                <div class="caption">
+                    <h4 class="testimonials" style="padding:0px">‘Sin olor a humo de cigarro.’</h4>
+                    <p class="flex-text">“Me encantó porque no deja olor a humo de cigarro, que eso para mí al estar en el área de ventas es muy importante.“</p>
+                    <p class="flex-text" style="font-weight: bolder;opacity:0.6;position:absolute;bottom:20px;">Miguel</p>
+                </div>
+            </article>
 
-                                    </div><!-- #owl-demo-2 -->
-                                </div><!-- .container -->
-                            </section>
+        </div><!-- #owl-demo-2 -->
+    </div><!-- .container -->
+</section>
 
-                            <section id="queEsIqosVideo" class="video">
-                                <h3>¿Qué es IQOS?</h3>
-                                <p>IQOS es una mejor opción para consumir tabaco ya que lo calienta en lugar de quemarlo. Al calentar el tabaco se produce vapor, no hay olor a cigarro y por lo tanto, menos molestias a la gente a tu alrededor.</p>
-                                <div class="container ambiente_prueba" data-category="Clicks" data-action="Play" data-label="que-es-iqos-3-duo-caracteristicas-y-video" data-event="Video">
-                                    <img src="/arquivos/queEsIqosTumbnailMayo.png" />
-                                    <video width="320" height="240" id="myVideo">
-                                    <source src="https://pmi.23video.com/64968578/68793752/1423b77c21d366d862f03171afd1bcbe/video_hd/iqos-new-brand-world-brand-1-7-video.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                    </video>  
-                                </div>
-                            </section>
-                            <section class="video" >
-                                <div style="position: relative;
-                                text-align:center;">
-                                    <a id="toFormBottom" style="cursor:pointer;background-color: black;letter-spacing: 2px;text-transform: uppercase;" class="btn btn-form" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">Dejar mis datos</a>
-                                </div>
-                            </section>
+<section id="queEsIqosVideo" class="video">
+    <h3>¿Qué es IQOS?</h3>
+    <p>IQOS es una mejor opción para consumir tabaco ya que lo calienta en lugar de quemarlo. Al calentar el tabaco se produce vapor, no hay olor a cigarro y por lo tanto, menos molestias a la gente a tu alrededor.</p>
+    <div class="container ambiente_prueba" data-category="Clicks" data-action="Play" data-label="que-es-iqos-3-duo-caracteristicas-y-video" data-event="Video">
+        <img src="/arquivos/queEsIqosTumbnailMayo.png" />
+        <video width="320" height="240" id="myVideo">
+        <source src="https://pmi.23video.com/64968578/68793752/1423b77c21d366d862f03171afd1bcbe/video_hd/iqos-new-brand-world-brand-1-7-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>  
+    </div>
+</section>
+<section class="video" >
+    <div style="position: relative;
+    text-align:center;">
+        <a id="toFormBottom" style="cursor:pointer;background-color: black;letter-spacing: 2px;text-transform: uppercase;" class="btn btn-form" data-category="Clicks" data-action="Pedir un iqos" data-label="MX" data-event="Clic">Dejar mis datos</a>
+    </div>
+</section>
 
 
 
-                            </div>`;
-
+</div>`;
 Vue.component('gettrital-component-test', {
     'template': $gettritalTest,
     'data': function() {
@@ -27974,6 +28196,7 @@ var $gettritalQueEsIqosVersionTest = `<div>
                                             
                                             <div class="two">
                                                 <h4>Completa el formulario</h4>
+   
                                                 <form id="form" autocomplete="off" method="POST" novalidate="false" @submit.prevent="checkForm($event)" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8">
                                                     
                                                     <input type=hidden name="oid" value="00D4P000000h9QV">
